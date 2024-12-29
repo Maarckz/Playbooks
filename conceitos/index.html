@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Playbooks de Segurança Cibernética - Resposta a Incidentes, Pentesting e Defesa de Sistemas">
+    <title>Playbooks DefCyber</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Conceitos</h1>
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Pesquisar">
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">                
+        <!-- Barra Lateral -->
+        <aside class="sidebar">
+            <br><br>
+            <nav>
+                <ul>
+                    <li style="margin-left: 1em;"><a href="../index.html" class="js-scroll-trigger">Inicio</a></li>
+                    <li style="margin-left: 1em;"><a href="#criacao" class="js-scroll-trigger">Criação de Playbooks</a></li>
+                    <li style="margin-left: 1em;"><a href="#ciclelife" target="_blank">Ciclo de Vida dos Dados</a></li>
+                    <li style="margin-left: 1em;"><a href="#dataclass" target="_blank">Classificação dos Dados</a></li>
+                    <li style="margin-left: 1em;"><a href="#ttp" class="js-scroll-trigger">Técnicas, Táticas e Procedimentos</a></li>
+                    <li style="margin-left: 1em;"><a href="#controlacessmodels" class="js-scroll-trigger">Modelos de Controle de Acesso</a></li>
+                    <li style="margin-left: 1em;"><a href="#emocoes" class="js-scroll-trigger">Modelagem de Emoções</a></li>
+                    <li style="margin-left: 1em;"><a href="#controlacessmodels" class="js-scroll-trigger">Matriz de Risco</a></li>
+                    <li style="margin-left: 1em;"><a href="#controlacessmodels" class="js-scroll-trigger">Políticas, Padrões, Diretrizes e Procedimentos </a></li>
+                    <li style="margin-left: 1em;"><a href="#controlacessmodels" class="js-scroll-trigger">Estratégias de CyberSegurity</a></li>
+                    <li style="margin-left: 1em;"><a href="#controlacessmodels" class="js-scroll-trigger">Cyber Threat Intelligence</a></li>
+                    <li style="margin-left: 1em;"><a href="https://maarckz.github.io/CyberDefense/" target="_blank">CyberDefense</a></li>
+                    <li style="margin-left: 1em;"><a href="https://github.com/Maarckz" target="_blank">GitHub</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main>
+            <section id="criacao">
+                <h2 id="playbooks-title">Criação de Playbooks</h2>
+                <p>
+                    <h1>Como criar um Playbook para resposta a incidentes?</h1></br>
+
+                    <strong>1. Defina metas e prioridades organizacionais</strong>
+                    <br>
+                    Identifique os ativos, sistemas e processos críticos que necessitam de proteção. Considere o impacto de incidentes sobre essas áreas para priorizar as respostas adequadamente. Alinhe as metas e objetivos de segurança ao apetite de risco da organização e às exigências de conformidade regulatória.
+                    <br>
+                    Documente os objetivos claramente no manual, incluindo:
+                    <ul>
+                        <li style="margin-left: 1em;">Proteção da integridade e continuidade operacional.</li>
+                        <li style="margin-left: 1em;">Mitigação de danos financeiros, reputacionais e legais.</li>
+                        <li style="margin-left: 1em;">Cumprimento de normas e padrões de segurança.</li>
+                    </ul>
+                </p></br>
+                <p>
+                    <strong>2. Estabeleça funções e responsabilidades</strong>
+                    <br>
+                    Determine as responsabilidades específicas de cada membro da equipe de resposta a incidentes, além de outras partes envolvidas.
+                    <ul>
+                        <li style="margin-left: 1em;"><strong>Manipuladores de incidentes internos:</strong> profissionais técnicos que identificam, analisam e mitigam incidentes.</li>
+                        <li style="margin-left: 1em;"><strong>Terceiros especializados:</strong> consultores externos ou prestadores de serviços que auxiliam na investigação e resposta.</li>
+                        <li style="margin-left: 1em;"><strong>Equipes jurídicas e de comunicação:</strong> responsáveis pela gestão de impactos legais e pela comunicação com partes interessadas internas e externas.</li>
+                        <li style="margin-left: 1em;"><strong>Tomadores de decisão:</strong> alta gestão ou C-suite para aprovar ações críticas e alocação de recursos.</li>
+                    </ul>
+                    Inclua planos de comunicação e garanta treinamento para todos os envolvidos, de modo que estejam preparados para responder com eficiência a crises reais.
+                </p></br>
+                <p>
+                    <strong>3. Realize uma avaliação de risco</strong>
+                    <br>
+                    Conduza uma análise abrangente para identificar ameaças específicas e avaliar vulnerabilidades no ambiente organizacional.
+                    <ul>
+                        <li style="margin-left: 1em;">Analise a probabilidade de ocorrência e o impacto potencial de diferentes incidentes.</li>
+                        <li style="margin-left: 1em;">Categorize os riscos de acordo com sua gravidade para priorizar a alocação de recursos.</li>
+                        <li style="margin-left: 1em;">Considere ameaças internas (acessos indevidos) e externas (malware, ataques DDoS, violações de dados).</li>
+                    </ul>
+                    Use os resultados da avaliação para criar cenários de resposta e desenvolver planos específicos para incidentes mais prováveis ou críticos.
+                </p></br>
+                <p>
+                    <strong>4. Desenvolva procedimentos detalhados</strong>
+                    <br>
+                    Crie processos bem definidos para cada fase de resposta a incidentes. O manual deve incluir:
+                    <ul>
+                        <li style="margin-left: 1em;"><strong>Detecção e análise:</strong> métodos para identificar e confirmar incidentes.</li>
+                        <li style="margin-left: 1em;"><strong>Contenção:</strong> estratégias para limitar danos e preservar evidências.</li>
+                        <li style="margin-left: 1em;"><strong>Erradicação:</strong> ações para eliminar a causa raiz do incidente.</li>
+                        <li style="margin-left: 1em;"><strong>Recuperação:</strong> processos para restaurar sistemas afetados com segurança.</li>
+                        <li style="margin-left: 1em;"><strong>Pós-incidente:</strong> análise de lições aprendidas e ajustes para prevenir futuros incidentes.</li>
+                    </ul>
+                    Especifique as ferramentas, os passos técnicos e as comunicações necessárias para cada fase. Certifique-se de que as instruções sejam claras e práticas para a equipe técnica e os gestores.
+                </p></br>
+                <p>
+                    <strong>5. Planeje o envolvimento de terceiros e relatórios</strong>
+                    <br>
+                    Inclua diretrizes para o uso de suporte externo, como agências de aplicação da lei, consultorias ou serviços de resposta a incidentes.
+                    <ul>
+                        <li style="margin-left: 1em;">Defina critérios claros para acionar terceiros (ex.: incidentes de alta gravidade ou violações de dados regulamentadas).</li>
+                        <li style="margin-left: 1em;">Crie um processo formal de relatório para partes internas, reguladores e indivíduos afetados, garantindo comunicação ágil e precisa.</li>
+                    </ul>
+                </p></br>
+                <p>
+                    <strong>6. Teste, treine e refine continuamente</strong>
+                    <br>
+                    Implemente exercícios de simulação para validar o manual e identificar lacunas. Esses testes ajudam a melhorar a preparação da equipe e a eficácia das respostas.
+                    <ul>
+                        <li style="margin-left: 1em;">Realize treinamentos regulares para garantir que todos compreendam suas funções e possam executá-las sob pressão.</li>
+                        <li style="margin-left: 1em;">Ajuste o manual com base em lições aprendidas durante simulações e incidentes reais.</li>
+                        <li style="margin-left: 1em;">Atualize periodicamente o conteúdo para refletir mudanças no cenário de ameaças e nos requisitos regulatórios.</li>
+                    </ul>
+                    Um manual bem estruturado e testado é a base para uma resposta eficaz e alinhada ao NIST.
+                </p></br>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <div id="modal-details">
+                <!-- Conteúdo do Playbook de Phishing -->
+                <div id="phishing" class="modal-playbook-content" style="display:none;">
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/scripts.js" defer></script>
+</body>
+</html>
