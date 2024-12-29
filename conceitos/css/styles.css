@@ -244,3 +244,93 @@ button:focus {
     margin-right: 10px;
     color: red;
 }
+
+/* Para telas menores que 768px (smartphones) */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 1rem;
+    }
+
+    header h1 {
+        font-size: 1rem;
+    }
+
+    .search-container input {
+        width: 100%; /* Ocupa a largura total */
+        margin-top: 0.5rem;
+    }
+
+    .main-container {
+        display: block;
+        height: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 1rem 0;
+    }
+
+    .sidebar nav ul li {
+        text-align: left;
+        padding: 0.8rem 1rem;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 2rem 1rem;
+    }
+
+    .playbook-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .playbook-card {
+        width: 90%; /* Mais estreito em telas pequenas */
+    }
+
+    button {
+        width: 100%; /* Botões ocupam a largura total */
+        padding: 0.6rem;
+    }
+
+    .modal-content {
+        width: calc(100vw - 2rem); /* Maior aproveitamento do espaço */
+        max-height: 80vh;
+    }
+}
+
+/* Para telas entre 768px e 1024px (tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    header .container {
+        padding: 0 1.5rem;
+    }
+
+    header h1 {
+        font-size: 1.1rem;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sidebar {
+        width: 200px;
+        height: auto;
+    }
+
+    main {
+        margin-left: 210px;
+        padding: 2rem 1.5rem;
+    }
+
+    .playbook-card {
+        width: 45%; /* Ajuste para duas colunas */
+    }
+}
