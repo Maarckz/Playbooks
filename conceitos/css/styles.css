@@ -11,6 +11,23 @@ body {
     background-color: #f9f9f9;
     color: #333;
 }
+.sidebar {
+    overflow-y: auto;
+    height: calc(100vh - 0px);
+}
+.sidebar::-webkit-scrollbar {
+    width: 0.5em;
+}
+.sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 
 header {
     background-color: #1f1f1f;
@@ -95,11 +112,11 @@ main {
 }
 
 /* criacao */
-#criacao {
+section {
     margin-bottom: 3rem;
 }
 
-#criacao h2 {
+h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
     color: #007BFF;
@@ -195,7 +212,30 @@ button:focus {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
 
+th, td {
+    border: 1px solid gray;
+    padding: 8px 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #e0e0e0;
+}
 /* Animação para o modal */
 @keyframes modalAnimation {
     from {
