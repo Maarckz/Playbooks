@@ -69,31 +69,3 @@ document.querySelectorAll('.sidebar a').forEach(link => {
         }
     });
 });
-document.querySelectorAll('.collapsible').forEach(button => {
-    button.addEventListener('click', function() {
-        this.classList.toggle('active');
-        const content = this.nextElementSibling;
-        if (content.style.display === 'block') {
-            content.style.transition = 'all 0.5s ease-in-out';
-            content.style.height = content.scrollHeight + 'px';
-            setTimeout(() => {
-                content.style.height = '0';
-            }, 1);
-            setTimeout(() => {
-                content.style.display = 'none';
-            }, 500);
-        } else {
-            content.style.display = 'block';
-            content.style.height = '0';
-            content.style.transition = 'all 0.5s ease-in-out';
-            setTimeout(() => {
-                content.style.height = content.scrollHeight + 'px';
-            }, 1);
-        }
-    });
-});
-
-document.addEventListener("contextmenu", event => event.preventDefault());
-document.addEventListener("selectstart", event => event.preventDefault());
-
-
