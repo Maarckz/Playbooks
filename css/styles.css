@@ -1,1 +1,275 @@
-#about h2,#playbooks h2{color:#007bff;font-size:2rem}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:Roboto,sans-serif;background-color:#f9f9f9;color:#333}.sidebar,header{background-color:#1f1f1f;color:#fff}header{padding:1rem;z-index:1000;position:sticky;top:0;width:100%}header .container{display:flex;justify-content:space-between;align-items:center;padding:0 2rem}header h1{font-size:1.2rem}.search-container input{padding:.6rem;width:250px;border-radius:20px;border:2px solid #007bff;transition:.3s}.search-container input:focus{outline:0;border-color:#0056b3}.main-container{display:flex;height:100vh}.modal,.sidebar{position:fixed;left:0;top:0;height:100%}.sidebar{width:250px;padding-top:2rem;transition:.3s;z-index:999}.sidebar nav ul{list-style:none}.sidebar nav ul li{padding:1rem;text-align:center}.sidebar nav ul li a{color:#fff;text-decoration:none;display:block;transition:.3s}.sidebar nav ul li a:hover{background-color:#007bff;padding:.5rem;border-radius:5px}main{margin-left:270px;padding:3rem;width:100%;z-index:1}#about{margin-bottom:3rem}#about h2{margin-bottom:1rem}#playbooks h2,.playbook-card{margin-bottom:2rem;text-align:center}#playbooks{margin-top:3rem}.playbook-list{display:flex;flex-wrap:wrap;justify-content:space-around}.playbook-card{background-color:#fff;border-radius:10px;box-shadow:0 4px 8px rgba(0,0,0,.1);width:30%;padding:1.5rem;transition:transform .3s}.playbook-card:hover{transform:translateY(-10px)}.playbook-card h3{margin-bottom:1rem;font-size:1.25rem;color:#333}.playbook-card p{margin-bottom:1rem;font-size:1rem;color:#666}button{background-color:#007bff;color:#fff;border:none;padding:.8rem 1.2rem;border-radius:30px;cursor:pointer;transition:background-color .3s}button:hover{background-color:#0056b3}button:focus{outline:0}.modal{z-index:1000;width:100%;background-color:rgba(0,0,0,.7);transition:.3s}.modal-content{background-color:#fff;padding:2rem;border-radius:10px;width:calc(90vw - 4rem);max-width:auto;max-height:90vh;overflow-y:auto;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}@keyframes modalAnimation{from{opacity:0;transform:translateY(-50px)}to{opacity:1;transform:translateY(0)}}.modal .close:hover,.modal h2{color:#007bff}.modal .close{position:absolute;top:10px;right:20px;font-size:2rem;color:#333;cursor:pointer}.modal-playbook-content{display:none}.alert{border:1px solid red;border-radius:5px;padding:10px;margin:20px auto;display:block;text-align:center}.alert:before{content:"\26A0";margin-right:10px;color:red}@media (max-width:768px){.playbook-card,button{width:90%}header .container{flex-direction:column;align-items:flex-start;padding:0 1rem}header h1{font-size:1rem}.search-container input{width:100%;margin-top:.5rem}.main-container{display:block;height:auto}.sidebar{padding:1rem 0}.sidebar nav ul li{text-align:left;padding:.8rem 1rem}main{margin-left:0;padding:2rem 1rem}.playbook-list{flex-direction:column;align-items:center}button{padding:.6rem}.modal-content{width:calc(100vw - 2rem);max-height:80vh}.menu-toggle{position:fixed;top:.7rem;z-index:1000;background-color:#007bff;color:#fff;border:none;padding:.5rem 13rem;border-radius:5px;cursor:pointer;display:block;left:50%;transform:translateX(-50%)}.sidebar{width:100%;height:100%;position:fixed;top:0;left:-100%;background-color:#000;transition:.3s;overflow-y:auto}.sidebar.active{left:0}.sidebar nav ul{display:block;position:relative;padding:1rem;border-radius:10px}.search-container{display:none}}@media (min-width:768px) and (max-width:1024px){header .container{padding:0 1.5rem}header h1{font-size:1.1rem}.main-container{display:flex;flex-direction:column;height:auto}.sidebar{width:200px;height:auto}main{margin-left:210px;padding:2rem 1.5rem}.playbook-card{width:45%}}
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 9999; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+  .playbook-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0.7rem;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.playbook-card {
+    width: calc(26%);
+}
+
+@media (max-width: 768px) {
+    .playbook-card {
+        width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .playbook-card {
+        width: 100%;
+    }
+}
+
+.playbook-card:hover {
+    transform: translateY(-10px);
+}
+
+.playbook-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.playbook-card p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #666;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 0.6rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:focus {
+    outline: none;
+}
+
+.playbook-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1f1f1f;
+    color: white;
+    padding-top: 2rem;
+    width: 250px;
+    height: 100%;
+    transition: all 0.3s ease;
+    z-index: 999;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav ul li {
+    padding: 1rem;
+    text-align: center;
+}
+
+.sidebar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+    text-align: center;
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #007BFF;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        left: -250px;
+        opacity: 0;
+    }
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+.menu-hamburguer {
+display: none;
+position: absolute;
+top: 20px;
+left: 20px;
+z-index: 1000;
+cursor: pointer;
+}
+
+.menu-hamburguer div {
+width: 35px;
+height: 5px;
+background-color: #333;
+margin: 6px 0;
+transition: 0.4s;
+}
+
+@media screen and (max-width: 768px) {
+.menu-hamburguer {
+    display: block;
+}
+
+.sidebar {
+    left: -250px;
+    transition: left 0.3s ease-in-out;
+}
+
+.sidebar.open {
+    left: 0;
+}
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+    background-color: #f6f8fa;
+    animation: fadeIn 1s ease-in-out;
+}
+h1 {
+    color: #24292f;
+    font-size: 24px;
+    animation: fadeInUp 1s ease-in-out;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(27, 31, 35, 0.1);
+    padding: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+.section {
+    margin-top: 20px;
+    border: 1px solid #d8dee4;
+    border-radius: 6px;
+    padding: 15px;
+    background-color: #f6f8fa;
+    animation: fadeInUp 1s ease-in-out;
+}
+.section h2 {
+    margin-top: 0;
+    font-size: 20px;
+    background-color: #ddf4ff;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #b6e3ff;
+    color: #0969da;
+    animation: fadeInUp 1s ease-in-out;
+}
+.card {
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #ffffff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeInUp 1s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card h3 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #24292f;
+    animation: fadeInUp 0.5s ease-in-out;
+}
+.card p {
+    margin: 0;
+    font-size: 14px;
+    color: #57606a;
+    animation: fadeInUp 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

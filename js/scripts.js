@@ -1,26 +1,19 @@
-// Função para mostrar o modal
-function showModal(playbook) {
-    // Exibe o modal
+ function showModal(playbook) {
     document.getElementById('modal').style.display = 'block';
-    // Define o título do modal
     document.getElementById('modal-title').textContent = "Playbook: " + playbook.charAt(0).toUpperCase() + playbook.slice(1);
 
-    // Esconde todos os conteúdos do modal
     var allContent = document.querySelectorAll('.modal-playbook-content');
     allContent.forEach(function(content) {
         content.style.display = 'none';
     });
 
-    // Exibe o conteúdo correspondente ao playbook
     document.getElementById(playbook).style.display = 'block';
 }
 
-// Função para fechar o modal
 function closeModal() {
     document.getElementById('modal').style.display = 'none';
 }
 
-// Fechar o modal clicando fora dele
 window.onclick = function(event) {
     const modal = document.getElementById('modal');
     if (event.target === modal) {
@@ -28,39 +21,35 @@ window.onclick = function(event) {
     }
 }
 
-// Fechar o modal pressionando a tecla ESC
 window.addEventListener('keydown', function(event) {
-    if (event.key === "Escape") { // Verifica se a tecla pressionada foi ESC
-        closeModal(); // Fecha o modal
+    if (event.key === "Escape") { 
+        closeModal(); 
     }
 });
 document.querySelectorAll('.sidebar a').forEach(link => {
     link.addEventListener('click', function(event) {
         const href = this.getAttribute('href');
         if (href && href.startsWith('#')) {
-            event.preventDefault(); // Previne o comportamento padr o
+            event.preventDefault(); 
 
-            const targetId = href.substring(1); // ID do destino
+            const targetId = href.substring(1); 
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
-                // Rolagem com ajuste de deslocamento (caso haja header fixo ou similar)
-                const offset = 80; // Exemplo: ajuste de 80px
+                const offset = 80; 
                 const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
                 const offsetPosition = elementPosition - offset;
 
                 window.scrollTo({
                     top: offsetPosition,
-                    behavior: 'smooth' // Rolagem suave
+                    behavior: 'smooth'
                 });
             }
 
-            // Verifica se o link   de um playbook e fecha o modal
             if (targetId === 'playbooks') {
                 closeModal();
             }
         } else {
-            // Se for um link para uma se o, leva para a se o
             const sectionId = href.split('#')[1];
             const sectionElement = document.getElementById(sectionId);
             if (sectionElement) {
@@ -68,4 +57,23 @@ document.querySelectorAll('.sidebar a').forEach(link => {
             }
         }
     });
+});
+
+document.addEventListener("contextmenu", event => event.preventDefault());
+document.addEventListener("selectstart", event => event.preventDefault());
+function toggleSidebar() {
+    document.querySelector('.sidebar').classList.toggle('open');
+}
+
+
+document.addEventListener("click", function(event) {
+if (!event.target.closest(".menu-hamburguer")) {
+    document.querySelector(".sidebar").classList.remove("open");
+}
+});
+
+document.addEventListener("click", function(event) {
+    if (!event.target.closest(".menu-hamburguer")) {
+        document.querySelector(".sidebar").classList.remove("open");
+    }
 });
