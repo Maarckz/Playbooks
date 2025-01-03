@@ -48,7 +48,7 @@
 
 @media (max-width: 768px) {
     .playbook-card {
-        width: calc(50% - 1rem);
+        width: calc(90% - 1rem);
     }
 }
 
