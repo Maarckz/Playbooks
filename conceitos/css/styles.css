@@ -1,0 +1,390 @@
+.card-title, th {
+    font-weight: 700
+}
+header, main, table {
+    width: 100%
+}
+#playbooks h2, h2 {
+    color: #007bff;
+    font-size: 2rem
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+html {
+    scroll-behavior: smooth
+}
+body {
+    font-family: Roboto, sans-serif;
+    background-color: #f9f9f9;
+    color: #333
+}
+.sidebar {
+    overflow-y: auto
+}
+.card, .content, table {
+    overflow: hidden
+}
+.sidebar::-webkit-scrollbar {
+    width: .5em
+}
+.sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #555
+}
+header {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 1rem;
+    z-index: 1000;
+    position: sticky;
+    top: 0
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem
+}
+header h1 {
+    font-size: 1.2rem
+}
+.search-container input {
+    padding: .6rem;
+    width: 250px;
+    border-radius: 20px;
+    border: 2px solid #007bff;
+    transition: .3s
+}
+.search-container input:focus {
+    outline: 0;
+    border-color: #0056b3
+}
+.main-container {
+    display: flex;
+    height: 100vh
+}
+.modal, .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%
+}
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px
+}
+.card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .1);
+    transition: .2s
+}
+.collapsible, th {
+    background-color: #007bffc2
+}
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2)
+}
+.card-body {
+    padding: 15px
+}
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333
+}
+#playbooks h2, .playbook-card {
+    margin-bottom: 2rem;
+    text-align: center
+}
+.card-text {
+    font-size: 1rem;
+    color: #000;
+    line-height: 1.5
+}
+.collapsible, .sidebar, button, th {
+    color: #fff
+}
+table {
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1)
+}
+td, th {
+    border: none;
+    padding: 12px 15px;
+    text-align: left;
+    vertical-align: middle
+}
+tbody tr:nth-child(2n) {
+    background-color: #f3f3f3
+}
+tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer
+}
+tbody tr td {
+    border-bottom: 1px solid #ddd
+}
+.collapsible {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.2rem;
+    transition: background-color .3s, color .3s
+}
+.collapsible:hover {
+    background-color: #fdfdfd;
+    color: #222
+}
+.sidebar {
+    width: 250px;
+    background-color: #1f1f1f;
+    padding-top: 2rem;
+    transition: .3s;
+    z-index: 999
+}
+.sidebar nav ul {
+    list-style: none
+}
+.sidebar nav ul li {
+    padding: 1rem;
+    text-align: center
+}
+.sidebar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    transition: .3s
+}
+.sidebar nav ul li a:hover {
+    background-color: #007bff;
+    padding: .5rem;
+    border-radius: 5px
+}
+main {
+    margin-left: 270px;
+    padding: 3rem;
+    z-index: 1
+}
+section {
+    margin-bottom: 3rem
+}
+.playbook-card h3, .playbook-card p, h2 {
+    margin-bottom: 1rem
+}
+#playbooks {
+    margin-top: 3rem
+}
+.playbook-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
+.playbook-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+    width: 30%;
+    padding: 1.5rem;
+    transition: transform .3s
+}
+.playbook-card:hover {
+    transform: translateY(-10px)
+}
+.playbook-card h3 {
+    font-size: 1.25rem;
+    color: #333
+}
+.playbook-card p {
+    font-size: 1rem;
+    color: #666
+}
+button {
+    background-color: #007bff;
+    border: none;
+    padding: .8rem 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color .3s
+}
+button:hover {
+    background-color: #0056b3
+}
+button:focus {
+    outline: 0
+}
+.modal {
+    z-index: 1000;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    transition: .3s
+}
+.modal-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: calc(90vw - 4rem);
+    max-width: auto;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+@keyframes modalAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(-50px)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+.modal .close:hover, .modal h2 {
+    color: #007bff
+}
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer
+}
+.modal-playbook-content {
+    display: none
+}
+.alert {
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px auto;
+    display: block;
+    text-align: center
+}
+.alert:before {
+    content: "\26A0";
+    margin-right: 10px;
+    color: red
+}
+@media (max-width:768px) {
+    .playbook-card, button {
+        width: 90%
+    }
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 1rem
+    }
+    header h1 {
+        font-size: 1rem
+    }
+    .search-container input {
+        width: 100%;
+        margin-top: .5rem
+    }
+    .main-container {
+        display: block;
+        height: auto
+    }
+    .sidebar {
+        padding: 1rem 0
+    }
+    .sidebar nav ul li {
+        text-align: left;
+        padding: .8rem 1rem
+    }
+    main {
+        margin-left: 0;
+        padding: 2rem 1rem
+    }
+    .playbook-list {
+        flex-direction: column;
+        align-items: center
+    }
+    button {
+        padding: .6rem
+    }
+    .modal-content {
+        width: calc(100vw - 2rem);
+        max-height: 80vh
+    }
+    .menu-toggle {
+        position: fixed;
+        top: .7rem;
+        z-index: 1000;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: .5rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        display: block;
+        left: 46%;
+        transform: translateX(-50%)
+    }
+    .sidebar {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background-color: #000;
+        transition: .3s;
+        overflow-y: auto
+    }
+    .sidebar.active {
+        left: 0
+    }
+    .sidebar nav ul {
+        display: block;
+        position: relative;
+        padding: 1rem;
+        border-radius: 10px
+    }
+    .search-container {
+        display: none
+    }
+}
+@media (min-width:768px) and (max-width:1024px) {
+    header .container {
+        padding: 0 1.5rem
+    }
+    header h1 {
+        font-size: 1.1rem
+    }
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        height: auto
+    }
+    .sidebar {
+        width: 200px;
+        height: auto
+    }
+    main {
+        margin-left: 210px;
+        padding: 2rem 1.5rem
+    }
+    .playbook-card {
+        width: 45%
+    }
+}
