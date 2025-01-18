@@ -1,0 +1,99 @@
+<h2>Playbook de Segurança em Dispositivos Móveis</h2>
+
+<h3>1. Propósito</h3>
+<p>Proteger dispositivos móveis contra ameaças como malware, roubo de dados e acessos não autorizados, garantindo a segurança de informações corporativas e pessoais.</p>
+
+<h3>2. Escopo</h3>
+<p>Aplicável a dispositivos móveis corporativos e pessoais usados para trabalho (BYOD), considerando:</p>
+<ul>
+    <li>Configuração inicial e manutenção contínua.</li>
+    <li>Políticas de segurança para dispositivos iOS, Android e outros.</li>
+    <li>Detecção e resposta a ameaças móveis.</li>
+</ul>
+
+<h3>3. Papéis e Responsabilidades</h3>
+<table>
+    <tr>
+        <th>Papel</th>
+        <th>Responsabilidade</th>
+    </tr>
+    <tr>
+        <td>Administrador de TI</td>
+        <td>Gerenciar políticas e ferramentas de MDM (Mobile Device Management).</td>
+    </tr>
+    <tr>
+        <td>Usuários Finais</td>
+        <td>Seguir as diretrizes de segurança e evitar práticas inseguras.</td>
+    </tr>
+    <tr>
+        <td>Especialista em Segurança</td>
+        <td>Realizar auditorias de dispositivos móveis e análise de ameaças.</td>
+    </tr>
+</table>
+
+<h3>4. Etapas do Processo</h3>
+
+<h4>4.1. Configuração Inicial</h4>
+<ul>
+    <li>Ativar senha de bloqueio, biometria ou PIN no dispositivo.</li>
+    <li>Configurar a criptografia do dispositivo (nativa ou via MDM).</li>
+    <li>Habilitar o recurso de localização e apagamento remoto (Find My Device, Google Find My Device).</li>
+    <li>Atualizar o sistema operacional e aplicativos regularmente.</li>
+</ul>
+<p>Ferramentas recomendadas: Microsoft Intune, VMware Workspace ONE.</p>
+
+<h4>4.2. Implementação de Políticas de Uso</h4>
+<ul>
+    <li>Implementar políticas de uso aceitável (BYOD ou dispositivos corporativos).</li>
+    <li>Restringir o download de aplicativos de fontes desconhecidas.</li>
+    <li>Exigir autenticação multifator para acesso a aplicativos corporativos.</li>
+</ul>
+<p>Ferramentas recomendadas: Jamf, MobileIron.</p>
+
+<h4>4.3. Controle de Acesso</h4>
+<ul>
+    <li>Aplicar políticas de acesso condicional baseadas em risco (Zero Trust).</li>
+    <li>Configurar autenticação via SSO para aplicativos empresariais.</li>
+    <li>Monitorar conexões de redes Wi-Fi e bloquear redes públicas inseguras.</li>
+</ul>
+<p>Ferramentas recomendadas: Okta, Google Workspace Security.</p>
+
+<h4>4.4. Proteção Contra Ameaças</h4>
+<ul>
+    <li>Instalar soluções de segurança para dispositivos móveis (antivírus, EDR).</li>
+    <li>Monitorar comportamento de aplicativos e verificar permissões de acesso.</li>
+    <li>Bloquear acesso a sites maliciosos via DNS seguro.</li>
+</ul>
+<p>Ferramentas recomendadas: Lookout, Zimperium, Norton Mobile Security.</p>
+
+<h4>4.5. Monitoramento e Auditoria</h4>
+<ul>
+    <li>Realizar verificações periódicas de dispositivos para conformidade com políticas.</li>
+    <li>Monitorar logs de atividade em dispositivos gerenciados.</li>
+    <li>Detectar e responder a tentativas de acesso não autorizado.</li>
+</ul>
+<p>Ferramentas recomendadas: SolarWinds Mobile Log Manager, Splunk.</p>
+
+<h4>4.6. Educação e Conscientização</h4>
+<ul>
+    <li>Treinar usuários para evitar phishing móvel (smishing).</li>
+    <li>Ensinar boas práticas de segurança, como evitar redes públicas.</li>
+    <li>Realizar campanhas de conscientização regulares.</li>
+</ul>
+<p>Ferramentas recomendadas: KnowBe4 Mobile, Cybersecurity Awareness Programs.</p>
+
+<h4>4.7. Resposta a Incidentes</h4>
+<ul>
+    <li>Isolar dispositivos comprometidos para análise.</li>
+    <li>Revogar acesso corporativo em dispositivos suspeitos.</li>
+    <li>Realizar análise forense em casos de ataques mais avançados.</li>
+</ul>
+<p>Ferramentas recomendadas: Cellebrite, Magnet AXIOM.</p>
+
+<h3>5. Pós-Implementação</h3>
+<ul>
+    <li>Revisar configurações e políticas regularmente.</li>
+    <li>Atualizar ferramentas de segurança conforme necessário.</li>
+    <li>Monitorar tendências de ameaças móveis.</li>
+</ul>
+

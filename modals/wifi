@@ -1,0 +1,143 @@
+<h2>Playbook de Segurança em Redes Wi-Fi</h2>
+
+<h3>1. Propósito</h3>
+<p>Proteger redes Wi-Fi contra acessos não autorizados, ataques cibernéticos e exploração de vulnerabilidades.</p>
+
+<h3>2. Escopo</h3>
+<p>Aplicável a redes Wi-Fi corporativas, residenciais ou públicas, abrangendo:</p>
+<ul>
+    <li>Configuração de redes seguras.</li>
+    <li>Monitoramento e mitigação de ameaças.</li>
+    <li>Garantia de conformidade com as melhores práticas de segurança.</li>
+</ul>
+
+<h3>3. Papéis e Responsabilidades</h3>
+<table>
+    <tr>
+        <th>Papel</th>
+        <th>Responsabilidade</th>
+    </tr>
+    <tr>
+        <td>Administrador de Redes</td>
+        <td>Configurar e gerenciar redes Wi-Fi.</td>
+    </tr>
+    <tr>
+        <td>Especialista em Segurança</td>
+        <td>Realizar auditorias e configurar defesas avançadas.</td>
+    </tr>
+    <tr>
+        <td>Usuários Finais</td>
+        <td>Seguir práticas seguras ao utilizar redes Wi-Fi.</td>
+    </tr>
+</table>
+
+<h3>4. Etapas do Processo</h3>
+
+<h4>4.1. Configuração Inicial de Segurança</h4>
+<ul>
+    <li>Ações:</li>
+    <ul>
+        <li>Alterar credenciais padrão do roteador e da interface administrativa.</li>
+        <li>Configurar senhas complexas para a rede Wi-Fi.</li>
+        <li>Alterar o SSID padrão para um nome único, evitando informações pessoais.</li>
+        <li>Ativar o protocolo de segurança WPA3 (se suportado).</li>
+        <li>Desativar o WPS (Wi-Fi Protected Setup).</li>
+    </ul>
+    <li>Ferramentas recomendadas:</li>
+    <ul>
+        <li>Painéis de configuração do roteador (Cisco, Ubiquiti, TP-Link).</li>
+    </ul>
+</ul>
+
+<h4>4.2. Segmentação de Redes</h4>
+<ul>
+    <li>Ações:</li>
+    <ul>
+        <li>Criar redes separadas para usuários, dispositivos IoT e convidados.</li>
+        <li>Limitar a largura de banda para redes de convidados.</li>
+        <li>Aplicar políticas de firewall para cada rede segmentada.</li>
+    </ul>
+    <li>Ferramentas recomendadas:</li>
+    <ul>
+        <li>Soluções como VLANs (Virtual LANs).</li>
+    </ul>
+</ul>
+
+<h4>4.3. Controle de Acesso</h4>
+<ul>
+    <li>Ações:</li>
+    <ul>
+        <li>Habilitar autenticação baseada em 802.1X (RADIUS) para redes empresariais.</li>
+        <li>Configurar listas de controle de acesso (ACLs) por endereço MAC.</li>
+        <li>Limitar o número máximo de dispositivos conectados por SSID.</li>
+    </ul>
+    <li>Ferramentas recomendadas:</li>
+    <ul>
+        <li>Servidores RADIUS (FreeRADIUS), sistemas NAC (Network Access Control).</li>
+    </ul>
+</ul>
+
+<h4>4.4. Implementação de Monitoramento e Alertas</h4>
+<ul>
+    <li>Ações:</li>
+    <ul>
+        <li>Configurar ferramentas de monitoramento para detectar dispositivos não autorizados.</li>
+        <li>Configurar alertas para conexões suspeitas ou falhas de autenticação.</li>
+        <li>Realizar análises periódicas de logs.</li>
+    </ul>
+    <li>Ferramentas recomendadas:</li>
+    <ul>
+        <li>Monitoramento: WIDS/WIPS (Wireless Intrusion Detection/Prevention Systems), Ekahau.</li>
+    </ul>
+</ul>
+
+<h4>4.5. Mitigação de Ameaças</h4>
+<ul>
+    <li>Ações:</li>
+    <ul>
+        <li>Habilitar atualizações automáticas de firmware no roteador.</li>
+        <li>Configurar firewalls locais e sistemas de prevenção contra intrusões (IPS).</li>
+        <li>Implementar redes VPN para usuários remotos.</li>
+    </ul>
+    <li>Ferramentas recomendadas:</li>
+    <ul>
+        <li>VPN: OpenVPN, WireGuard.</li>
+        <li>Firewall: pfSense, UFW.</li>
+    </ul>
+</ul>
+
+<h4>4.6. Educação e Conscientização</h4>
+<ul>
+    <li>Ações:</li>
+    <ul>
+        <li>Realizar treinamentos para usuários finais sobre práticas seguras de Wi-Fi.</li>
+        <li>Divulgar informações sobre os riscos de redes públicas.</li>
+        <li>Incentivar o uso de redes VPN ao se conectar a redes inseguras.</li>
+    </ul>
+    <li>Ferramentas recomendadas:</li>
+    <ul>
+        <li>Treinamentos: KnowBe4, Cyber Awareness.</li>
+    </ul>
+</ul>
+
+<h4>4.7. Auditoria e Testes de Penetração</h4>
+<ul>
+    <li>Ações:</li>
+    <ul>
+        <li>Realizar auditorias regulares de segurança Wi-Fi.</li>
+        <li>Testar vulnerabilidades usando ferramentas especializadas.</li>
+        <li>Avaliar a eficácia das configurações de segurança implementadas.</li>
+    </ul>
+    <li>Ferramentas recomendadas:</li>
+    <ul>
+        <li>Pentest: Aircrack-ng, Kismet.</li>
+    </ul>
+</ul>
+
+<h3>5. Pós-Implementação</h3>
+<ul>
+    <li>Revisar configurações periodicamente.</li>
+    <li>Monitorar logs e responder a alertas.</li>
+    <li>Atualizar os dispositivos regularmente.</li>
+</ul>
+

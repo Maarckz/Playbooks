@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Playbook para Prevenir o Sequestro de Downloads (Download Hijacking)</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <h1>Playbook para Prevenir o Sequestro de Downloads (Download Hijacking)</h1>
+  <h2>1. Propósito</h2>
+  <p>Este playbook fornece orientações sobre como prevenir o sequestro de downloads (Download Hijacking), que ocorre quando arquivos transferidos por meio de um servidor legítimo ou rede são interceptados, manipulados ou substituídos por arquivos maliciosos. O objetivo é garantir a integridade e segurança dos arquivos transferidos, protegendo os usuários contra o download de malware ou software indesejado.</p>
+  <h2>2. Escopo</h2>
+  <p>Este playbook se aplica a todos os sistemas que permitem o download de arquivos, incluindo servidores web, sistemas de gerenciamento de downloads, aplicativos móveis e plataformas de compartilhamento de arquivos. A abordagem também se aplica a redes que distribuem arquivos para usuários finais ou outros sistemas.</p>
+  <h2>3. Papéis e Responsabilidades</h2>
+  <table>
+    <tr>
+      <th>Papel</th>
+      <th>Responsabilidade</th>
+    </tr>
+    <tr>
+      <td>Equipe de Segurança</td>
+      <td>Monitorar e mitigar riscos associados ao sequestro de downloads, implementando soluções de segurança.</td>
+    </tr>
+    <tr>
+      <td>Equipe de TI</td>
+      <td>Implementar controles técnicos, como criptografia e validação de integridade, nos sistemas de download.</td>
+    </tr>
+    <tr>
+      <td>Desenvolvedores</td>
+      <td>Garantir que as funções de download em plataformas e aplicativos sejam seguras e protejam a integridade dos arquivos.</td>
+    </tr>
+    <tr>
+      <td>Equipe de Compliance</td>
+      <td>Garantir que as práticas de download estejam em conformidade com regulamentações de segurança e privacidade.</td>
+    </tr>
+    <tr>
+      <td>Usuários Finais</td>
+      <td>Evitar clicar em links desconhecidos ou suspeitos, garantir que os arquivos sejam verificados antes de abrir.</td>
+    </tr>
+  </table>
+  <h2>4. Procedimentos Detalhados</h2>
+  <h3>4.1. Prevenção de Sequestro de Downloads</h3>
+  <ul>
+    <li>Uso de HTTPS (SSL/TLS): Sempre utilize conexões HTTPS para garantir que os dados transferidos entre o servidor e o cliente sejam criptografados e protegidos contra interceptação.</li>
+    <li>Verificação de Integridade dos Arquivos: Implementar a verificação de integridade de arquivos por meio de somas de verificação (hashes) como SHA-256 ou GPG para garantir que os arquivos não foram alterados durante o download.</li>
+    <li>Certificados e Assinaturas Digitais: Para garantir a autenticidade dos arquivos, use assinaturas digitais e certificados para validar a origem e integridade dos arquivos transferidos.</li>
+    <li>Bloqueio de Scripts Maliciosos: Bloqueie ou desabilite scripts no lado do cliente (JavaScript, Flash, etc.) durante o processo de download para evitar que sejam usados para redirecionar ou modificar downloads.</li>
+    <li>Implementação de Controles de Acesso: Limite o acesso a áreas críticas de download, garantindo que somente usuários autorizados ou sistemas confiáveis possam fazer downloads.</li>
+  </ul>
+  <h3>4.2. Monitoramento e Detecção de Atividades Suspeitas</h3>
+  <ul>
+    <li>Monitoramento de Atividades de Download: Monitore e registre todas as atividades de download em seus servidores, verificando padrões de acesso incomuns ou atividades suspeitas, como o aumento inesperado de downloads em um curto período.</li>
+    <li>Análise de Logs de Rede: Realize a análise dos logs de rede para identificar comportamentos anômalos que possam indicar um ataque de download hijacking, como redirecionamentos para servidores externos ou modificações nos arquivos baixados.</li>
+    <li>Detecção de URLs Maliciosas: Implemente sistemas que possam detectar links maliciosos, como links de download que redirecionam os usuários para sites falsificados ou infectados.</li>
+  </ul>
+  <h3>4.3. Resposta a Incidentes de Sequestro de Downloads</h3>
+  <ul>
+    <li>Isolamento de Sistemas Comprometidos: Caso seja identificado um ataque de sequestro de downloads, isole os servidores ou sistemas comprometidos para evitar a propagação do ataque e interromper a distribuição de arquivos maliciosos.</li>
+    <li>Verificação de Arquivos Baixados: Se um download foi comprometido, verifique os arquivos baixados para detectar e remover qualquer software malicioso.</li>
+    <li>Bloqueio de Links Suspeitos: Imediatamente bloqueie qualquer link de download que tenha sido alterado ou que esteja redirecionando para fontes não confiáveis.</li>
+    <li>Análise Forense: Realize uma investigação detalhada para entender como o ataque ocorreu e para quais sistemas ou dados ele teve acesso.</li>
+  </ul>
+  <h3>4.4. Comunicação e Notificação</h3>
+  <ul>
+    <li>Notificação Interna: Informe as equipes internas sobre o incidente e os passos a serem seguidos, incluindo a mitigação e o bloqueio de atividades relacionadas ao sequestro de downloads.</li>
+    <li>Notificação ao Usuário: Caso os usuários tenham sido afetados, envie instruções claras sobre como verificar os arquivos baixados e fornecer soluções para remoção de malware, se necessário.</li>
+    <li>Notificação de Autoridades Regulatórias: Se o incidente resultar na exposição de dados pessoais ou sensíveis, notifique as autoridades regulatórias conforme exigido por leis como o GDPR ou LGPD.</li>
+  </ul>
+  <h3>4.5. Análise Pós-Incidência e Melhoria</h3>
+  <ul>
+    <li>Revisão de Causa Raiz: Realize uma análise completa para entender como o sequestro de downloads ocorreu, identificando vulnerabilidades no sistema que precisam ser corrigidas.</li>
+    <li>Correção de Vulnerabilidades: Implemente as correções necessárias para evitar que o ataque se repita, incluindo a revisão de controles de acesso, políticas de download e protocolos de segurança.</li>
+    <li>Revisão de Processos de Download: Atualize os processos de download e segurança, incluindo a utilização de novas ferramentas de validação de integridade e criptografia de arquivos.</li>
+  </ul>
+  <h2>5. Pós-Implementação</h2>
+  <ul>
+    <li>Revisão Contínua de Segurança: Realize auditorias regulares nos sistemas de download para garantir que as melhores práticas de segurança estejam sendo seguidas e que novas vulnerabilidades não estejam presentes.</li>
+    <li>Treinamento de Usuários: Ofereça treinamento contínuo para usuários finais sobre como identificar e evitar links de download suspeitos, além de orientá-los sobre como verificar a integridade de arquivos baixados.</li>
+    <li>Monitoramento Proativo: Mantenha monitoramento ativo sobre os sistemas que oferecem download de arquivos para identificar e bloquear possíveis tentativas de ataque.</li>
+  </ul>
+</body>
+</html>

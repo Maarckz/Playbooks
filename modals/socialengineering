@@ -1,0 +1,152 @@
+<h1>Playbook para Prevenir Ataques de Engenharia Social</h1>
+<h2>1. Propósito</h2>
+<p>Este playbook fornece orientações sobre como prevenir ataques de engenharia social, abordando práticas e controles de segurança para reduzir a vulnerabilidade a tentativas de manipulação de pessoas, informações e processos. A engenharia social é uma técnica de ataque em que os invasores exploram a confiança humana para obter acesso não autorizado a sistemas, dados sensíveis ou realizar outras ações prejudiciais.</p>
+<h2>2. Escopo</h2>
+<p>Este playbook aplica-se a todas as pessoas dentro da organização, incluindo funcionários, prestadores de serviços e parceiros. Ele cobre os ataques mais comuns de engenharia social, como phishing, spear phishing, pretexting, vishing (phishing por voz), e ataques presenciais.</p>
+<h2>3. Papéis e Responsabilidades</h2>
+<table>
+    <tr>
+        <th>Papel</th>
+        <th>Responsabilidade</th>
+    </tr>
+    <tr>
+        <td>Equipe de Segurança</td>
+        <td>Desenvolver políticas de segurança, identificar ameaças de engenharia social e implementar medidas preventivas.</td>
+    </tr>
+    <tr>
+        <td>Líder de TI</td>
+        <td>Coordenar as ações técnicas para proteger os sistemas e dados sensíveis contra manipulações externas.</td>
+    </tr>
+    <tr>
+        <td>RH/Compliance</td>
+        <td>Implementar treinamentos regulares de conscientização sobre segurança e engenharia social.</td>
+    </tr>
+    <tr>
+        <td>Usuários Finais</td>
+        <td>Seguir as melhores práticas de segurança, relatar tentativas de ataque e evitar ações que possam comprometer a segurança.</td>
+    </tr>
+</table>
+<h2>4. Procedimentos Detalhados</h2>
+<h3>4.1. Identificação de Tentativas de Engenharia Social</h3>
+<p>
+    Ações:
+    <br>
+    Monitoramento de Atividades Suspeitas: Fique atento a comunicações inesperadas ou urgentes que solicitam informações confidenciais ou acesso a sistemas.
+    <br>
+    Reconhecimento de Sinais Comuns de Phishing: Tente identificar e-mails, mensagens de texto ou chamadas telefônicas que contenham erros gramaticais, links ou anexos suspeitos, e solicitações de informações pessoais.
+    <br>
+    Validação de Comunicação: Se uma solicitação parecer suspeita (por e-mail ou telefone), verifique sua autenticidade por meios alternativos, como ligar diretamente para a pessoa ou empresa solicitante.
+</p>
+<p>Ferramentas:
+    <br>
+    Ferramentas de email filtering e anti-phishing (Proofpoint, Barracuda).
+    <br>
+    Soluções de detecção de fraude em comunicação (SonicWall, Cisco Umbrella).
+    <br>
+    Ferramentas de monitoramento de tráfego de rede (Wireshark, Zeek).
+</p>
+<h3>4.2. Prevenção de Engenharia Social</h3>
+<p>
+    Ações:
+    <br>
+    Treinamento Regular de Conscientização sobre Segurança: Conduza treinamentos periódicos para todos os colaboradores sobre os tipos de ataques de engenharia social, como identificar tentativas de phishing e vishing, e a importância de manter a confidencialidade de dados.
+    <br>
+    Implementação de Políticas de Segurança: Estabeleça políticas claras que instruam os colaboradores a não fornecer informações sensíveis por e-mail, telefone ou outros meios sem confirmação adequada.
+    <br>
+    Uso de Autenticação Multifatorial (MFA): Aplique autenticação multifatorial em todos os sistemas críticos e contas de acesso, dificultando o sucesso de tentativas de engenharia social.
+    <br>
+    Simulações de Phishing: Realize testes regulares de phishing simulados para avaliar a capacidade dos colaboradores de detectar tentativas de engenharia social.
+    <br>
+    Alertas e Canais de Denúncia: Crie canais de comunicação claros e acessíveis para os funcionários denunciarem tentativas de engenharia social.
+</p>
+<p>Ferramentas:
+    <br>
+    Plataformas de treinamento em segurança (KnowBe4, Wombat Security).
+    <br>
+    Soluções de MFA (Duo, Okta).
+    <br>
+    Simuladores de phishing (PhishMe, Cofense).
+    <br>
+    Ferramentas de gestão de incidentes de segurança (ServiceNow, JIRA).
+</p>
+<h3>4.3. Análise de Suspeitas de Engenharia Social</h3>
+<p>
+    Ações:
+    <br>
+    Investigação de Incidentes: Caso uma tentativa de engenharia social seja identificada, inicie uma investigação para determinar sua origem e o impacto potencial.
+    <br>
+    Verificação de Sistemas Afetados: Verifique se houve acesso indevido a sistemas ou dados sensíveis e se informações confidenciais foram divulgadas.
+    <br>
+    Coleta de Evidências: Documente todas as evidências relacionadas à tentativa de engenharia social, como mensagens de phishing, registros de chamadas, e-mails, e qualquer comunicação suspeita.
+</p>
+<p>Ferramentas:
+    <br>
+    Ferramentas de análise forense (Autopsy, FTK Imager).
+    <br>
+    Ferramentas de análise de e-mail (X1 Social Discovery, EmailAnalyzer).
+    <br>
+    Sistemas de SIEM para coleta de logs (Splunk, QRadar).
+</p>
+<h3>4.4. Contenção e Resposta</h3>
+<p>
+    Ações:
+    <br>
+    Isolamento de Sistemas Comprometidos: Se houver suspeita de comprometimento de sistemas, isole-os imediatamente para prevenir a propagação do ataque.
+    <br>
+    Revogação de Acessos Comprometidos: Revogue acessos a sistemas e dados sensíveis para qualquer usuário ou dispositivo afetado pela tentativa de engenharia social.
+    <br>
+    Restabelecimento de Controles de Segurança: Se forem encontrados sistemas comprometidos, reforce as configurações de segurança, como senhas fortes, MFA e criptografia.
+</p>
+<p>Ferramentas:
+    <br>
+    Ferramentas de controle de acesso (CyberArk, HashiCorp Vault).
+    <br>
+    Ferramentas de isolamento de rede (pfSense, Cisco ASA).
+    <br>
+    Soluções de gerenciamento de identidades (Microsoft Active Directory, Okta).
+</p>
+<h3>4.5. Comunicação e Notificação</h3>
+<p>
+    Ações:
+    <br>
+    Comunicação Interna: Notifique as equipes internas sobre o incidente e forneça orientações claras sobre como evitar cair em tentativas de engenharia social.
+    <br>
+    Notificação de Stakeholders Externos: Se o incidente afetar parceiros ou clientes, entre em contato com eles para informar o ocorrido e as medidas tomadas.
+    <br>
+    Notificação Regulatória: Caso informações confidenciais ou dados pessoais tenham sido comprometidos, notifique as autoridades competentes (como GDPR ou LGPD).
+</p>
+<p>Ferramentas:
+    <br>
+    Modelos de comunicação de incidentes.
+    <br>
+    Sistemas de comunicação corporativa (Slack, Teams, Email).
+    <br>
+    Plataformas de gestão de incidentes (ServiceNow, JIRA).
+</p>
+<h3>4.6. Análise Pós-Incidência e Melhorias</h3>
+<p>
+    Ações:
+    <br>
+    Revisão de Políticas e Procedimentos: Após o incidente, revise as políticas de segurança e os processos de resposta a incidentes, incorporando as lições aprendidas para melhorar a prevenção de ataques de engenharia social.
+    <br>
+    Aprimoramento de Treinamentos: Ajuste os programas de treinamento com base nas falhas identificadas, para garantir que todos os colaboradores estejam preparados para identificar e reagir a tentativas de engenharia social.
+    <br>
+    Monitoramento Contínuo: Melhore os sistemas de monitoramento e de análise comportamental para detectar e bloquear atividades suspeitas.
+</p>
+<p>Ferramentas:
+    <br>
+    Ferramentas de gestão de conformidade (RSA Archer, GRC).
+    <br>
+    Ferramentas de monitoramento de usuários e redes (Zscaler, Palo Alto).
+    <br>
+    Ferramentas de análise de comportamento (Darktrace, Vectra AI).
+<h3>5. Pós-Implementação</h3>
+<p>
+    Ações:
+    <br>
+    Treinamento e Conscientização: Realizar treinamentos regulares de conscientização sobre engenharia social para todos os colaboradores e realizar simulações de ataques para medir a resposta dos funcionários.
+    <br>
+    Revisão das Controles de Segurança: Reforçar a segurança da rede e os sistemas de autenticação, garantindo que técnicas de engenharia social não consigam contornar os controles.
+    <br>
+    Auditorias e Testes Regulares: Realizar auditorias de segurança periódicas e testes de penetração para identificar e corrigir vulnerabilidades que possam ser exploradas por ataques de engenharia social.
+

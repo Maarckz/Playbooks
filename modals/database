@@ -1,0 +1,139 @@
+<h1>Playbook de Segurança em Banco de Dados</h1>
+<h2>1. Propósito</h2>
+<p>Proteger bancos de dados contra acessos não autorizados, manipulação indevida e vazamento de informações, garantindo a integridade, confidencialidade e disponibilidade dos dados.</p>
+<h2>2. Escopo</h2>
+<p>Aplicável a bancos de dados relacionais (como MySQL, PostgreSQL, SQL Server e Oracle) e não relacionais (como MongoDB, Cassandra e DynamoDB).</p>
+<h2>3. Papéis e Responsabilidades</h2>
+<table>
+    <tr>
+        <th>Papel</th>
+        <th>Responsabilidade</th>
+    </tr>
+    <tr>
+        <td>Administrador de Banco de Dados (DBA)</td>
+        <td>Configuração, manutenção e backups do banco de dados.</td>
+    </tr>
+    <tr>
+        <td>Especialista em Segurança de TI</td>
+        <td>Monitoramento e implementação de políticas avançadas de segurança.</td>
+    </tr>
+    <tr>
+        <td>Desenvolvedores de Software</td>
+        <td>Implementação de interações seguras com o banco de dados.</td>
+    </tr>
+</table>
+<h2>4. Procedimentos Detalhados</h2>
+<ol>
+    <li>
+        <h3>4.1. Configuração Inicial</h3>
+        <p>Ações:</p>
+        <ul>
+            <li>Instale o banco de dados utilizando as configurações padrão mínimas e seguras.</li>
+            <li>Atualize o sistema operacional e o software do banco de dados para as versões mais recentes.</li>
+            <li>Configure conexões criptografadas (TLS/SSL) para proteger os dados em trânsito.</li>
+        </ul>
+        <p>Ferramentas:</p>
+        <ul>
+            <li>PostgreSQL: Configuração do pg_hba.conf para TLS.</li>
+            <li>MySQL: Uso de mysql_secure_installation para configurações iniciais.</li>
+        </ul>
+    </li>
+    <li>
+        <h3>4.2. Controle de Acesso</h3>
+        <p>Ações:</p>
+        <ul>
+            <li>Implemente o princípio do menor privilégio, garantindo que usuários e aplicações tenham apenas as permissões necessárias.</li>
+            <li>Crie perfis de acesso baseados em funções e restrinja o acesso por IPs confiáveis.</li>
+            <li>Use autenticação multifator (MFA) para administradores.</li>
+        </ul>
+        <p>Ferramentas:</p>
+        <ul>
+            <li>PostgreSQL: Gerenciamento de privilégios com ROLES.</li>
+            <li>MySQL: Uso de comandos GRANT e REVOKE.</li>
+        </ul>
+    </li>
+    <li>
+        <h3>4.3. Hardening do Banco de Dados</h3>
+        <p>Ações:</p>
+        <ul>
+            <li>Desative serviços desnecessários e extensões que não estejam em uso.</li>
+            <li>Limite o acesso à interface de administração (phpMyAdmin, pgAdmin) para IPs específicos.</li>
+            <li>Configure políticas de segurança, como tempo limite para sessões.</li>
+        </ul>
+        <p>Ferramentas:</p>
+        <ul>
+            <li>Configuração no arquivo my.cnf (MySQL) ou postgresql.conf (PostgreSQL).</li>
+        </ul>
+    </li>
+    <li>
+        <h3>4.4. Monitoramento e Auditoria</h3>
+        <p>Ações:</p>
+        <ul>
+            <li>Configure logs para registrar acessos, alterações em dados e tentativas de autenticação.</li>
+            <li>Utilize sistemas de detecção de intrusão (IDS) para identificar comportamentos anômalos.</li>
+            <li>Monitore as consultas executadas para identificar possíveis vulnerabilidades.</li>
+        </ul>
+        <p>Ferramentas:</p>
+        <ul>
+            <li>PostgreSQL: Extensão pgAudit.</li>
+            <li>MySQL: Logs gerais e de consultas lentas.</li>
+        </ul>
+    </li>
+    <li>
+        <h3>4.5. Backup e Recuperação</h3>
+        <p>Ações:</p>
+        <ul>
+            <li>Realize backups automáticos e frequentes de todo o banco de dados.</li>
+            <li>Teste regularmente os backups para garantir sua integridade e capacidade de recuperação.</li>
+            <li>Armazene os backups criptografados em local seguro, fora do ambiente de produção.</li>
+        </ul>
+        <p>Ferramentas:</p>
+        <ul>
+            <li>MySQL: mysqldump, MySQL Enterprise Backup.</li>
+            <li>PostgreSQL: pg_dump ou pg_basebackup.</li>
+        </ul>
+    </li>
+    <li>
+        <h3>4.6. Prevenção Contra Ameaças</h3>
+        <p>Ações:</p>
+        <ul>
+            <li>Implante firewalls para proteger o banco de dados de acessos maliciosos.</li>
+            <li>Configure consultas parametrizadas para prevenir injeções SQL.</li>
+            <li>Limite a taxa de conexões para evitar ataques de força bruta.</li>
+        </ul>
+        <p>Ferramentas:</p>
+        <ul>
+            <li>Firewalls: AWS WAF, Cloudflare.</li>
+            <li>IDS: Snort, Suricata.</li>
+        </ul>
+    </li>
+    <li>
+        <h3>4.7. Resposta a Incidentes</h3>
+        <p>Ações:</p>
+        <ul>
+            <li>Isolar o banco de dados comprometido imediatamente.</li>
+            <li>Analisar logs para determinar a origem do incidente.</li>
+            <li>Restaurar o banco de dados a partir de um backup íntegro.</li>
+        </ul>
+        <p>Ferramentas:</p>
+        <ul>
+            <li>Logs: Splunk, Elastic Stack (ELK).</li>
+        </ul>
+    </li>
+    <li>
+        <h3>4.8. Revisão Contínua</h3>
+        <p>Ações:</p>
+        <ul>
+            <li>Realize auditorias regulares para identificar falhas ou vulnerabilidades no ambiente do banco de dados.</li>
+            <li>Atualize continuamente as políticas de segurança de acordo com as melhores práticas.</li>
+            <li>Treine equipes de desenvolvimento e administração para práticas seguras.</li>
+        </ul>
+        <p>Ferramentas:</p>
+        <ul>
+            <li>Pentests: SQLMap, Nessus.</li>
+        </ul>
+    </li>
+</ol>
+<h2>5. Pós-Implementação</h2>
+<p>Monitore continuamente o desempenho e a segurança do banco de dados.</p>
+<p>Atualize ferramentas, scripts e processos de segurança conforme novas ameaças surgirem.</p>

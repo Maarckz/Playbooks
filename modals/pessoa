@@ -1,0 +1,106 @@
+<h1>Playbook de Saída de Pessoa da Empresa</h1>
+<p>1. Propósito</p>
+<p>Garantir que a saída de um colaborador, seja por desligamento ou mudança de função, seja tratada de maneira segura e eficiente, protegendo os ativos da organização, revogando acessos e evitando vazamento de informações.</p>
+<p>2. Escopo</p>
+<p>Aplica-se a todos os colaboradores (efetivos, temporários, estagiários, terceiros) e abrange recursos físicos e digitais.</p>
+<p>3. Papéis e Responsabilidades</p>
+<ul>
+    <li>Papel	Responsabilidade</li>
+    <li>Recursos Humanos (RH)	Informar o desligamento e gerenciar aspectos legais e administrativos.</li>
+    <li>TI	Revogar acessos, proteger dados e garantir a devolução de equipamentos.</li>
+    <li>Líder/Supervisor	Coordenar a transição de atividades e validar devoluções e procedimentos.</li>
+    <li>Segurança Corporativa	Gerenciar acesso físico a instalações e recuperação de crachás ou chaves.</li>
+</ul>
+<p>4. Procedimentos Detalhados</p>
+<p>4.1. Comunicação Interna</p>
+<ul>
+    <li>Ações:</li>
+    <li>O RH deve informar formalmente a TI sobre a saída do colaborador com antecedência, sempre que possível.</li>
+    <li>Definir a data e hora para encerramento de acessos digitais e físicos.</li>
+    <li>Ferramentas:</li>
+    <li>Sistema de gestão de RH (SAP, ADP, etc.).</li>
+    <li>Checklist de desligamento.</li>
+</ul>
+<p>4.2. Revogação de Acessos Digitais</p>
+<ul>
+    <li>Ações:</li>
+    <li>Desativar a conta de e-mail e outros acessos corporativos no momento exato da saída.</li>
+    <li>Revogar permissões de acesso a sistemas, plataformas e VPNs.</li>
+    <li>Identificar e desativar tokens de autenticação multifator (2FA).</li>
+    <li>Encerrar sessões ativas em dispositivos remotos.</li>
+    <li>Ferramentas:</li>
+    <li>Active Directory para contas locais.</li>
+    <li>Ferramentas de gerenciamento de acessos (Okta, CyberArk).</li>
+    <li>Soluções de MDM para dispositivos móveis (Intune, Jamf).</li>
+</ul>
+<p>4.3. Recuperação de Equipamentos</p>
+<ul>
+    <li>Ações:</li>
+    <li>Recuperar todos os dispositivos fornecidos pela empresa, como laptops, celulares e tokens de autenticação.</li>
+    <li>Verificar a integridade dos equipamentos e identificar possíveis backups locais não autorizados.</li>
+    <li>Garantir a devolução de crachás, chaves, cartões de acesso e outros itens físicos.</li>
+    <li>Ferramentas:</li>
+    <li>Checklists físicos.</li>
+    <li>Sistemas de inventário de TI.</li>
+</ul>
+<p>4.4. Proteção de Dados</p>
+<ul>
+    <li>Ações:</li>
+    <li>Verificar pastas compartilhadas e remover dados pessoais do colaborador.</li>
+    <li>Revogar acessos a arquivos em nuvem (Google Drive, OneDrive, Dropbox).</li>
+    <li>Auditar o envio de dados nos 30 dias anteriores à saída (upload, download ou e-mails).</li>
+    <li>Bloquear a possibilidade de compartilhamento futuro de informações sensíveis.</li>
+    <li>Ferramentas:</li>
+    <li>Soluções DLP (Forcepoint, Symantec).</li>
+    <li>Logs de auditoria de e-mail e armazenamento em nuvem.</li>
+</ul>
+<p>4.5. Acesso Físico</p>
+<ul>
+    <li>Ações:</li>
+    <li>Desativar o crachá de acesso imediatamente após a saída.</li>
+    <li>Alterar códigos ou senhas de áreas restritas, caso o colaborador tenha tido acesso exclusivo.</li>
+    <li>Registrar a devolução de chaves físicas e outros itens relacionados.</li>
+    <li>Ferramentas:</li>
+    <li>Sistemas de controle de acesso (Honeywell, HID).</li>
+</ul>
+<p>4.6. Transferência de Atividades</p>
+<ul>
+    <li>Ações:</li>
+    <li>Realocar tarefas e acessos necessários para outros membros da equipe.</li>
+    <li>Transferir a propriedade de arquivos e pastas digitais (e-mails, drives, projetos).</li>
+    <li>Documentar e registrar as etapas concluídas no desligamento.</li>
+    <li>Ferramentas:</li>
+    <li>Sistemas de gestão de tarefas e projetos (Trello, Asana, Jira).</li>
+    <li>Recursos nativos de transferência de propriedade em nuvens corporativas.</li>
+</ul>
+<p>4.7. Comunicação com a Equipe</p>
+<ul>
+    <li>Ações:</li>
+    <li>Informar a equipe e stakeholders relevantes sobre a saída do colaborador.</li>
+    <li>Atualizar listas de contatos, assinaturas de e-mail e permissões de acesso a grupos.</li>
+    <li>Garantir que clientes externos sejam notificados quando necessário.</li>
+    <li>Ferramentas:</li>
+    <li>Comunicação interna via e-mail ou plataforma de mensagens (Slack, Microsoft Teams).</li>
+</ul>
+<p>4.8. Análise Pós-Saída</p>
+<ul>
+    <li>Ações:</li>
+    <li>Auditar os logs para identificar atividades suspeitas antes ou após a saída.</li>
+    <li>Garantir que nenhuma conta foi reativada ou acessada indevidamente.</li>
+    <li>Documentar lições aprendidas para melhorar o processo.</li>
+    <li>Ferramentas:</li>
+    <li>Ferramentas de SIEM (Splunk, QRadar, Sentinel).</li>
+    <li>Relatórios de logs do Active Directory ou ferramentas de monitoramento.</li>
+</ul>
+<p>4.9. Atualização de Políticas</p>
+<ul>
+    <li>Ações:</li>
+    <li>Revisar e atualizar políticas relacionadas ao desligamento, caso necessário.</li>
+    <li>Treinar líderes e equipes sobre os procedimentos de saída.</li>
+    <li>Ferramentas:</li>
+    <li>Repositórios de políticas internas.</li>
+    <li>Ferramentas de e-learning para treinamentos.</li>
+</ul>
+<p>5. Pós-Implementação</p>
+<p>Monitore periodicamente a implementação do playbook para garantir conformidade.</p>
+<p>Realize auditorias anuais para identificar lacunas ou oportunidades de melhoria.</p>

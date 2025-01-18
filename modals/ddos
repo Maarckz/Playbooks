@@ -1,0 +1,166 @@
+<link href="css/styles.css" rel="stylesheet">
+
+<h2 style="background-color: #333; color: #fff; padding: 1rem; border-radius: 0.5rem;" id="playbook-mitigacao-ataques-ddos">Playbook: Mitigação de Ataques DDoS</h2>
+
+<h3>1. Propósito</h3>
+<p>Estabelecer um procedimento eficaz para detectar e mitigar ataques DDoS, minimizando impactos sobre a disponibilidade dos serviços.</p>
+
+<h3 id="2-escopo">2. Escopo</h3>
+<p>Aplicável a todos os tipos de ataques DDoS, incluindo volumétricos, ataques de amplificação/reflexão, e ataques baseados em camada de aplicação (HTTP flood).</p>
+
+<h3 id="3-papeis-e-responsabilidades">3. Papéis e Responsabilidades</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Papel</th>
+      <th>Responsabilidade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Equipe SOC</td>
+      <td>Monitorar, identificar e aplicar estratégias de mitigação.</td>
+    </tr>
+    <tr>
+      <td>Administradores TI</td>
+      <td>Implementar mudanças em firewalls, roteadores e servidores.</td>
+    </tr>
+    <tr>
+      <td>Provedores de Nuvem/CDN</td>
+      <td>Ativar proteção avançada contra DDoS.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="4-etapas-do-processo">4. Etapas do Processo</h3>
+
+<h3 id="41-identificacao">4.1. Identificação</h3>
+<p>Ações:</p>
+<ul>
+  <li>Monitorar métricas anômalas:
+    <ul>
+      <li>Aumento repentino no tráfego de rede.</li>
+      <li>Uso elevado de recursos (CPU, memória, largura de banda).</li>
+    </ul>
+  </li>
+  <li>Confirmar o ataque:
+    <ul>
+      <li>Analisar logs de rede (NetFlow, packet captures).</li>
+      <li>Identificar padrões de tráfego malicioso.</li>
+    </ul>
+  </li>
+</ul>
+<p>Ferramentas recomendadas:</p>
+<ul>
+  <li>Soluções SIEM (Splunk, QRadar).</li>
+  <li>Ferramentas de monitoramento de rede (Zabbix, SolarWinds).</li>
+</ul>
+
+<h3 id="42-classificacao-do-ataque">4.2. Classificação do Ataque</h3>
+<p>Ações:</p>
+<ul>
+  <li>Determinar o tipo de ataque:
+    <ul>
+      <li>Volumétrico: Altos volumes de pacotes ou solicitações.</li>
+      <li>Amplificação: Uso de serviços refletidos (DNS, NTP, SSDP).</li>
+      <li>Aplicação: Alto número de requisições HTTP ou POST.</li>
+    </ul>
+  </li>
+  <li>Identificar fontes:
+    <ul>
+      <li>Endereços IP, ASN ou regiões geográficas.</li>
+    </ul>
+  </li>
+</ul>
+<p>Ferramentas recomendadas:</p>
+<ul>
+  <li>Ferramentas de análise de tráfego (Wireshark, tcpdump).</li>
+  <li>Soluções DDoS Protection (Cloudflare, AWS Shield).</li>
+</ul>
+
+<h3 id="43-contencao-inicial">4.3. Contenção Inicial</h3>
+<p>Ações:</p>
+<ul>
+  <li>Aplicar bloqueios temporários:
+    <ul>
+      <li>Endereços IP suspeitos: Usar ACLs ou firewall.</li>
+      <li>Regiões geográficas: Bloqueio por país no firewall.</li>
+    </ul>
+  </li>
+  <li>Redirecionar tráfego:
+    <ul>
+      <li>Usar provedores de mitigação como Akamai ou Cloudflare.</li>
+    </ul>
+  </li>
+  <li>Ativar sistemas de proteção DDoS, como scrubbing centers.</li>
+</ul>
+<p>Ferramentas recomendadas:</p>
+<ul>
+  <li>Firewalls (Palo Alto, Fortinet).</li>
+  <li>Soluções CDN (Cloudflare, Akamai).</li>
+</ul>
+
+<h3 id="44-mitigacao">4.4. Mitigação</h3>
+<p>Ações:</p>
+<ul>
+  <li>Configurar filtros avançados:
+    <ul>
+      <li>Bloquear pacotes inválidos (ex.: SYN flood).</li>
+      <li>Limitar requisições por segundo no servidor web.</li>
+    </ul>
+  </li>
+  <li>Habilitar rate-limiting:
+    <ul>
+      <li>Restringir o número de conexões simultâneas por IP.</li>
+    </ul>
+  </li>
+  <li>Reduzir superfícies de ataque:
+    <ul>
+      <li>Desativar serviços ou portas não utilizados.</li>
+    </ul>
+  </li>
+</ul>
+<p>Ferramentas recomendadas:</p>
+<ul>
+  <li>Regras de WAF (ModSecurity, F5).</li>
+  <li>Roteadores e switches configurados para limitar volume.</li>
+</ul>
+
+<h3 id="45-recuperacao">4.5. Recuperação</h3>
+<p>Ações:</p>
+<ul>
+  <li>Restaurar serviços para condições normais:
+    <ul>
+      <li>Gradualmente reativar IPs ou regiões bloqueadas.</li>
+    </ul>
+  </li>
+  <li>Monitorar tráfego após a mitigação.</li>
+</ul>
+<p>Ferramentas recomendadas:</p>
+<ul>
+  <li>Logs de performance (Elastic Stack, Graylog).</li>
+  <li>Ferramentas de monitoramento de SLA.</li>
+</ul>
+
+<h3 id="46-pos-incidente">4.6. Pós-Incidente</h3>
+<p>Ações:</p>
+<ul>
+  <li>Conduzir análise pós-incidente:
+    <ul>
+      <li>Identificar vulnerabilidades exploradas.</li>
+      <li>Avaliar eficácia das medidas tomadas.</li>
+    </ul>
+  </li>
+  <li>Atualizar planos de resposta e playbooks.</li>
+  <li>Reforçar políticas de segurança:
+    <ul>
+      <li>Configurar alertas automáticos para atividades suspeitas.</li>
+    </ul>
+  </li>
+</ul>
+<p>Ferramentas recomendadas:</p>
+<ul>
+  <li>Ferramentas de documentação (Confluence, Notion).</li>
+  <li>Plataformas de colaboração para treinamento (MS Teams, Slack).</li>
+</ul>
+

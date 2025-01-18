@@ -1,0 +1,105 @@
+Playbook para Identificação e Remoção de Scareware
+1. Propósito
+
+Este playbook fornece orientações para identificar, remover e prevenir o scareware, um tipo de malware que exibe mensagens alarmistas e falsas para enganar os usuários. O objetivo é proteger os usuários de ameaças falsas, impedir o comprometimento de sistemas e reduzir o impacto de campanhas de scareware.
+2. Escopo
+
+Este playbook é aplicável a todos os sistemas e dispositivos dentro da organização, incluindo computadores, laptops, dispositivos móveis e qualquer outro sistema de informação onde o scareware possa ser executado.
+3. Papéis e Responsabilidades
+Papel	Responsabilidade
+Equipe de Segurança	Monitorar sinais de scareware, implementar medidas de prevenção e remoção.
+Equipe de TI	Executar a remoção técnica do scareware nos dispositivos comprometidos.
+Comunicação Corporativa	Comunicar aos usuários finais sobre as ameaças de scareware e as ações de resposta.
+Equipe de Suporte ao Usuário	Fornecer suporte e assistência para usuários afetados, ajudando a remover o scareware de seus dispositivos.
+Usuários Finais	Relatar mensagens suspeitas e não interagir com elas, protegendo seus dispositivos de scareware.
+4. Procedimentos Detalhados
+4.1. Identificação de Scareware
+
+Ações:
+
+    Sinais Comuns de Scareware: Monitorar e educar os usuários para reconhecer sinais típicos de scareware, como mensagens alarmistas e pop-ups informando que o sistema está infectado, com links direcionando para sites de download de software "antivírus" falso ou solicitando informações pessoais.
+    Análise de Logs de Sistema: Inspecionar logs de sistema e eventos para identificar atividades suspeitas que possam estar relacionadas ao scareware, como processos de instalação não autorizados ou tentativas de conexão com endereços de IP externos desconhecidos.
+    Verificação de Programas Não Solicitados: Detectar programas ou barras de ferramentas indesejadas que tenham sido instaladas sem o conhecimento do usuário, muitas vezes associadas ao scareware.
+
+Ferramentas:
+
+    Software Antivírus (Sophos, Kaspersky) para detecção preliminar de scareware.
+    Ferramentas de Análise de Sistema (Process Explorer, Autoruns) para identificar processos suspeitos.
+    Ferramentas de Monitoramento de Rede (Wireshark, Zeek) para identificar conexões indesejadas.
+
+4.2. Remoção de Scareware
+
+Ações:
+
+    Interromper o Processo de Instalação: Caso o scareware ainda esteja em processo de instalação, interromper o processo imediatamente para evitar que ele seja completamente configurado no sistema.
+    Execução de Antivírus ou Ferramentas de Remoção: Utilizar software antivírus ou ferramentas especializadas para realizar a varredura e remoção completa de scareware e seus componentes.
+    Verificação Manual: Caso a ferramenta antivírus não identifique completamente o scareware, realizar uma análise manual dos processos e arquivos em execução para identificar e remover o software malicioso.
+    Limpeza de Navegadores: Limpar os cache, cookies e histórico de navegação dos navegadores, pois o scareware pode ser vinculado a extensões maliciosas ou redirecionamentos de sites.
+    Reinicialização em Modo Seguro: Em caso de dificuldades para remover o scareware, reiniciar o sistema em modo seguro e realizar a remoção usando ferramentas de segurança.
+
+Ferramentas:
+
+    Antivírus (Malwarebytes, Windows Defender) para escaneamento e remoção.
+    Ferramentas de Remoção de Malware (AdwCleaner, HitmanPro).
+    Ferramentas de Limpeza de Navegador (CCleaner, BrowsingHistoryView).
+
+4.3. Prevenção de Scareware
+
+Ações:
+
+    Educação e Conscientização do Usuário: Realizar treinamentos regulares sobre como identificar mensagens suspeitas e links maliciosos, evitando clicar em alertas de segurança falsos ou em anúncios que prometem "corrigir" problemas do sistema.
+    Desabilitação de Pop-ups e Notificações Suspensas: Configurar navegadores e sistemas para bloquear pop-ups e notificações não solicitadas, reduzindo a chance de o usuário ser enganado.
+    Instalação de Software de Segurança Reforçada: Assegurar que todas as máquinas da organização tenham soluções antivírus, firewall e outras ferramentas de segurança sempre atualizadas para detectar e bloquear ameaças.
+    Autenticação de Fontes Confiáveis: Alertar os usuários a instalar apenas software de fontes confiáveis (como lojas oficiais de aplicativos ou sites verificados), evitando o download de programas de fontes desconhecidas.
+
+Ferramentas:
+
+    Extensões de Navegador de Bloqueio de Pop-up (AdBlock, uBlock Origin).
+    Ferramentas de Controle de Navegação (Webroot, OpenDNS).
+    Política de Software (Repositórios de software confiáveis, como Microsoft Store, Apple App Store).
+
+4.4. Monitoramento de Atividades Suspeitas
+
+Ações:
+
+    Monitoramento de Sistemas e Rede: Implantar sistemas de monitoramento de rede e endpoints para detectar padrões anômalos de tráfego ou de comportamento, como downloads em massa, atividades de instalação ou conexão com sites suspeitos.
+    Análise de Alertas: Monitorar e analisar alertas gerados por sistemas de antivírus e ferramentas de detecção de intrusões para identificar sinais de scareware em tempo real.
+    Revisão Periódica de Logs: Realizar auditorias periódicas de logs para detectar qualquer atividade relacionada a pop-ups ou instalações não autorizadas.
+
+Ferramentas:
+
+    SIEMs (Splunk, QRadar) para monitoramento e análise em tempo real.
+    Firewall de Rede e Endpoint (pfSense, Cisco Umbrella) para bloquear acesso a sites de scareware.
+    Ferramentas de Monitoramento de Tráfego (Wireshark, Zeek).
+
+4.5. Comunicação e Notificação
+
+Ações:
+
+    Informar Usuários Impactados: Notificar imediatamente os usuários sobre a ameaça de scareware e fornecer instruções claras sobre como proceder.
+    Notificação Interna: Informar as equipes de segurança e TI sobre incidentes de scareware para que medidas adicionais possam ser tomadas.
+    Divulgação de Melhores Práticas: Distribuir materiais educativos sobre como os usuários podem se proteger contra scareware, incluindo links de sites confiáveis, práticas de navegação segura e como verificar a legitimidade de pop-ups.
+
+Ferramentas:
+
+    Sistemas de Comunicação de Emergência (Slack, Microsoft Teams).
+    Emails de Alerta (Mailchimp, SendGrid) para alertar usuários.
+
+4.6. Recuperação e Pós-Incidência
+
+Ações:
+
+    Restauração de Sistemas: Se o scareware causar danos significativos ou interferir no funcionamento de sistemas importantes, restaurar sistemas a partir de backups conhecidos e limpos.
+    Análise de Causa Raiz: Investigar como o scareware foi instalado e propagado na rede, buscando identificar vulnerabilidades de segurança que possam ter sido exploradas.
+    Revisão de Políticas e Ferramentas de Segurança: Reforçar as políticas de segurança da organização e garantir que todos os sistemas estejam protegidos com as últimas atualizações de segurança.
+
+Ferramentas:
+
+    Soluções de Backup e Recuperação (Veeam, Acronis).
+    Ferramentas de Análise de Forense (EnCase, Autopsy).
+
+5. Pós-Implementação
+
+    Treinamento Contínuo: Realizar treinamentos periódicos de conscientização sobre segurança para os usuários finais, enfatizando a importância de não interagir com pop-ups ou alertas falsos.
+    Análise de Incidentes: Após a remoção do scareware, revisar os incidentes para entender como o malware foi disseminado e implementar melhorias nas defesas.
+    Implementação de Ferramentas de Prevenção: Continuar a utilizar ferramentas de segurança que bloqueiam sites maliciosos, pop-ups e downloads não confiáveis, além de manter os sistemas de segurança sempre atualizados.

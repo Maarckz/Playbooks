@@ -1,0 +1,189 @@
+<h2>Playbook de Monitoramento de Redes</h2>
+<ul>
+    <li>1. Propósito: Estabelecer diretrizes para monitoramento eficaz de redes, incluindo a configuração de ferramentas, coleta de dados, análise e resposta a eventos.</li>
+    <li>
+        2. Escopo: Aplicável a redes corporativas e de datacenters, com foco em:
+        <ul>
+            <li>Detecção de anomalias.</li>
+            <li>Análise de tráfego.</li>
+            <li>Identificação de ameaças ou falhas.</li>
+        </ul>
+    </li>
+    <li>
+        3. Papéis e Responsabilidades:
+        <table>
+            <tr>
+                <th>Papel</th>
+                <th>Responsabilidade</th>
+            </tr>
+            <tr>
+                <td>Administrador de Redes</td>
+                <td>Configurar ferramentas de monitoramento e garantir operação contínua.</td>
+            </tr>
+            <tr>
+                <td>Analista SOC</td>
+                <td>Revisar alertas e investigar anomalias.</td>
+            </tr>
+            <tr>
+                <td>Equipe de Segurança</td>
+                <td>Responder a eventos e implementar ações corretivas.</td>
+            </tr>
+        </table>
+    </li>
+    <li>
+        4. Etapas do Processo:
+        <ol>
+            <li>
+                4.1. Planejamento
+                <ul>
+                    <li>Ações:</li>
+                    <ul>
+                        <li>Definir objetivos do monitoramento:</li>
+                        <ul>
+                            <li>Detecção de ameaças.</li>
+                            <li>Monitoramento de desempenho.</li>
+                            <li>Análise de comportamento.</li>
+                        </ul>
+                        <li>Mapear a infraestrutura:</li>
+                        <ul>
+                            <li>Identificar hosts críticos, sub-redes e serviços essenciais.</li>
+                        </ul>
+                        <li>Estabelecer KPIs:</li>
+                        <ul>
+                            <li>Exemplo: latência, throughput, taxa de perda de pacotes.</li>
+                        </ul>
+                    </ul>
+                    <li>Ferramentas recomendadas:</li>
+                    <ul>
+                        <li>Visibilidade: Nmap, SolarWinds</li>
+                        <li>Planejamento: Diagramas de rede com Visio ou Lucidchart</li>
+                    </ul>
+                </ul>
+            </li>
+            <li>
+                4.2. Configuração de Ferramentas
+                <ul>
+                    <li>Ações:</li>
+                    <ul>
+                        <li>Escolher ferramentas adequadas:</li>
+                        <ul>
+                            <li>Para desempenho: Zabbix, Nagios.</li>
+                            <li>Para análise de tráfego: Wireshark, NetFlow.</li>
+                        </ul>
+                        <li>Configurar coleta de dados:</li>
+                        <ul>
+                            <li>Habilitar SNMP, Syslog e NetFlow nos dispositivos.</li>
+                        </ul>
+                        <li>Criar dashboards personalizados:</li>
+                        <ul>
+                            <li>Exibir métricas-chave por host e serviço.</li>
+                        </ul>
+                    </ul>
+                    <li>Ferramentas recomendadas:</li>
+                    <ul>
+                        <li>Monitoramento geral: PRTG, Zabbix</li>
+                        <li>Coleta de logs: Graylog, Splunk</li>
+                    </ul>
+                </ul>
+            </li>
+            <li>
+                4.3. Coleta de Dados
+                <ul>
+                    <li>Ações:</li>
+                    <ul>
+                        <li>Configurar espelhamento de porta:</li>
+                        <ul>
+                            <li>Direcionar tráfego para dispositivos de monitoramento.</li>
+                        </ul>
+                        <li>Centralizar logs:</li>
+                        <ul>
+                            <li>Implementar SIEMs para agregação e correlação.</li>
+                        </ul>
+                        <li>Verificar integridade e frequência dos dados coletados.</li>
+                    </ul>
+                    <li>Ferramentas recomendadas:</li>
+                    <ul>
+                        <li>Mirror de porta: Configuração de Switch/Router</li>
+                        <li>SIEM: Splunk, QRadar</li>
+                    </ul>
+                </ul>
+            </li>
+            <li>
+                4.4. Interpretação de Resultados
+                <ul>
+                    <li>Ações:</li>
+                    <ul>
+                        <li>Identificar padrões anômalos:</li>
+                        <ul>
+                            <li>Aumento no tráfego em portas incomuns.</li>
+                            <li>Comunicação com IPs suspeitos.</li>
+                        </ul>
+                        <li>Correlacionar eventos:</li>
+                        <ul>
+                            <li>Investigar conexões entre logs de firewall, tráfego e alertas.</li>
+                        </ul>
+                        <li>Validar métricas de desempenho:</li>
+                        <ul>
+                            <li>Avaliar gargalos de largura de banda ou falhas de serviço.</li>
+                        </ul>
+                    </ul>
+                    <li>Ferramentas recomendadas:</li>
+                    <ul>
+                        <li>Logs detalhados: ELK Stack</li>
+                        <li>Análise gráfica: Grafana, Kibana</li>
+                    </ul>
+                </ul>
+            </li>
+            <li>
+                4.5. Resposta a Eventos
+                <ul>
+                    <li>Ações:</li>
+                    <ul>
+                        <li>Configurar alertas:</li>
+                        <ul>
+                            <li>Thresholds para tráfego, latência e falhas de autenticação.</li>
+                        </ul>
+                        <li>Executar investigações:</li>
+                        <ul>
+                            <li>Validar a origem de tráfego suspeito.</li>
+                        </ul>
+                        <li>Implementar mitigações:</li>
+                        <ul>
+                            <li>Bloquear IPs ou ajustar políticas de roteamento.</li>
+                        </ul>
+                    </ul>
+                    <li>Ferramentas recomendadas:</li>
+                    <ul>
+                        <li>Automação: SOAR (Ex.: Palo Alto Cortex XSOAR)</li>
+                        <li>Bloqueio: ACLs em Firewalls e Switches</li>
+                    </ul>
+                </ul>
+            </li>
+            <li>
+                4.6. Revisão Contínua
+                <ul>
+                    <li>Ações:</li>
+                    <ul>
+                        <li>Analisar métricas periodicamente:</li>
+                        <ul>
+                            <li>Identificar tendências ao longo do tempo.</li>
+                        </ul>
+                        <li>Atualizar ferramentas:</li>
+                        <ul>
+                            <li>Garantir compatibilidade e melhorias de segurança.</li>
+                        </ul>
+                        <li>Treinar equipe:</li>
+                        <ul>
+                            <li>Realizar simulações de incidentes.</li>
+                        </ul>
+                    </ul>
+                    <li>Ferramentas recomendadas:</li>
+                    <ul>
+                        <li>Relatórios: Power BI</li>
+                        <li>Simulações: Packet Tracer, GNS3</li>
+                    </ul>
+                </ul>
+            </li>
+        </ol>
+    </li>
+</ul>

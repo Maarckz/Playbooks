@@ -1,0 +1,183 @@
+<h3 id="recupera-o-de-dados">Recuperação de Dados</h3>
+
+<h4 id="1-prop-sito">1. Propósito</h4>
+
+<p>Fornecer um guia para recuperação de dados perdidos ou corrompidos, minimizando impactos e restaurando a integridade das informações.</p>
+
+<h4 id="2-escopo">2. Escopo</h4>
+
+<p>Aplicável em cenários como:</p>
+
+<ul>
+  <li>Exclusão acidental de arquivos.</li>
+  <li>Corrupção de dados em discos.</li>
+  <li>Recuperação de backups.</li>
+</ul>
+
+<h4 id="3-pap-s-e-responsabilidades">3. Papéis e Responsabilidades</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Papel</th>
+      <th>Responsabilidade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Administrador de TI</td>
+      <td>Identificar e acessar fontes de dados disponíveis.</td>
+    </tr>
+    <tr>
+      <td>Especialista em Recuperação</td>
+      <td>Aplicar técnicas avançadas e ferramentas de recuperação.</td>
+    </tr>
+    <tr>
+      <td>Usuários Afetados</td>
+      <td>Fornecer informações sobre os dados perdidos ou corrompidos.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="4-etapas-do-processo">4. Etapas do Processo</h4>
+
+<h5 id="41-identifica-o">4.1. Identificação</h5>
+
+<p>Ações:</p>
+
+<ul>
+  <li>Determinar a origem do problema:
+    <ul>
+      <li>Foi exclusão acidental, falha no hardware ou malware?</li>
+    </ul>
+  </li>
+  <li>Identificar a localização dos dados:
+    <ul>
+      <li>Sistemas locais, armazenamento em rede, nuvem, etc.</li>
+    </ul>
+  </li>
+  <li>Validar a gravidade do incidente:
+    <ul>
+      <li>Dados parcialmente acessíveis ou totalmente perdidos?</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Ferramentas recomendadas:</p>
+
+<ul>
+  <li>Logs do sistema: Syslog, Event Viewer.</li>
+  <li>Scanners de disco: Disk Drill, EaseUS Data Recovery.</li>
+</ul>
+
+<h5 id="42-avalia-o">4.2. Avaliação</h5>
+
+<p>Ações:</p>
+
+<ul>
+  <li>Verificar backups disponíveis:
+    <ul>
+      <li>Identificar se o dado está armazenado em versões anteriores.</li>
+    </ul>
+  </li>
+  <li>Avaliar integridade do hardware:
+    <ul>
+      <li>Testar disco rígido ou SSD para falhas.</li>
+    </ul>
+  </li>
+  <li>Determinar ferramentas adequadas para recuperação:
+    <ul>
+      <li>Com base no tipo de dado e sistema de arquivos.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Ferramentas recomendadas:</p>
+
+<ul>
+  <li>Backups: Verificação em Veeam, Bacula ou soluções em nuvem.</li>
+  <li>Teste de hardware: CrystalDiskInfo, TestDisk.</li>
+</ul>
+
+<h5 id="43-recupera-o-de-dados">4.3. Recuperação de Dados</h5>
+
+<p>Ações:</p>
+
+<ul>
+  <li>Realizar recuperação de dados localmente:
+    <ul>
+      <li>Usar ferramentas como Recuva, R-Studio.</li>
+    </ul>
+  </li>
+  <li>Recuperar partições perdidas:
+    <ul>
+      <li>Usar ferramentas de particionamento como TestDisk.</li>
+    </ul>
+  </li>
+  <li>Recuperar dados de backups:
+    <ul>
+      <li>Restaurar a partir de soluções de backup configuradas.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Ferramentas recomendadas:</p>
+
+<ul>
+  <li>Recuperação de arquivos: Recuva, Photorec.</li>
+  <li>Backup: Veeam, Acronis.</li>
+</ul>
+
+<h5 id="44-verifica-o">4.4. Verificação</h5>
+
+<p>Ações:</p>
+
+<ul>
+  <li>Garantir que os dados recuperados estão íntegros:
+    <ul>
+      <li>Verificar hashes ou testar a funcionalidade dos arquivos.</li>
+    </ul>
+  </li>
+  <li>Confirmar que não há dados corrompidos adicionais.</li>
+  <li>Validar se a origem do problema foi resolvida:
+    <ul>
+      <li>Evitar reincidência da perda.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Ferramentas recomendadas:</p>
+
+<ul>
+  <li>Validação de dados: HashCalc, FCIV.</li>
+  <li>Logs: Ferramentas de monitoramento e auditoria.</li>
+</ul>
+
+<h5 id="45-p-s-recupera-o">4.5. Pós-Recuperação</h5>
+
+<p>Ações:</p>
+
+<ul>
+  <li>Implementar medidas preventivas:
+    <ul>
+      <li>Políticas de backup regulares e redundância.</li>
+    </ul>
+  </li>
+  <li>Documentar o processo de recuperação:
+    <ul>
+      <li>Criar um registro detalhado do incidente.</li>
+    </ul>
+  </li>
+  <li>Treinar equipes para lidar com futuros incidentes:
+    <ul>
+      <li>Sensibilizar sobre práticas de segurança.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Ferramentas recomendadas:</p>
+
+<ul>
+  <li>Automação de backups: Rsync, Cobian Backup.</li>
+  <li>Treinamento: Workshops ou treinamentos online.</li>
+</ul>

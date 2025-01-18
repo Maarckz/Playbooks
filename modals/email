@@ -1,0 +1,152 @@
+<h1>Playbook de Segurança em E-mail</h1>
+<h2>1. Propósito</h2>
+<p>Proteger contas de e-mail e seus dados contra acessos não autorizados, phishing, malware e outras ameaças cibernéticas, garantindo a confidencialidade, integridade e disponibilidade das comunicações eletrônicas.</p>
+<h2>2. Escopo</h2>
+<p>Aplicável a provedores de e-mail corporativos e pessoais (Gmail, Outlook, Zoho, ProtonMail, etc.) e sistemas de e-mail interno em organizações.</p>
+<h2>3. Papéis e Responsabilidades</h2>
+<table>
+    <tr>
+        <th>Papel</th>
+        <th>Responsabilidade</th>
+    </tr>
+    <tr>
+        <td>Usuário Final</td>
+        <td>Seguir boas práticas de segurança no uso diário do e-mail.</td>
+    </tr>
+    <tr>
+        <td>Administrador de TI</td>
+        <td>Gerenciar e monitorar contas de e-mail corporativas.</td>
+    </tr>
+    <tr>
+        <td>Especialista em Segurança de TI</td>
+        <td>Implementar e supervisionar políticas de segurança para e-mails.</td>
+    </tr>
+</table>
+<h2>4. Procedimentos Detalhados</h2>
+<h3>4.1. Configuração Inicial</h3>
+<ul>
+    <li>Ações:</li>
+    <ul>
+        <li>Configure senhas fortes e únicas para cada conta de e-mail.</li>
+        <li>Ative a autenticação de dois fatores (2FA).</li>
+        <li>Certifique-se de que o servidor de e-mail utiliza criptografia (TLS/SSL) para envio e recebimento.</li>
+    </ul>
+    <li>Ferramentas:</li>
+    <ul>
+        <li>Painel de configuração de e-mail do provedor.</li>
+        <li>Aplicativos de autenticação (Authy, Google Authenticator).</li>
+    </ul>
+</ul>
+<h3>4.2. Proteção Contra Phishing</h3>
+<ul>
+    <li>Ações:</li>
+    <ul>
+        <li>Habilite filtros de spam para bloquear mensagens suspeitas.</li>
+        <li>Configure o sistema para identificar links suspeitos e alertar os usuários.</li>
+        <li>Treine os usuários para identificar e reportar tentativas de phishing.</li>
+    </ul>
+    <li>Ferramentas:</li>
+    <ul>
+        <li>Soluções de segurança como Mimecast, Proofpoint ou Microsoft Defender for Office 365.</li>
+        <li>Simuladores de phishing para treinamentos.</li>
+    </ul>
+</ul>
+<h3>4.3. Controle de Acesso</h3>
+<ul>
+    <li>Ações:</li>
+    <ul>
+        <li>Restrinja acessos a dispositivos confiáveis e locais aprovados.</li>
+        <li>Monitore tentativas de login suspeitas.</li>
+        <li>Revogue imediatamente acessos de contas comprometidas.</li>
+    </ul>
+    <li>Ferramentas:</li>
+    <ul>
+        <li>Políticas de segurança em ferramentas de administração do e-mail.</li>
+        <li>Relatórios de atividade de login.</li>
+    </ul>
+</ul>
+<h3>4.4. Monitoramento e Logs</h3>
+<ul>
+    <li>Ações:</li>
+    <ul>
+        <li>Ative logs detalhados de acesso e atividades de e-mail.</li>
+        <li>Analice regularmente os logs para identificar atividades anômalas.</li>
+        <li>Configure alertas para acessos não reconhecidos ou tentativas de login falhas.</li>
+    </ul>
+    <li>Ferramentas:</li>
+    <ul>
+        <li>Soluções de monitoramento como Splunk, Elastic Stack.</li>
+        <li>Painel de auditoria dos provedores de e-mail.</li>
+    </ul>
+</ul>
+<h3>4.5. Proteção Contra Malware</h3>
+<ul>
+    <li>Ações:</li>
+    <ul>
+        <li>Habilite a verificação de anexos de e-mail com soluções antivírus.</li>
+        <li>Bloqueie a entrega de arquivos executáveis (.exe, .bat, .js) por padrão.</li>
+        <li>Eduque usuários sobre os perigos de abrir anexos desconhecidos.</li>
+    </ul>
+    <li>Ferramentas:</li>
+    <ul>
+        <li>Antivírus corporativos (Symantec, McAfee, CrowdStrike).</li>
+        <li>Filtros de anexos nos provedores de e-mail.</li>
+    </ul>
+</ul>
+<h3>4.6. Prevenção de Vazamento de Dados (DLP)</h3>
+<ul>
+    <li>Ações:</li>
+    <ul>
+        <li>Implemente políticas de DLP para prevenir o envio de informações confidenciais por e-mail.</li>
+        <li>Configure alertas para tentativas de envio de dados sensíveis.</li>
+        <li>Utilize criptografia de ponta a ponta para comunicações sensíveis.</li>
+    </ul>
+    <li>Ferramentas:</li>
+    <ul>
+        <li>Soluções DLP (Microsoft DLP, Forcepoint, Symantec DLP).</li>
+        <li>ProtonMail ou Tutanota para comunicações criptografadas.</li>
+    </ul>
+</ul>
+<h3>4.7. Backup e Recuperação</h3>
+<ul>
+    <li>Ações:</li>
+    <ul>
+        <li>Configure backups automáticos para armazenar cópias das mensagens.</li>
+        <li>Teste regularmente a capacidade de recuperação de e-mails excluídos.</li>
+        <li>Garanta que os backups sejam criptografados e armazenados em locais seguros.</li>
+    </ul>
+    <li>Ferramentas:</li>
+    <ul>
+        <li>Soluções de backup como Veeam, Barracuda Backup.</li>
+        <li>Recursos de backup nativos de serviços como Google Workspace ou Microsoft 365.</li>
+    </ul>
+</ul>
+<h3>4.8. Resposta a Incidentes</h3>
+<ul>
+    <li>Ações:</li>
+    <ul>
+        <li>Isolar a conta comprometida para evitar mais danos.</li>
+        <li>Redefinir a senha da conta afetada.</li>
+        <li>Revogar tokens de aplicativos conectados suspeitos.</li>
+        <li>Comunicar aos usuários sobre tentativas de phishing ou atividades maliciosas.</li>
+    </ul>
+    <li>Ferramentas:</li>
+    <ul>
+        <li>Recursos de resposta a incidentes do provedor de e-mail.</li>
+        <li>Ferramentas de análise forense para e-mails.</li>
+    </ul>
+</ul>
+<h3>4.9. Revisão Contínua</h3>
+<ul>
+    <li>Ações:</li>
+    <ul>
+        <li>Realize auditorias regulares nas políticas de e-mail.</li>
+        <li>Atualize configurações conforme surgirem novas ameaças.</li>
+        <li>Promova treinamentos periódicos para os usuários.</li>
+    </ul>
+    <li>Ferramentas:</li>
+    <ul>
+        <li>Ferramentas de auditoria do provedor de e-mail.</li>
+        <li>Soluções de simulação de ataques de engenharia social.</li>
+    </ul>
+</ul>

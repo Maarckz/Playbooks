@@ -1,0 +1,190 @@
+<h2>Playbook de Exploração de Vulnerabilidades</h2>
+
+<h3>1. Propósito</h3>
+<p>Definir diretrizes para identificar e explorar vulnerabilidades de maneira controlada, respeitando limites éticos e legais.</p>
+
+<h3>2. Escopo</h3>
+<p>Aplicável a todos os sistemas e redes sob autorização para execução de testes de penetração.</p>
+
+<h3>3. Papéis e Responsabilidades</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Papel</th>
+      <th>Responsabilidade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Pentester</td>
+      <td>Realizar testes com técnicas seguras e documentar descobertas.</td>
+    </tr>
+    <tr>
+      <td>Equipe de Segurança</td>
+      <td>Validar relatórios e aplicar medidas corretivas.</td>
+    </tr>
+    <tr>
+      <td>Cliente/Proprietário</td>
+      <td>Garantir autorização formal e definir escopo e limites.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>4. Etapas do Processo</h3>
+
+<h3 id="41-coleta-de-informacoes">4.1. Coleta de Informações</h3>
+<p>Ações:</p>
+<ul>
+  <li>Identificar ativos e obter informações públicas:
+    <ul>
+      <li>Realizar reconhecimento passivo:
+        <ul>
+          <li>Usar ferramentas como Shodan, Censys, e Whois.</li>
+        </ul>
+      </li>
+      <li>Coletar subdomínios e endereços IP.</li>
+    </ul>
+  </li>
+  <li>Conduzir reconhecimento ativo:
+    <ul>
+      <li>Executar varreduras de portas usando Nmap.</li>
+      <li>Identificar serviços e versões.</li>
+    </ul>
+  </li>
+</ul>
+<p>Ferramentas recomendadas:</p>
+<ul>
+  <li>Nmap, Amass, Recon-ng, Shodan.</li>
+</ul>
+
+<h3 id="42-analise-de-vulnerabilidades">4.2. Análise de Vulnerabilidades</h3>
+<p>Ações:</p>
+<ul>
+  <li>Identificar vulnerabilidades conhecidas:
+    <ul>
+      <li>Escanear usando Nessus, OpenVAS ou Qualys.</li>
+    </ul>
+  </li>
+  <li>Validar resultados manualmente:
+    <ul>
+      <li>Evitar falsos positivos por meio de testes específicos.</li>
+    </ul>
+  </li>
+  <li>Pesquisar exploits em bancos de dados:
+    <ul>
+      <li>Referências como Exploit-DB e CVE Details.</li>
+    </ul>
+  </li>
+</ul>
+<p>Ferramentas recomendadas:</p>
+<ul>
+  <li>Nessus, OpenVAS, Nikto, Burp Suite.</li>
+</ul>
+
+<h3 id="43-planejamento-de-exploracao">4.3. Planejamento de Exploração</h3>
+<p>Ações:</p>
+<ul>
+  <li>Avaliar impacto e risco:
+    <ul>
+      <li>Priorizar vulnerabilidades críticas.</li>
+    </ul>
+  </li>
+  <li>Planejar etapas:
+    <ul>
+      <li>Estabelecer metas claras e mensuráveis.</li>
+    </ul>
+  </li>
+  <li>Garantir backups:
+    <ul>
+      <li>Verificar se há mecanismos de recuperação para sistemas críticos.</li>
+    </ul>
+  </li>
+</ul>
+<p>Ferramentas recomendadas:</p>
+<ul>
+  <li>Ferramentas de documentação (Notion, Obsidian).</li>
+</ul>
+
+<h3 id="44-exploracao-controlada">4.4. Exploração Controlada</h3>
+<p>Ações:</p>
+<ul>
+  <li>Executar exploits controlados:
+    <ul>
+      <li>Usar frameworks como Metasploit e Cobalt Strike.</li>
+    </ul>
+  </li>
+  <li>Evitar danos colaterais:
+    <ul>
+      <li>Limitar interações para não comprometer sistemas em produção.</li>
+    </ul>
+  </li>
+  <li>Registrar resultados:
+    <ul>
+      <li>Documentar evidências (capturas de tela, logs).</li>
+    </ul>
+  </li>
+</ul>
+<p>Ferramentas recomendadas:</p>
+<ul>
+  <li>Metasploit, SQLmap, Hydra, John the Ripper.</li>
+</ul>
+
+<h3 id="45-pos-exploracao">4.5. Pós-Exploração</h3>
+<p>Ações:</p>
+<ul>
+  <li>Coletar e exfiltrar dados úteis:
+    <ul>
+      <li>Buscar arquivos de configuração e credenciais.</li>
+    </ul>
+  </li>
+  <li>Mapear movimentação lateral:
+    <ul>
+      <li>Identificar caminhos para alvos secundários.</li>
+    </ul>
+  </li>
+  <li>Planejar saída controlada:
+    <ul>
+      <li>Limpar rastros e restaurar configurações alteradas.</li>
+    </ul>
+  </li>
+</ul>
+<p>Ferramentas recomendadas:</p>
+<ul>
+  <li>BloodHound, CrackMapExec.</li>
+</ul>
+
+<h3 id="46-relatorio-e-recomendacao">4.6. Relatório e Recomendação</h3>
+<p>Ações:</p>
+<ul>
+  <li>Criar relatórios detalhados:
+    <ul>
+      <li>Descrever vulnerabilidades e técnicas utilizadas.</li>
+    </ul>
+  </li>
+  <li>Propor correções específicas:
+    <ul>
+      <li>Indicar patches, atualizações, e práticas de segurança.</li>
+    </ul>
+  </li>
+  <li>Realizar reunião pós-teste:
+    <ul>
+      <li>Alinhar aprendizados com as equipes envolvidas.</li>
+    </ul>
+  </li>
+</ul>
+<p>Ferramentas recomendadas:</p>
+<ul>
+  <li>Report templates (Markdown, LaTeX).</li>
+</ul>
+
+<h3 id="47-encerramento">4.7. Encerramento</h3>
+<p>Ações:</p>
+<ul>
+  <li>Certificar-se de que todos os sistemas estão funcionais.</li>
+  <li>Documentar lições aprendidas.</li>
+  <li>Atualizar playbooks e ferramentas.</li>
+</ul>
+<p>Ferramentas recomendadas:</p>
+<ul>
+  <li>JIRA, Trello.</li>
+</ul>

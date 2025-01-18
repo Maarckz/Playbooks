@@ -1,0 +1,185 @@
+<link href="css/styles.css" rel="stylesheet">
+<h2 style="background-color: #333; color: #fff; padding: 1rem; border-radius: 0.5rem;" id="playbook-detalhado-resposta-a-incidentes-de-phishing">Playbook: Resposta a Incidentes de Phishing</h2>
+
+<p>Aqui está o playbook com uma descrição mais detalhada de cada processo:</p>
+
+<h3>1. Propósito</h3>
+
+<p>Estabelecer um processo sistemático para lidar com incidentes de phishing de forma rápida e eficaz, minimizando riscos para a organização.</p>
+
+<h3 id="2-escopo">2. Escopo</h3>
+
+<p>- Aplicável a todos os incidentes de phishing envolvendo e-mails, SMS (smishing) e outras formas de comunicação fraudulentas.</p>
+
+<h3 id="3-pap-is-e-responsabilidades">3. Papéis e Responsabilidades</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Papel</th>
+      <th>Responsabilidade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Equipe SOC</td>
+      <td>Monitorar, analisar e coordenar as etapas de resposta.</td>
+    </tr>
+    <tr>
+      <td>Administradores TI</td>
+      <td>Aplicar bloqueios e corrigir vulnerabilidades técnicas.</td>
+    </tr>
+    <tr>
+      <td>Usuários Finais</td>
+      <td>Reportar mensagens suspeitas e seguir orientações de segurança.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="4-etapas-do-processo">4. Etapas do Processo</h3>
+
+<h3 id="41-identifica-o">4.1. Identificação</h3>
+
+<p>1. Ações:</p>
+
+<ul>
+  <li>Receber alertas de e-mails suspeitos reportados por usuários ou sistemas automatizados (ex.: SIEM).</li>
+  <li>Validar o incidente usando ferramentas de análise:
+    <ul>
+      <li>Inspecionar cabeçalhos de e-mails.</li>
+      <li>Verificar links suspeitos em sandboxes.</li>
+    </ul>
+  </li>
+  <li>Classificar o incidente em níveis de severidade (baixo, médio, alto).</li>
+</ul>
+
+<p>2. Ferramentas recomendadas:</p>
+
+<ul>
+  <li>Ferramentas de sandboxing como Cuckoo ou Hybrid Analysis.</li>
+  <li>Soluções de SIEM (Splunk, QRadar).</li>
+</ul>
+
+<h3 id="42-conten-o">4.2. Contenção</h3>
+
+<p>1. Ações:</p>
+
+<ul>
+  <li>Bloquear remetentes e links maliciosos:
+    <ul>
+      <li>Configurar regras no gateway de e-mail.</li>
+      <li>Atualizar listas de bloqueio de URLs no firewall ou proxy.</li>
+    </ul>
+  </li>
+  <li>Isolar máquinas comprometidas:
+    <ul>
+      <li>Desconectar dispositivos suspeitos da rede.</li>
+    </ul>
+  </li>
+  <li>Comunicação interna:
+    <ul>
+      <li>Enviar alertas internos orientando os usuários a não interagirem com mensagens similares.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>2. Ferramentas recomendadas:</p>
+
+<ul>
+  <li>Gateways de e-mail (Proofpoint, Microsoft Defender).</li>
+  <li>EDR para isolar dispositivos (CrowdStrike, SentinelOne).</li>
+</ul>
+
+<h3 id="43-an-lise">4.3. Análise</h3>
+
+<p>1. Ações:</p>
+
+<ul>
+  <li>Analisar cabeçalhos de e-mail:
+    <ul>
+      <li>Identificar o IP do remetente e conferir autenticação DKIM/SPF.</li>
+    </ul>
+  </li>
+  <li>Examinar links e anexos suspeitos:
+    <ul>
+      <li>Usar sandboxes para verificar comportamento malicioso.</li>
+    </ul>
+  </li>
+  <li>Identificar as credenciais ou dados potencialmente comprometidos.</li>
+</ul>
+
+<p>2. Exemplo prático:</p>
+
+<ul>
+  <li>Cabeçalhos de e-mail: Verificar registros DNS do remetente para autenticidade.</li>
+  <li>Link: Usar um ambiente seguro para testar se redireciona a sites maliciosos.</li>
+</ul>
+
+<p>3. Ferramentas recomendadas:</p>
+
+<ul>
+  <li>Sandboxes (Joe Sandbox, Any.run).</li>
+  <li>Ferramentas de análise de e-mail (Mimecast, Microsoft Defender).</li>
+</ul>
+
+<h3 id="44-erradica-o">4.4. Erradicação</h3>
+
+<p>1. Ações:</p>
+
+<ul>
+  <li>Resetar senhas de usuários afetados.</li>
+  <li>Revogar tokens de autenticação comprometidos (ex.: SSO, MFA).</li>
+  <li>Remover malware detectado usando EDR ou antivírus.</li>
+</ul>
+
+<p>2. Exemplo prático:</p>
+
+<ul>
+  <li>Resetar imediatamente senhas para usuários que clicaram no link ou inseriram dados.</li>
+  <li>Implementar bloqueios adicionais para impedir novos ataques.</li>
+</ul>
+
+<p>3. Ferramentas recomendadas:</p>
+
+<ul>
+  <li>Gerenciadores de acesso (Okta, Azure AD).</li>
+  <li>Soluções de antivírus e EDR.</li>
+</ul>
+
+<h3 id="45-recupera-o">4.5. Recuperação</h3>
+
+<p>1. Ações:</p>
+
+<ul>
+  <li>Monitorar os dispositivos e contas previamente afetados.</li>
+  <li>Garantir que as máquinas limpas estão livres de malwares.</li>
+  <li>Validar que os controles foram eficazes.</li>
+</ul>
+
+<p>2. Ferramentas recomendadas:</p>
+
+<ul>
+  <li>SIEM para monitorar atividades pós-incidente.</li>
+  <li>Logs de autenticação para verificar tentativas não autorizadas.</li>
+</ul>
+
+<h3 id="46-p-s-incidente">4.6. Pós-Incidente</h3>
+
+<p>1. Ações:</p>
+
+<ul>
+  <li>Conduzir uma reunião de análise pós-incidente (post-mortem):
+    <ul>
+      <li>Documentar o que funcionou bem e o que precisa melhorar.</li>
+    </ul>
+  </li>
+  <li>Atualizar playbooks e treinamentos baseados no incidente.</li>
+</ul>
+
+<p>2. Ferramentas recomendadas:</p>
+
+<ul>
+  <li>Ferramentas de documentação (Confluence, Notion).</li>
+  <li>Soluções de aprendizado e treinamento (Cybersecurity Awareness Tools).</li>
+</ul>
+

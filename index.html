@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,17 +10,15 @@
     <link href="css/styles.css" rel="stylesheet" />
 </head>
 
-
 <body>
-    <div class="main-container">                
+    <div class="main-container">
         <div class="menu-hamburguer" onclick="toggleSidebar()" style="position: fixed;">
             <span style="display: block; width: 9px; height: 25px; background-color: #333; writing-mode: vertical-rl; transform: rotate(180deg); margin-left: -15.45px; margin-top: 5.5px;"></span>
             <span style="display: block; width: 9px; height: 25px; background-color: #333; writing-mode: vertical-rl; transform: rotate(180deg); margin-left: -15.45px; margin-top: 5.5px;"></span>
             <span style="display: block; width: 9px; height: 25px; background-color: #333; writing-mode: vertical-rl; transform: rotate(180deg); margin-left: -15.45px; margin-top: 5.5px;"></span>
         </div>
 
-
-<!-- Barra Lateral -->
+        <!-- Barra Lateral -->
         <aside class="sidebar">
             <br><br>
             <nav>
@@ -30,7 +27,6 @@
                     <li><a href="#playbooks-title" class="js-scroll-trigger">Playbooks</a></li>
                     <li><a href="index.html">Conceitos (Em Breve)</a></li>
                     <li><a href="index.html">Implementações (Em Breve)</a></li>
-
                     <li><a href="https://maarckz.github.io" target="_blank">Maarckz</a></li>
                     <li><a href="https://maarckz.github.io/CyberDefense/" target="_blank">CyberDefense</a></li>
                     <li><a href="https://github.com/Maarckz" target="_blank">GitHub</a></li>
@@ -38,284 +34,365 @@
             </nav>
         </aside>
 
-            <!-- Sobre -->
-            <section id="about" class="container">
-                <h2 style="background-color: #333; color: #fff; padding: 1rem; border-radius: 0.5rem; width: 96%;">O que é um Playbook?</h2>
-                <p>Playbooks são ferramentas essenciais para profissionais de segurança cibernética, projetadas para armazenar e organizar conhecimentos sobre táticas e procedimentos de segurança. Eles servem como guias práticos, permitindo que equipes enfrentem situações desafiadoras de maneira eficiente e estruturada.</p>
-                <p>Em vez de improvisar diante de incidentes, os playbooks fornecem estratégias claras e bem documentadas que podem ser aplicadas imediatamente, facilitando a tomada de decisões rápidas e eficazes.</p>
-                <h2 style="background-color: #333; color: #fff; padding: 1rem; border-radius: 0.5rem; width: 96%;">Por que usar Playbooks?</h2>
-                    <p><strong>Respostas rápidas e eficazes:</strong> Auxiliam na mitigação de danos causados por ataques cibernéticos.</p>
-                    <p><strong>Continuidade dos negócios:</strong> Ajudam a restaurar operações críticas o mais rápido possível.</p>
-                    <p><strong>Coordenar esforços:</strong> Promovem respostas bem organizadas em tempos de crise, reduzindo confusões e evitando debates desnecessários graças aos passos pré-definidos.</p>
-                    <p><strong>Conformidade regulatória:</strong> Garantem que a organização permaneça alinhada com as regulamentações, minimizando riscos de multas mesmo durante ataques.</p>
-                    <p><strong>Fortalecimento da cultura de segurança:</strong> Educam e envolvem grupos, atribuindo funções claras e promovendo o refinamento contínuo do manual de resposta a incidentes.</p>
-                <div class="alert-box" style="background-color: #FFF;border: 1px solid red;border-radius: 5px;padding: 0.5rem;"><div class="alert">
-                        <span class="material-symbols-outlined" style="font-size: 1.5rem; color: red; vertical-align: middle;">Atenção!</span>
-                        <p style="display: inline-block; margin-left: 1rem;">Playbooks de Resposta a Incidentes e Fluxos de Trabalho do SOC. Estes são modelos gerais e devem ser adaptados para atender aos requisitos de segurança da sua organização.</p>
-                    </div>
+        <!-- Sobre -->
+        <section id="about" class="container">
+            <h2 style="background-color: #333; color: #fff; padding: 1rem; border-radius: 0.5rem; width: 96%;">O que é um Playbook?</h2>
+            <p>Playbooks são ferramentas essenciais para profissionais de segurança cibernética, projetadas para armazenar e organizar conhecimentos sobre táticas e procedimentos de segurança. Eles servem como guias práticos, permitindo que equipes enfrentem situações desafiadoras de maneira eficiente e estruturada.</p>
+            <p>Em vez de improvisar diante de incidentes, os playbooks fornecem estratégias claras e bem documentadas que podem ser aplicadas imediatamente, facilitando a tomada de decisões rápidas e eficazes.</p>
+            <h2 style="background-color: #333; color: #fff; padding: 1rem; border-radius: 0.5rem; width: 96%;">Por que usar Playbooks?</h2>
+            <p><strong>Respostas rápidas e eficazes:</strong> Auxiliam na mitigação de danos causados por ataques cibernéticos.</p>
+            <p><strong>Continuidade dos negócios:</strong> Ajudam a restaurar operações críticas o mais rápido possível.</p>
+            <p><strong>Coordenar esforços:</strong> Promovem respostas bem organizadas em tempos de crise, reduzindo confusões e evitando debates desnecessários graças aos passos pré-definidos.</p>
+            <p><strong>Conformidade regulatória:</strong> Garantem que a organização permaneça alinhada com as regulamentações, minimizando riscos de multas mesmo durante ataques.</p>
+            <p><strong>Fortalecimento da cultura de segurança:</strong> Educam e envolvem grupos, atribuindo funções claras e promovendo o refinamento contínuo do manual de resposta a incidentes.</p>
+            <div class="alert-box" style="background-color: #FFF;border: 1px solid red;border-radius: 5px;padding: 0.5rem;">
+                <div class="alert">
+                    <span class="material-symbols-outlined" style="font-size: 1.5rem; color: red; vertical-align: middle;">Atenção!</span>
+                    <p style="display: inline-block; margin-left: 1rem;">Playbooks de Resposta a Incidentes e Fluxos de Trabalho do SOC. Estes são modelos gerais e devem ser adaptados para atender aos requisitos de segurança da sua organização.</p>
                 </div>
-            </section><br>
+            </div>
+        </section><br>
 
-            <!-- Playbooks -->
-            <section id="playbooks" class="container">
-                <h2 style="background-color: #333; color: #fff; padding: 1rem; border-radius: 0.5rem; width: 96%;" id="playbooks-title">Lista de Playbooks</h2>
-                <div class="playbook-list">
-                    <!-- Playbook 1 -->
-                    <div class="playbook-card">
-                        <h3>Resposta a Incidentes de Phishing</h3>
-                        <p>Este playbook orienta sobre como responder a ataques de phishing, desde a identificação inicial até a mitigação.</p>
-                        <button onclick="showModal('Phishing')">Ver Detalhes</button>
-                    </div>
-
-                    <!-- Playbook 2 -->
-                    <div class="playbook-card">
-                        <h3>Mitigação de Ataques DDoS</h3>
-                        <p>Procedimento para mitigar ataques DDoS, identificando tráfego malicioso e aplicando bloqueios e soluções de mitigação.</p>
-                        <button onclick="showModal('DDOS')">Ver Detalhes</button>
-                    </div>
-
-                    <!-- Playbook 3 -->
-                    <div class="playbook-card">
-                        <h3>Exploitação de Vulnerabilidades</h3>
-                        <p>Orientações sobre como executar testes de penetração, desde a coleta de informações até a exploração de vulnerabilidades.</p>
-                        <button onclick="showModal('Vulnerabilidades')">Ver Detalhes</button>
-                    </div>
-
-                    <!-- Playbook 4 -->
-                    <div class="playbook-card">
-                        <h3>Análise de Malware</h3>
-                        <p>Orientações sobre como analisar malware, incluindo a identificação de IOCs e a criação de relatórios.</p>
-                        <button onclick="showModal('Malware')">Ver Detalhes</button>
-                    </div>
-
-                    <!-- Playbook 5 -->
-                    <div class="playbook-card">
-                        <h3>Monitoramento de Redes</h3>
-                        <p>Orientações sobre como monitorar redes, incluindo a configuração de ferramentas de monitoramento e a interpretação de resultados.</p>
-                        <button onclick="showModal('Monitoramento de Redes')">Ver Detalhes</button>
-                    </div>
-
-                    <!-- Playbook 6 -->
-                    <div class="playbook-card">
-                        <h3>Recuperação de Dados</h3>
-                        <p>Orientações sobre como recuperar dados perdidos ou danificados, incluindo a identificação de fontes de dados e a utilização de ferramentas de recuperação.</p>
-                        <button onclick="showModal('Recuperação de Dados')">Ver Detalhes</button>
-                    </div>
-
-                    <!-- Playbook 7 -->
-                    <div class="playbook-card">
-                        <h3>Segurança em Nuvem</h3>
-                        <p>Orientações sobre como garantir a segurança em ambientes de nuvem, incluindo a configuração de controles de acesso e a implementação de soluções de segurança.</p>
-                        <button onclick="showModal('cloud')">Ver Detalhes</button>
-                    </div>
-
-                    <!-- Playbook 8 -->
-                    <div class="playbook-card">
-                        <h3>Segurança em Redes Wi-Fi</h3>
-                        <p>Orientações sobre como garantir a segurança em redes Wi-Fi, incluindo a configuração de controles de acesso e a implementação de soluções de segurança.</p>
-                        <button onclick="showModal('wifi')">Ver Detalhes</button>
-                    </div>
-
-                    <!-- Playbook 9 -->
-                    <div class="playbook-card">
-                        <h3>Segurança em Sistemas de Informação</h3>
-                        <p>Orientações sobre como garantir a segurança em sistemas de informação, incluindo a configuração de controles de acesso e a implementação de soluções de segurança.</p>
-                        <button onclick="showModal('sis')">Ver Detalhes</button>
-                    </div>
-
-                    <!-- Playbook 10 -->
-                    <div class="playbook-card">
-                        <h3>Segurança em Dispositivos Móveis</h3>
-                        <p>Orientações sobre como garantir a segurança em dispositivos móveis, incluindo a configuração de controles de acesso e a implementação de soluções de segurança.</p>
-                        <button onclick="showModal('mobile')">Ver Detalhes</button>
-                    </div>
-
-                    <!-- Playbook 11 -->
-                    <div class="playbook-card">
-                        <h3>Segurança em Servidores</h3>
-                        <p>Orientações sobre como garantir a segurança em servidores, incluindo a configuração de controles de acesso e a implementação de soluções de segurança.</p>
-                        <button onclick="showModal('servers')">Ver Detalhes</button>
-                    </div>
-
-                    <!-- Playbook 12 -->
-                    <div class="playbook-card">
-                        <h3>Segurança em Banco de Dados</h3>
-                        <p>Orientações sobre como garantir a segurança em bancos de dados, incluindo a configuração de controles de acesso e a implementação de soluções de segurança.</p>
-                        <button onclick="showModal('database')">Ver Detalhes</button>
-                    </div>
-
-                    <!-- Playbook 13 -->
-                    <div class="playbook-card">
-                        <h3>Segurança em Rede Social</h3>
-                        <p>Orientações sobre como garantir a segurança em redes sociais, incluindo a configuração de controles de acesso e a implementação de soluções de segurança.</p>
-                        <button onclick="showModal('social')">Ver Detalhes</button>
-                    </div>
-
-                    <!-- Playbook 14 -->
-                    <div class="playbook-card">
-                        <h3>Segurança em Email</h3>
-                        <p>Orientações sobre como garantir a segurança em emails, incluindo a configuração de controles de acesso e a implementação de soluções de segurança.</p>
-                        <button onclick="showModal('email')">Ver Detalhes</button>
-                    </div>
-
-                    <!-- Playbook 15 -->
-                    <div class="playbook-card">
-                        <h3>Saida de Pessoa da Empresa</h3>
-                        <p>Orientações sobre como lidar com a saída de uma pessoa da empresa, incluindo a revogação de acessos e a proteção de dados.</p>
-                        <button onclick="showModal('saida')">Ver Detalhes</button>
-                    </div>
-
-                    <!-- Playbook 16 -->
-                    <div class="playbook-card">
-                        <h3>Vazamento de Dados</h3>
-                        <p>Orientações sobre como lidar com o vazamento de dados, incluindo a contenção do incidente e a proteção de dados.</p>
-                        <button onclick="showModal('vazamento')">Ver Detalhes</button>
-                    </div>
-                    <!-- Playbook 17 -->
-                    <div class="playbook-card">
-                        <h3>Injeção de Código</h3>
-                        <p>Orienta es sobre como prevenir a inje o de c digo em aplica es web.</p>
-                        <button onclick="showModal('injection')">Ver Detalhes</button>
-                    </div>
-
-                    <!-- Playbook 18 -->
-                    <div class="playbook-card">
-                        <h3>Falha na Autentição</h3>
-                        <p>Orienta es sobre como prevenir falhas na autentica o em aplica es web.</p>
-                        <button onclick="showModal('auth')">Ver Detalhes</button>
-                    </div>
-
-                    <!-- Playbook 19 -->
-                    <div class="playbook-card">
-                        <h3>Exposi o de Dados Sensíveis</h3>
-                        <p>Orienta es sobre como prevenir a exposi o de dados sens veis em aplica es web.</p>
-                        <button onclick="showModal('data')">Ver Detalhes</button>
-                    </div>
-
-                    <!-- Playbook 20 -->
-                    <div class="playbook-card">
-                        <h3>Controle de Acessos Insuficiente</h3>
-                        <p>Orienta es sobre como prevenir o controle de acessos insuficiente em aplica es web.</p>
-                        <button onclick="showModal('access')">Ver Detalhes</button>
-                    </div>
-
-                    <!-- Playbook 21 -->
-                    <div class="playbook-card">
-                        <h3>Componentes com Vulnerabilidades Conhecidas</h3>
-                        <p>Orienta es sobre como prevenir a utiliza o de componentes com vulnerabilidades conhecidas em aplica es web.</p>
-                        <button onclick="showModal('components')">Ver Detalhes</button>
-                    </div>
-
-                    <!-- Playbook 22 -->
-                    <div class="playbook-card">
-                        <h3>Controle de Entradas Insuficiente</h3>
-                        <p>Orienta es sobre como prevenir o controle de entradas insuficiente em aplica es web.</p>
-                        <button onclick="showModal('input')">Ver Detalhes</button>
-                    </div>
-
-                    <!-- Playbook 23 -->
-                    <div class="playbook-card">
-                        <h3>Falha na Prote o de Dados</h3>
-                        <p>Orienta es sobre como prevenir a falha na prote o de dados em aplica es web.</p>
-                        <button onclick="showModal('data_protection')">Ver Detalhes</button>
-                    </div>
-
-                    <!-- Playbook 24 -->
-                    <div class="playbook-card">
-                        <h3>Configura o de Seguran a Insuficiente</h3>
-                        <p>Orienta es sobre como prevenir a configura o de seguran a insuficiente em aplica es web.</p>
-                        <button onclick="showModal('security_configuration')">Ver Detalhes</button>
-                    </div>
-                    <!-- Playbook for Downloaders -->
-                    <div class="playbook-card">
-                        <h3>Downloaders</h3>
-                        <p>Orientações sobre como lidar com downloaders maliciosos, incluindo a detecção e remoção de software indesejado.</p>
-                        <button onclick="showModal('downloaders')">Ver Detalhes</button>
-                    </div>
-                    
-                    <!-- Playbook for Engenharia Social -->
-                    <div class="playbook-card">
-                        <h3>Engenharia Social</h3>
-                        <p>Orientações sobre como prevenir ataques de engenharia social, incluindo treinamento de funcionários e identificação de tentativas de manipulação.</p>
-                        <button onclick="showModal('social_engineering')">Ver Detalhes</button>
-                    </div>
-                    
-                    <!-- Playbook for Malvertising -->
-                    <div class="playbook-card">
-                        <h3>Malvertising</h3>
-                        <p>Orientações sobre como lidar com malvertising, incluindo o bloqueio de anúncios maliciosos e a proteção dos usuários.</p>
-                        <button onclick="showModal('malvertising')">Ver Detalhes</button>
-                    </div>
-                    
-                    <!-- Playbook for Download Hijacking -->
-                    <div class="playbook-card">
-                        <h3>Download Hijacking</h3>
-                        <p>Orientações sobre como prevenir o sequestro de downloads, garantindo a integridade e segurança dos arquivos transferidos.</p>
-                        <button onclick="showModal('download_hijacking')">Ver Detalhes</button>
-                    </div>
-                    
-                    <!-- Playbook for Password Cracking -->
-                    <div class="playbook-card">
-                        <h3>Password Cracking</h3>
-                        <p>Orientações sobre como prevenir o cracking de senhas, incluindo o uso de senhas fortes e a implementação de autenticação multifator.</p>
-                        <button onclick="showModal('password_cracking')">Ver Detalhes</button>
-                    </div>
-                    
-                    <!-- Playbook for Scareware -->
-                    <div class="playbook-card">
-                        <h3>Scareware</h3>
-                        <p>Orientações sobre como identificar e remover scareware, protegendo os usuários de mensagens de alerta falsas.</p>
-                        <button onclick="showModal('scareware')">Ver Detalhes</button>
-                    </div>
-                    
-                </div>
-            </section>
-        </main>
-    
-    <!-- Modal -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2 id="modal-title"></h2>
-            <div id="modal-details">
-                <!-- Conteúdo do Playbook de Phishing -->
-                <div id="phishing" class="modal-playbook-content" style="display:none;">
-                  
+        <!-- Playbooks -->
+        <section id="playbooks" class="container">
+            <h2 style="background-color: #333; color: #fff; padding: 1rem; border-radius: 0.5rem; width: 96%;" id="playbooks-title">Lista de Playbooks</h2>
+            <div class="playbook-list">
+                <!-- Playbook 1 -->
+                <div class="playbook-card">
+                    <h3>Resposta a Incidentes de Phishing</h3>
+                    <p>Este playbook orienta sobre como responder a ataques de phishing, desde a identificação inicial até a mitigação.</p>
+                    <button onclick="showModal('phishing')">Ver Detalhes</button>
                 </div>
 
-                <!-- Conteúdo do Playbook de DDoS -->
-                <div id="ddos" class="modal-playbook-content" style="display:none;">
-                    <ul>
-                        <li>Monitoramento de tráfego em tempo real</li>
-                        <li>Identificação de fontes do ataque</li>
-                        <li>Aplicação de regras de firewall</li>
-                        <li>Uso de servi os de mitigação de DDoS</li>
-                        <li>Análise pós-incidente e ajustes nas defesas</li>
-                    </ul>
+
+                <!-- Playbook 2 -->
+                <div class="playbook-card">
+                    <h3>Mitigação de Ataques DDoS</h3>
+                    <p>Procedimento para mitigar ataques DDoS, identificando tráfego malicioso e aplicando bloqueios e soluções de mitigação.</p>
+                    <button onclick="showModal('ddos')">Ver Detalhes</button>
                 </div>
 
-                <!-- Conteúdo do Playbook de Vulnerabilidades -->
-                <div id="vulnerabilities" class="modal-playbook-content" style="display:none;">
-                    <ul>
-                        <li>Coleta de informações (Recon)</li>
-                        <li>Análise de vulnerabilidades conhecidas</li>
-                        <li>Desenvolvimento de exploits</li>
-                        <li>Execução de payloads</li>
-                        <li>Escalada de privilégios</li>
-                    </ul>
+                <!-- Playbook 3 -->
+                <div class="playbook-card">
+                    <h3>Exploitação de Vulnerabilidades</h3>
+                    <p>Orientações sobre como executar testes de penetração, desde a coleta de informações até a exploração de vulnerabilidades.</p>
+                    <button onclick="showModal('vulnerabilidades')">Ver Detalhes</button>
+                </div>
+
+                <!-- Playbook 4 -->
+                <div class="playbook-card">
+                    <h3>Análise de Malware</h3>
+                    <p>Orientações sobre como analisar malware, incluindo a identificação de IOCs e a criação de relatórios.</p>
+                    <button onclick="showModal('malware')">Ver Detalhes</button>
+                </div>
+
+                <!-- Playbook 5 -->
+                <div class="playbook-card">
+                    <h3>Monitoramento de Redes</h3>
+                    <p>Orientações sobre como monitorar redes, incluindo a configuração de ferramentas de monitoramento e a interpretação de resultados.</p>
+                    <button onclick="showModal('redes')">Ver Detalhes</button>
+                </div>
+
+                <!-- Playbook 6 -->
+                <div class="playbook-card">
+                    <h3>Recuperação de Dados</h3>
+                    <p>Orientações sobre como recuperar dados perdidos ou danificados, incluindo a identificação de fontes de dados e a utilização de ferramentas de recuperação.</p>
+                    <button onclick="showModal('datarecovery')">Ver Detalhes</button>
+                </div>
+
+                <!-- Playbook 7 -->
+                <div class="playbook-card">
+                    <h3>Segurança em Nuvem</h3>
+                    <p>Orientações sobre como garantir a segurança em ambientes de nuvem, incluindo a configuração de controles de acesso e a implementação de soluções de segurança.</p>
+                    <button onclick="showModal('cloud')">Ver Detalhes</button>
+                </div>
+
+                <!-- Playbook 8 -->
+                <div class="playbook-card">
+                    <h3>Segurança em Redes Wi-Fi</h3>
+                    <p>Orientações sobre como garantir a segurança em redes Wi-Fi, incluindo a configuração de controles de acesso e a implementação de soluções de segurança.</p>
+                    <button onclick="showModal('wifi')">Ver Detalhes</button>
+                </div>
+
+                <!-- Playbook 9 -->
+                <div class="playbook-card">
+                    <h3>Segurança em Sistemas de Informação</h3>
+                    <p>Orientações sobre como garantir a segurança em sistemas de informação, incluindo a configuração de controles de acesso e a implementação de soluções de segurança.</p>
+                    <button onclick="showModal('sisinfo')">Ver Detalhes</button>
+                </div>
+
+                <!-- Playbook 10 -->
+                <div class="playbook-card">
+                    <h3>Segurança em Dispositivos Móveis</h3>
+                    <p>Orientações sobre como garantir a segurança em dispositivos móveis, incluindo a configuração de controles de acesso e a implementação de soluções de segurança.</p>
+                    <button onclick="showModal('mobile')">Ver Detalhes</button>
+                </div>
+
+                <!-- Playbook 11 -->
+                <div class="playbook-card">
+                    <h3>Segurança em Servidores</h3>
+                    <p>Orientações sobre como garantir a segurança em servidores, incluindo a configuração de controles de acesso e a implementação de soluções de segurança.</p>
+                    <button onclick="showModal('servers')">Ver Detalhes</button>
+                </div>
+
+                <!-- Playbook 12 -->
+                <div class="playbook-card">
+                    <h3>Segurança em Banco de Dados</h3>
+                    <p>Orientações sobre como garantir a segurança em bancos de dados, incluindo a configuração de controles de acesso e a implementação de soluções de segurança.</p>
+                    <button onclick="showModal('database')">Ver Detalhes</button>
+                </div>
+
+                <!-- Playbook 13 -->
+                <div class="playbook-card">
+                    <h3>Segurança em Rede Social</h3>
+                    <p>Orientações sobre como garantir a segurança em redes sociais, incluindo a configuração de controles de acesso e a implementação de soluções de segurança.</p>
+                    <button onclick="showModal('social')">Ver Detalhes</button>
+                </div>
+
+                <!-- Playbook 14 -->
+                <div class="playbook-card">
+                    <h3>Segurança em Email</h3>
+                    <p>Orientações sobre como garantir a segurança em emails, incluindo a configuração de controles de acesso e a implementação de soluções de segurança.</p>
+                    <button onclick="showModal('email')">Ver Detalhes</button>
+                </div>
+
+                <!-- Playbook 15 -->
+                <div class="playbook-card">
+                    <h3>Saida de Pessoa da Empresa</h3>
+                    <p>Orientações sobre como lidar com a saída de uma pessoa da empresa, incluindo a revogação de acessos e a proteção de dados.</p>
+                    <button onclick="showModal('pessoa')">Ver Detalhes</button>
+                </div>
+
+                <!-- Playbook 16 -->
+                <div class="playbook-card">
+                    <h3>Vazamento de Dados</h3>
+                    <p>Orientações sobre como lidar com o vazamento de dados, incluindo a contenção do incidente e a proteção de dados.</p>
+                    <button onclick="showModal('vazamento')">Ver Detalhes</button>
+                </div>
+                <!-- Playbook 17 -->
+                <div class="playbook-card">
+                    <h3>Injeção de Código</h3>
+                    <p>Orienta es sobre como prevenir a inje o de c digo em aplica es web.</p>
+                    <button onclick="showModal('injection')">Ver Detalhes</button>
+                </div>
+
+                <!-- Playbook 18 -->
+                <div class="playbook-card">
+                    <h3>Falha na Autentição</h3>
+                    <p>Orienta es sobre como prevenir falhas na autentica o em aplica es web.</p>
+                    <button onclick="showModal('falhasauth')">Ver Detalhes</button>
+                </div>
+
+                <!-- Playbook 19 -->
+                <div class="playbook-card">
+                    <h3>Exposi o de Dados Sensíveis</h3>
+                    <p>Orienta es sobre como prevenir a exposi o de dados sens veis em aplica es web.</p>
+                    <button onclick="showModal('expo')">Ver Detalhes</button>
+                </div>
+
+                <!-- Playbook 20 -->
+                <div class="playbook-card">
+                    <h3>Controle de Acessos Insuficiente</h3>
+                    <p>Orienta es sobre como prevenir o controle de acessos insuficiente em aplica es web.</p>
+                    <button onclick="showModal('access')">Ver Detalhes</button>
+                </div>
+
+                <!-- Playbook 21 -->
+                <div class="playbook-card">
+                    <h3>Componentes com Vulnerabilidades Conhecidas</h3>
+                    <p>Orienta es sobre como prevenir a utiliza o de componentes com vulnerabilidades conhecidas em aplica es web.</p>
+                    <button onclick="showModal('components')">Ver Detalhes</button>
+                </div>
+
+                <!-- Playbook 22 -->
+                <div class="playbook-card">
+                    <h3>Controle de Entradas Insuficiente</h3>
+                    <p>Orienta es sobre como prevenir o controle de entradas insuficiente em aplica es web.</p>
+                    <button onclick="showModal('input')">Ver Detalhes</button>
+                </div>
+
+                <!-- Playbook 23 -->
+                <div class="playbook-card">
+                    <h3>Falha na Prote o de Dados</h3>
+                    <p>Orienta es sobre como prevenir a falha na prote o de dados em aplica es web.</p>
+                    <button onclick="showModal('dataprotection')">Ver Detalhes</button>
+                </div>
+
+                <!-- Playbook 24 -->
+                <div class="playbook-card">
+                    <h3>Configura o de Seguran a Insuficiente</h3>
+                    <p>Orienta es sobre como prevenir a configura o de seguran a insuficiente em aplica es web.</p>
+                    <button onclick="showModal('securityconfiguration')">Ver Detalhes</button>
+                </div>
+                <!-- Playbook for Downloaders -->
+                <div class="playbook-card">
+                    <h3>Downloaders</h3>
+                    <p>Orientações sobre como lidar com downloaders maliciosos, incluindo a detecção e remoção de software indesejado.</p>
+                    <button onclick="showModal('downloaders')">Ver Detalhes</button>
+                </div>
+                
+                <!-- Playbook for Engenharia Social -->
+                <div class="playbook-card">
+                    <h3>Engenharia Social</h3>
+                    <p>Orientações sobre como prevenir ataques de engenharia social, incluindo treinamento de funcionários e identificação de tentativas de manipulação.</p>
+                    <button onclick="showModal('socialengineering')">Ver Detalhes</button>
+                </div>
+                
+                <!-- Playbook for Malvertising -->
+                <div class="playbook-card">
+                    <h3>Malvertising</h3>
+                    <p>Orientações sobre como lidar com malvertising, incluindo o bloqueio de anúncios maliciosos e a proteção dos usuários.</p>
+                    <button onclick="showModal('malvertising')">Ver Detalhes</button>
+                </div>
+                
+                <!-- Playbook for Download Hijacking -->
+                <div class="playbook-card">
+                    <h3>Download Hijacking</h3>
+                    <p>Orientações sobre como prevenir o sequestro de downloads, garantindo a integridade e segurança dos arquivos transferidos.</p>
+                    <button onclick="showModal('hijacking')">Ver Detalhes</button>
+                </div>
+                
+                <!-- Playbook for Password Cracking -->
+                <div class="playbook-card">
+                    <h3>Password Cracking</h3>
+                    <p>Orientações sobre como prevenir o cracking de senhas, incluindo o uso de senhas fortes e a implementação de autenticação multifator.</p>
+                    <button onclick="showModal('passwordcracking')">Ver Detalhes</button>
+                </div>
+                
+                <!-- Playbook for Scareware -->
+                <div class="playbook-card">
+                    <h3>Scareware</h3>
+                    <p>Orientações sobre como identificar e remover scareware, protegendo os usuários de mensagens de alerta falsas.</p>
+                    <button onclick="showModal('scareware')">Ver Detalhes</button>
+                </div>
+                
+        </section>
+
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title"></h2>
+                <div id="modal-details">
+                    <!-- Conteúdo do modal será injetado aqui -->
                 </div>
             </div>
         </div>
     </div>
-    
+<style>
+    /* Estilo geral do modal */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animação de saída */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Conteúdo do modal */
+.modal-content {
+    position: relative;
+    margin: 5% auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    max-width: 1400px; /* Largura máxima */
+    width: 90%; /* Adapta ao tamanho da tela */
+    top: -5%; /* Desloca para cima */
+    max-height: 85vh; /* Altura máxima para caber na tela */
+    overflow-y: auto; /* Adiciona barra de rolagem vertical */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 0.4s ease-in-out;
+}
+
+/* Animação de entrada do conteúdo */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Título do modal */
+.modal-content h1 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+.modal-content h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+
+            font-size: 16px;
+            background-color: #ddf4ff;
+            padding: 6px;
+            border-radius: 6px;
+            border: 1px solid #b6e3ff;
+            color: #0969da;
+            animation: fadeInUp 1s ease-in-out;
+            display: block;
+        }
+
+
+/* Botão de fechar */
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.modal-content .close:hover {
+    color: red;
+}
+
+/* Animação de saída do conteúdo ao fechar */
+.modal-content.closing {
+    animation: fadeOut 0.4s ease-in-out;
+}
+
+</style>
+    <!-- Scripts -->
+     
+    <script src="js/scripts.js"></script>
+        
     <!-- Footer -->
     <br><footer class="footer">
         <div class="container">
             <p style="text-align: center;">&copy; 2025 Cyber Defense Playbook. Todos os direitos reservados.</p>
         </div>
     </footer>
-
-    <!-- Scripts -->
-    <script src="js/scripts.js" defer></script>
 </body>
+
 </html>
