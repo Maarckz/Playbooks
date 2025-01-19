@@ -35,7 +35,8 @@ function showModal(playbook) {
     modalTitle.style.textAlign = "center";
     modalDetails.innerHTML = '<p>Carregando conteúdo...</p>';
 
-    fetch(`https://maarckz.github.io/Playbooks/modals/${playbook}`)
+    const filePath = `./modals/${playbook}`;
+    fetch(filePath)
         .then(response => {
             if (!response.ok) throw new Error(`Erro ao carregar: ${response.statusText}`);
             return response.text();
@@ -61,18 +62,24 @@ window.addEventListener('keydown', event => {
     if (event.key === "Escape") closeModal();
 });
 
-// Mostrar/ocultar barra lateral
-function toggleSidebar() {
-    document.querySelector('aside').classList.toggle('active');
-}
 
-// Fechar sidebar ao clicar fora
-document.addEventListener("click", event => {
-    if (!event.target.closest(".menu-hamburguer")) {
-        document.querySelector(".sidebar").classList.remove("open");
+function toggleMenu() {
+    let sidebar = document.querySelector(".sidebar");
+    sidebar.classList.toggle("active");
+    if (sidebar.classList.contains("active")) {
+        sidebar.style.left = "0";
+    } else {
+        sidebar.style.left = "-250px";
     }
-});
+}
+    // Fechar sidebar ao clicar fora
+    document.addEventListener("click", event => {
+        if (!event.target.closest(".menu-hamburguer")) {
+            document.querySelector(".sidebar").classList.remove("active");
+            document.querySelector(".sidebar").style.left = "-250px";
+        }
+    });
 
 // Evitar cliques e seleções indesejadas
-//document.addEventListener("contextmenu", event => event.preventDefault());
-//document.addEventListener("selectstart", event => event.preventDefault());
+document.addEventListener("contextmenu", event => event.preventDefault());
+document.addEventListener("selectstart", event => event.preventDefault());
