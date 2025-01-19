@@ -1,6 +1,5 @@
 <style>
-
-  body {
+  #iframe {
       font-family: 'Montserrat', sans-serif;
       margin: 20px;
       line-height: 1.6;
@@ -9,7 +8,7 @@
   }
   
 
-  h1 {
+  #iframe h1 {
       animation: fadeInUp 1s ease-in-out;
       background-color: #333;
       color: #fff;
@@ -24,7 +23,7 @@
   
   }
 
-  h2 {
+  #iframe h2 {
       animation: fadeInUp 1s ease-in-out;
       background-color: #333;
       color: #fff;
@@ -38,7 +37,7 @@
       animation: fadeInUp 1s ease-in-out;
   
   }
-  h3 {
+  #iframe h3 {
       margin-top: 0;
       font-size: 16px;
       background-color: #ddf4ff;
@@ -53,7 +52,7 @@
       margin-left: auto;
       margin-right: auto;
   }
-  h4 {
+  #iframe h4 {
             margin-top: 1rem;
             font-weight: bold;
             font-size: 1.1rem;
@@ -63,15 +62,14 @@
         
 
 
-  p {
+  #iframe p {
       animation: fadeInUp 1s ease-in-out;
       width: 90%;
       margin-left: auto;
       margin-right: auto;
   }
 
-
-  ul {
+  #iframe ul {
             list-style: none;
             padding: 0;
             margin: 0;
@@ -82,7 +80,7 @@
             margin-right: auto;
         }
 
-        ul li {
+        #iframe ul li {
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -94,14 +92,12 @@
             box-sizing: border-box; 
         }
 
-        ul li:hover {
+        #iframe ul li:hover {
             transform: translateY(-5px);
         }
 
 
-
-
-  table {
+  #iframe table {
       border-collapse: collapse;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       width: 90%;
@@ -113,24 +109,24 @@
       margin-right: auto;
   }
 
-  th, td {
+  #iframe th, #iframe td {
       padding: 12px;
       text-align: left;
       border: 1px solid #b6e3ff;
       font-size: 16px;
   }
 
-  th {
+  #iframe th {
       font-weight: bold;
       background-color: #ddf4ff;
       color: #0969da;
   }
 
-  tr {
+  #iframe tr {
       background-color: #fff;
   }
 
-  tr:hover {
+  #iframe tr:hover {
       background-color: #bbddff;
   }
 
@@ -155,46 +151,46 @@
   
 </style>
 
+<div id="iframe">
 
 
-<div style="text-align: center;">
-    <h1>Playbook: Resposta a Incidentes de Phishing</h1>
+<h1>Playbook: Resposta a Incidentes de Phishing</h1>
 
-    <h3>1. Propósito</h3>
+<h3>1. Propósito</h3>
 
-    <p>Padronizar e agilizar a resposta a incidentes de phishing, garantindo a detecção precoce e a mitigação de ataques de phishing avançados, minimizando o impacto sobre a organização e protegendo seus ativos digitais.</p>
+<p>Padronizar e agilizar a resposta a incidentes de phishing, garantindo a detecção precoce e a mitigação de ataques de phishing avançados, minimizando o impacto sobre a organização e protegendo seus ativos digitais.</p>
 
-    <h3>2. Escopo</h3>
+<h3>2. Escopo</h3>
 
-    <p>- Aplicável a todos os incidentes de phishing envolvendo e-mails, SMS (smishing) e outras formas de comunicação fraudulentas.</p>
+<p>- Aplicável a todos os incidentes de phishing envolvendo e-mails, SMS (smishing) e outras formas de comunicação fraudulentas.</p>
 
-    <h3>3. Papéis e Responsabilidades</h3>
+<h3>3. Papéis e Responsabilidades</h3>
 
-    <table style="margin: 0 auto;">
-        <thead>
-            <tr>
-                <th>Papel</th>
-                <th>Responsabilidade</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Equipe SOC</td>
-                <td>Monitorar, analisar e coordenar as etapas de resposta.</td>
-            </tr>
-            <tr>
-                <td>Administradores TI</td>
-                <td>Aplicar bloqueios e corrigir vulnerabilidades técnicas.</td>
-            </tr>
-            <tr>
-                <td>Usuários Finais</td>
-                <td>Reportar mensagens suspeitas e seguir orientações de segurança.</td>
-            </tr>
-        </tbody>
-    </table>
+<table style="margin: 0 auto;">
+    <thead>
+        <tr>
+            <th>Papel</th>
+            <th>Responsabilidade</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Equipe SOC</td>
+            <td>Monitorar, analisar e coordenar as etapas de resposta.</td>
+        </tr>
+        <tr>
+            <td>Administradores TI</td>
+            <td>Aplicar bloqueios e corrigir vulnerabilidades técnicas.</td>
+        </tr>
+        <tr>
+            <td>Usuários Finais</td>
+            <td>Reportar mensagens suspeitas e seguir orientações de segurança.</td>
+        </tr>
+    </tbody>
+</table>
 
-    <h3>4. Etapas do Processo</h3>
-    <style>
+<h3>4. Etapas do Processo</h3>
+<style>
       
     </style>
 
@@ -344,7 +340,4 @@
         <li>Soluções de aprendizado e treinamento (Cybersecurity Awareness Tools).</li>
     </ul>
 </div>
-
-
-
 
