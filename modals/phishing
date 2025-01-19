@@ -55,8 +55,18 @@
             margin-top: 1rem;
             font-weight: bold;
             font-size: 1.1rem;
+            width: 90%;
+            animation: fadeInUp 1s ease-in-out;
+
   }
-        
+     
+  #iframe p {
+            margin-top: 1rem;
+            font-size: 1rem;
+            width: 90%;
+            animation: fadeInUp 1s ease-in-out;
+
+  }
 
 
 
@@ -147,30 +157,88 @@
     </table>
 
     <h2>4. Etapas do Processo</h2>
+
+
+<!-- ATE AQUI OK -->
+<!-- ATE AQUI OK -->
+<!-- ATE AQUI OK -->
+<!-- ATE AQUI OK -->
+<!-- ATE AQUI OK -->
+<!-- ATE AQUI OK -->
+<!-- ATE AQUI OK -->
+<!-- ATE AQUI OK -->
+<!-- ATE AQUI OK -->
+<!-- ATE AQUI OK -->
+<!-- ATE AQUI OK -->
+<!-- ATE AQUI OK -->
+<!-- ATE AQUI OK -->
+<!-- ATE AQUI OK -->
+
+
+
+
     <style>
         #iframe .cards {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            gap: 20px;
         }
 
         #iframe .card {
-            margin: 10px;
-            padding: 10px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            max-width: 300px;
-            flex-basis: calc(33.33% - 20px);
+            margin: 15px;
+            padding: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            max-width: 620px;
+            border-radius: 8px;
+            background-color: #f1f8ff;
+            transition: transform 0.2s;
+        }
+
+        #iframe .card:hover {
+            transform: translateY(-5px);
         }
 
         #iframe .card h3 {
             margin-top: 0;
+            font-size: 1.2em;
+            color: #0969da;
         }
 
-        #iframe .card p {
+
+        
+        #iframe .card p, #iframe .card ul {
             margin-top: 0;
+            color: #000000;
         }
-    </style>
 
+        #iframe .card ul {
+            padding-left: 20px;
+            list-style-type: none;
+        }
+
+        #iframe li {
+            background-color: #f1f8ff;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        #iframe li:hover {
+            background-color: #ddf4ff;
+        }
+
+        #iframe li:active {
+            background-color: #bbddff;
+        }
+
+        #iframe ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+    </style>
     <h2>1. Preparação</h2>
     <div id="iframe">
         <div class="cards">
@@ -185,29 +253,33 @@
                 <p>Para contatar empresas de hospedagem para remoção de domínios.</p>
                 <p>Para informar terceiros a tomar ações contra phishing em sua infraestrutura (Microsoft, FedEx, Apple, etc.).</p>
             </div>
+
             <div class="card">
-                <h3>Garantir que:</h3>
-                <p>Soluções de anti-malware/anti-spam/anti-phish estejam implementadas.</p>
-                <p>Os usuários saibam como relatar tentativas de phishing.</p>
-                <p>Haja detecção para documentos de escritório que geram processos:</p>
-                <ul>
-                    <li>PowerShell</li>
-                    <li>CMD</li>
-                    <li>WMI</li>
-                    <li>MSHTA</li>
-                    <li>Etc.</li>
-                </ul>
+              <h3>Garantir que:</h3>
+              <p>Soluções de anti-malware/anti-spam/anti-phish estejam implementadas.</p>
+              <p>Os usuários saibam como relatar tentativas de phishing.</p>
+              <p>Haja detecção para documentos de escritório que geram processos:</p>
+              <ul>
+                  <li class="item">PowerShell</li>
+                  <li class="item">CMD</li>
+                  <li class="item">WMI</li>
+                  <li class="item">MSHTA</li>
+                  <li class="item">Etc.</li>
+              </ul>
             </div>
-            <div class="card">
-                <h3>Realizar simulação de emergência para garantir que todos os aspectos do Playbook funcionem:</h3>
-                <p>Após a publicação</p>
-                <p>Pelo menos uma vez por ano</p>
-                <p>Testar/Validar:</p>
-                <ul>
-                    <li>Cartões do cliente</li>
-                    <li>Contatos internos e caminhos de escalonamento</li>
-                </ul>
-            </div>
+        </div>
+     
+        <div class="cards">
+          <div class="card">
+            <h3>Realizar simulação de emergência para garantir que todos os aspectos do Playbook funcionem:</h3>
+            <p>Após a publicação</p>
+            <p>Pelo menos uma vez por ano</p>
+            <p>Testar/Validar:</p>
+            <ul>
+                <li>Cartões do cliente</li>
+                <li>Contatos internos e caminhos de escalonamento</li>
+            </ul>
+        </div>
             <div class="card">
                 <h3>Revisar inteligência de ameaças para:</h3>
                 <p>Ameaças à organização</p>
@@ -227,49 +299,53 @@
         </div>
     </div>
 
-    <h2>Lista de Ativos</h2>
-    <ul>
-        <li>Uma lista de ativos e proprietários deve existir e estar disponível para o seguinte:
-            <ul>
-                <li>Ativos dos Clientes:
-                    <ul>
-                        <li>Proprietários</li>
-                        <li>Contatos</li>
-                        <li>Ações pré-autorizadas</li>
-                    </ul>
-                </li>
-                <li>Ativos da Empresa (Incluindo todas as subsidiárias e unidades de negócios):
-                    <ul>
-                        <li>Proprietários</li>
-                        <li>Contatos</li>
-                        <li>Administradores</li>
-                        <li>Ações pré-autorizadas</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li>Tipo de inventário de ativos necessário:
-            <ul>
-                <li>Endpoints</li>
-                <li>Servidores</li>
-                <li>Equipamentos de rede</li>
-                <li>Appliances de segurança</li>
-                <li>Faixas de rede:
-                    <ul>
-                        <li>Públicas</li>
-                        <li>Privadas</li>
-                        <li>VPN / Fora de banda:
-                            <ul>
-                                <li>Funcionários</li>
-                                <li>Parceiros</li>
-                                <li>Clientes</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-    </ul>
+
+
+
+
+
+<div class="cards">
+  <h2>Tool Access and Provisioning</h2>
+    <div class="card">
+        <h3>Ativos dos Clientes</h3>
+        <ul>
+            <li>Proprietários</li>
+            <li>Contatos</li>
+            <li>Ações pré-autorizadas</li>
+        </ul>
+    </div>
+    <div class="card">
+        <h3>Ativos da Empresa</h3>
+        <p>(Incluindo todas as subsidiárias e unidades de negócios)</p>
+        <ul>
+            <li>Proprietários</li>
+            <li>Contatos</li>
+            <li>Administradores</li>
+            <li>Ações pré-autorizadas</li>
+        </ul>
+    </div>
+    <div class="card">
+        <h3>Tipo de Inventário de Ativos Necessário</h3>
+        <ul>
+            <li>Endpoints</li>
+            <li>Servidores</li>
+            <li>Equipamentos de rede</li>
+            <li>Appliances de segurança</li>
+            <li>Faixas de rede</li>
+                <ul>
+                    <li>Públicas</li>
+                    <li>Privadas</li>
+                    <li>VPN / Fora de banda</li>
+                        <ul>
+                            <li>Funcionários</li>
+                            <li>Parceiros</li>
+                            <li>Clientes</li>
+                        </ul>
+                </ul>
+        </ul>
+    </div>
+</div>
+
 <h2>2. Detectar</h2>
 
 <p>Ações:</p>
