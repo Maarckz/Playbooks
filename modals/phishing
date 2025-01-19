@@ -1,185 +1,350 @@
-<link href="css/styles.css" rel="stylesheet">
-<h2 style="background-color: #333; color: #fff; padding: 1rem; border-radius: 0.5rem;" id="playbook-detalhado-resposta-a-incidentes-de-phishing">Playbook: Resposta a Incidentes de Phishing</h2>
+<style>
 
-<p>Aqui está o playbook com uma descrição mais detalhada de cada processo:</p>
+  body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+      background-color: #f6f8fa;
+      animation: fadeIn 1s ease-in-out;
+  }
+  
 
-<h3>1. Propósito</h3>
+  h1 {
+      animation: fadeInUp 1s ease-in-out;
+      background-color: #333;
+      color: #fff;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      color: #ffffff;
+      font-size: 24px;
+      animation: fadeInUp 1s ease-in-out;
+  
+  }
 
-<p>Estabelecer um processo sistemático para lidar com incidentes de phishing de forma rápida e eficaz, minimizando riscos para a organização.</p>
+  h2 {
+      animation: fadeInUp 1s ease-in-out;
+      background-color: #333;
+      color: #fff;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      color: #ffffff;
+      font-size: 16px;
+      animation: fadeInUp 1s ease-in-out;
+  
+  }
+  h3 {
+      margin-top: 0;
+      font-size: 16px;
+      background-color: #ddf4ff;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #b6e3ff;
+      color: #0969da;
+      animation: fadeInUp 1s ease-in-out;
+      width: 90%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  h4 {
+            margin-top: 1rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-left: auto;
+            margin-right: auto;
+  }
+        
 
-<h3 id="2-escopo">2. Escopo</h3>
 
-<p>- Aplicável a todos os incidentes de phishing envolvendo e-mails, SMS (smishing) e outras formas de comunicação fraudulentas.</p>
+  p {
+      animation: fadeInUp 1s ease-in-out;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+  }
 
-<h3 id="3-pap-is-e-responsabilidades">3. Papéis e Responsabilidades</h3>
 
-<table>
-  <thead>
-    <tr>
-      <th>Papel</th>
-      <th>Responsabilidade</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Equipe SOC</td>
-      <td>Monitorar, analisar e coordenar as etapas de resposta.</td>
-    </tr>
-    <tr>
-      <td>Administradores TI</td>
-      <td>Aplicar bloqueios e corrigir vulnerabilidades técnicas.</td>
-    </tr>
-    <tr>
-      <td>Usuários Finais</td>
-      <td>Reportar mensagens suspeitas e seguir orientações de segurança.</td>
-    </tr>
-  </tbody>
-</table>
+  ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-<h3 id="4-etapas-do-processo">4. Etapas do Processo</h3>
+        ul li {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 0.7rem;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+            flex: 1 0 calc(30% - 1rem);
+            box-sizing: border-box; 
+        }
 
-<h3 id="41-identifica-o">4.1. Identificação</h3>
+        ul li:hover {
+            transform: translateY(-5px);
+        }
 
-<p>1. Ações:</p>
 
-<ul>
-  <li>Receber alertas de e-mails suspeitos reportados por usuários ou sistemas automatizados (ex.: SIEM).</li>
-  <li>Validar o incidente usando ferramentas de análise:
+
+
+  table {
+      border-collapse: collapse;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      margin: 16px auto;
+      background-color: #fff;
+      border-radius: 6px;
+      animation: fadeInUp 1s ease-in-out;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  th, td {
+      padding: 12px;
+      text-align: left;
+      border: 1px solid #b6e3ff;
+      font-size: 16px;
+  }
+
+  th {
+      font-weight: bold;
+      background-color: #ddf4ff;
+      color: #0969da;
+  }
+
+  tr {
+      background-color: #fff;
+  }
+
+  tr:hover {
+      background-color: #bbddff;
+  }
+
+  @keyframes fadeIn {
+      from {
+          opacity: 0;
+      }
+      to {    
+          opacity: 1;
+      }
+  }
+  @keyframes fadeInUp {
+      from {
+          opacity: 0;
+          transform: translateY(20px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+  
+</style>
+
+
+
+<div style="text-align: center;">
+    <h1>Playbook: Resposta a Incidentes de Phishing</h1>
+
+    <h3>1. Propósito</h3>
+
+    <p>Padronizar e agilizar a resposta a incidentes de phishing, garantindo a detecção precoce e a mitigação de ataques de phishing avançados, minimizando o impacto sobre a organização e protegendo seus ativos digitais.</p>
+
+    <h3>2. Escopo</h3>
+
+    <p>- Aplicável a todos os incidentes de phishing envolvendo e-mails, SMS (smishing) e outras formas de comunicação fraudulentas.</p>
+
+    <h3>3. Papéis e Responsabilidades</h3>
+
+    <table style="margin: 0 auto;">
+        <thead>
+            <tr>
+                <th>Papel</th>
+                <th>Responsabilidade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Equipe SOC</td>
+                <td>Monitorar, analisar e coordenar as etapas de resposta.</td>
+            </tr>
+            <tr>
+                <td>Administradores TI</td>
+                <td>Aplicar bloqueios e corrigir vulnerabilidades técnicas.</td>
+            </tr>
+            <tr>
+                <td>Usuários Finais</td>
+                <td>Reportar mensagens suspeitas e seguir orientações de segurança.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>4. Etapas do Processo</h3>
+    <style>
+      
+    </style>
+
+    <h3 id="41-identifica-o">4.1. Identificação</h3>
+
+    <h4>1. Ações:</h4>
+
     <ul>
-      <li>Inspecionar cabeçalhos de e-mails.</li>
-      <li>Verificar links suspeitos em sandboxes.</li>
+        <li>Receber alertas de e-mails suspeitos reportados por usuários ou sistemas automatizados (ex.: SIEM).</li>
+        <li>Validar o incidente usando ferramentas de análise:
+            <ul>
+                <li>Inspecionar cabeçalhos de e-mails.</li>
+                <li>Verificar links suspeitos em sandboxes.</li>
+            </ul>
+        </li>
+        <li>Classificar o incidente em níveis de severidade (baixo, médio, alto).</li>
     </ul>
-  </li>
-  <li>Classificar o incidente em níveis de severidade (baixo, médio, alto).</li>
-</ul>
 
-<p>2. Ferramentas recomendadas:</p>
+    <h4>2. Ferramentas recomendadas:</h4>
 
-<ul>
-  <li>Ferramentas de sandboxing como Cuckoo ou Hybrid Analysis.</li>
-  <li>Soluções de SIEM (Splunk, QRadar).</li>
-</ul>
-
-<h3 id="42-conten-o">4.2. Contenção</h3>
-
-<p>1. Ações:</p>
-
-<ul>
-  <li>Bloquear remetentes e links maliciosos:
     <ul>
-      <li>Configurar regras no gateway de e-mail.</li>
-      <li>Atualizar listas de bloqueio de URLs no firewall ou proxy.</li>
+        <li>Ferramentas de sandboxing como Cuckoo ou Hybrid Analysis.</li>
+        <li>Soluções de SIEM (Splunk, QRadar).</li>
     </ul>
-  </li>
-  <li>Isolar máquinas comprometidas:
-    <ul>
-      <li>Desconectar dispositivos suspeitos da rede.</li>
+
+    <h3 id="42-conten-o">4.2. Contenção</h3>
+
+    <p>1. Ações:</p>
+
+    <ul style="display: inline-block; text-align: left;">
+        <li>Bloquear remetentes e links maliciosos:
+            <ul>
+                <li>Configurar regras no gateway de e-mail.</li>
+                <li>Atualizar listas de bloqueio de URLs no firewall ou proxy.</li>
+            </ul>
+        </li>
+        <li>Isolar máquinas comprometidas:
+            <ul>
+                <li>Desconectar dispositivos suspeitos da rede.</li>
+            </ul>
+        </li>
+        <li>Comunicação interna:
+            <ul>
+                <li>Enviar alertas internos orientando os usuários a não interagirem com mensagens similares.</li>
+            </ul>
+        </li>
     </ul>
-  </li>
-  <li>Comunicação interna:
-    <ul>
-      <li>Enviar alertas internos orientando os usuários a não interagirem com mensagens similares.</li>
+
+    <p>2. Ferramentas recomendadas:</p>
+
+    <ul style="display: inline-block; text-align: left;">
+        <li>Gateways de e-mail (Proofpoint, Microsoft Defender).</li>
+        <li>EDR para isolar dispositivos (CrowdStrike, SentinelOne).</li>
     </ul>
-  </li>
-</ul>
 
-<p>2. Ferramentas recomendadas:</p>
+    <h2>4.3. Análise</h2>
 
-<ul>
-  <li>Gateways de e-mail (Proofpoint, Microsoft Defender).</li>
-  <li>EDR para isolar dispositivos (CrowdStrike, SentinelOne).</li>
-</ul>
+    <h4>1. Ações:</h4>
 
-<h3 id="43-an-lise">4.3. Análise</h3>
-
-<p>1. Ações:</p>
-
-<ul>
-  <li>Analisar cabeçalhos de e-mail:
-    <ul>
-      <li>Identificar o IP do remetente e conferir autenticação DKIM/SPF.</li>
+    <ul style="display: inline-block; text-align: left;">
+        <li>Analisar cabeçalhos de e-mail:
+            <ul>
+                <li>Identificar o IP do remetente e conferir autenticação DKIM/SPF.</li>
+            </ul>
+        </li>
+        <li>Examinar links e anexos suspeitos:
+            <ul>
+                <li>Usar sandboxes para verificar comportamento malicioso.</li>
+            </ul>
+        </li>
+        <li>Identificar as credenciais ou dados potencialmente comprometidos.</li>
     </ul>
-  </li>
-  <li>Examinar links e anexos suspeitos:
-    <ul>
-      <li>Usar sandboxes para verificar comportamento malicioso.</li>
+
+    <h4>2. Exemplo prático:</h4>
+
+    <ul style="display: inline-block; text-align: left;">
+        <li>Cabeçalhos de e-mail: Verificar registros DNS do remetente para autenticidade.</li>
+        <li>Link: Usar um ambiente seguro para testar se redireciona a sites maliciosos.</li>
     </ul>
-  </li>
-  <li>Identificar as credenciais ou dados potencialmente comprometidos.</li>
-</ul>
 
-<p>2. Exemplo prático:</p>
+    <h4>3. Ferramentas recomendadas:</h4>
 
-<ul>
-  <li>Cabeçalhos de e-mail: Verificar registros DNS do remetente para autenticidade.</li>
-  <li>Link: Usar um ambiente seguro para testar se redireciona a sites maliciosos.</li>
-</ul>
-
-<p>3. Ferramentas recomendadas:</p>
-
-<ul>
-  <li>Sandboxes (Joe Sandbox, Any.run).</li>
-  <li>Ferramentas de análise de e-mail (Mimecast, Microsoft Defender).</li>
-</ul>
-
-<h3 id="44-erradica-o">4.4. Erradicação</h3>
-
-<p>1. Ações:</p>
-
-<ul>
-  <li>Resetar senhas de usuários afetados.</li>
-  <li>Revogar tokens de autenticação comprometidos (ex.: SSO, MFA).</li>
-  <li>Remover malware detectado usando EDR ou antivírus.</li>
-</ul>
-
-<p>2. Exemplo prático:</p>
-
-<ul>
-  <li>Resetar imediatamente senhas para usuários que clicaram no link ou inseriram dados.</li>
-  <li>Implementar bloqueios adicionais para impedir novos ataques.</li>
-</ul>
-
-<p>3. Ferramentas recomendadas:</p>
-
-<ul>
-  <li>Gerenciadores de acesso (Okta, Azure AD).</li>
-  <li>Soluções de antivírus e EDR.</li>
-</ul>
-
-<h3 id="45-recupera-o">4.5. Recuperação</h3>
-
-<p>1. Ações:</p>
-
-<ul>
-  <li>Monitorar os dispositivos e contas previamente afetados.</li>
-  <li>Garantir que as máquinas limpas estão livres de malwares.</li>
-  <li>Validar que os controles foram eficazes.</li>
-</ul>
-
-<p>2. Ferramentas recomendadas:</p>
-
-<ul>
-  <li>SIEM para monitorar atividades pós-incidente.</li>
-  <li>Logs de autenticação para verificar tentativas não autorizadas.</li>
-</ul>
-
-<h3 id="46-p-s-incidente">4.6. Pós-Incidente</h3>
-
-<p>1. Ações:</p>
-
-<ul>
-  <li>Conduzir uma reunião de análise pós-incidente (post-mortem):
-    <ul>
-      <li>Documentar o que funcionou bem e o que precisa melhorar.</li>
+    
+    <ul style="display: inline-block; text-align: left;">
+        <li>Sandboxes (Joe Sandbox, Any.run).</li>
+        <li>Ferramentas de análise de e-mail (Mimecast, Microsoft Defender).</li>
     </ul>
-  </li>
-  <li>Atualizar playbooks e treinamentos baseados no incidente.</li>
-</ul>
 
-<p>2. Ferramentas recomendadas:</p>
+    <h2>4.4. Erradicação</h2>
 
-<ul>
-  <li>Ferramentas de documentação (Confluence, Notion).</li>
-  <li>Soluções de aprendizado e treinamento (Cybersecurity Awareness Tools).</li>
-</ul>
+    <h4>1. Ações:</h4>
+
+    <ul style="display: inline-block; text-align: left;">
+        <li>Resetar senhas de usuários afetados.</li>
+        <li>Revogar tokens de autenticação comprometidos (ex.: SSO, MFA).</li>
+        <li>Remover malware detectado usando EDR ou antivírus.</li>
+    </ul>
+
+    <h4>2. Exemplo prático:</h4>
+
+    <ul style="display: inline-block; text-align: left;">
+        <li>Resetar imediatamente senhas para usuários que clicaram no link ou inseriram dados.</li>
+        <li>Implementar bloqueios adicionais para impedir novos ataques.</li>
+    </ul>
+
+    <h4>3. Ferramentas recomendadas:</h4>
+
+    <ul style="display: inline-block; text-align: left;">
+        <li>Gerenciadores de acesso (Okta, Azure AD).</li>
+        <li>Soluções de antivírus e EDR.</li>
+    </ul>
+
+    <h2>4.5. Recuperação</h2>
+
+    <h4>1. Ações:</h4>
+
+    <ul style="display: inline-block; text-align: left;">
+        <li>Monitorar os dispositivos e contas previamente afetados.</li>
+        <li>Garantir que as máquinas limpas estão livres de malwares.</li>
+        <li>Validar que os controles foram eficazes.</li>
+    </ul>
+
+    <h4>2. Ferramentas recomendadas:</h4>
+
+    <ul style="display: inline-block; text-align: left;">
+        <li>SIEM para monitorar atividades pós-incidente.</li>
+        <li>Logs de autenticação para verificar tentativas não autorizadas.</li>
+    </ul>
+
+    <h2>4.6. Pós-Incidente</h2>
+
+    <h4>1. Ações:</h4>
+
+    <ul style="display: inline-block; text-align: left;">
+        <li>Conduzir uma reunião de análise pós-incidente (post-mortem):
+            <ul>
+                <li>Documentar o que funcionou bem e o que precisa melhorar.</li>
+            </ul>
+        </li>
+        <li>Atualizar playbooks e treinamentos baseados no incidente.</li>
+    </ul>
+
+    <h4>2. Ferramentas recomendadas:</h4>
+
+    <ul style="display: inline-block; text-align: left;">
+        <li>Ferramentas de documentação (Confluence, Notion).</li>
+        <li>Soluções de aprendizado e treinamento (Cybersecurity Awareness Tools).</li>
+    </ul>
+</div>
+
+
+
 
