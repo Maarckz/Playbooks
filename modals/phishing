@@ -1,12 +1,21 @@
 <style>
   #iframe {
       font-family: 'Montserrat', sans-serif;
-      margin: 20px;
+      margin: 20px auto;
       line-height: 1.6;
       background-color: #f6f8fa;
       animation: fadeIn 1s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
   }
   
+
+  #iframe h1, #iframe h2, #iframe h3, #iframe h4, #iframe p, #iframe ul, #iframe table {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+  }
 
   #iframe h1 {
       animation: fadeInUp 1s ease-in-out;
@@ -15,9 +24,6 @@
       padding: 1rem;
       border-radius: 0.5rem;
       width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-      color: #ffffff;
       font-size: 24px;
       animation: fadeInUp 1s ease-in-out;
   
@@ -30,9 +36,6 @@
       padding: 1rem;
       border-radius: 0.5rem;
       width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-      color: #ffffff;
       font-size: 16px;
       animation: fadeInUp 1s ease-in-out;
   
@@ -47,17 +50,11 @@
       color: #0969da;
       animation: fadeInUp 1s ease-in-out;
       width: 90%;
-      margin: 20px auto;
-      border-collapse: collapse;
-      margin-left: auto;
-      margin-right: auto;
   }
   #iframe h4 {
             margin-top: 1rem;
             font-weight: bold;
             font-size: 1.1rem;
-            margin-left: auto;
-            margin-right: auto;
   }
         
 
@@ -65,8 +62,6 @@
   #iframe p {
       animation: fadeInUp 1s ease-in-out;
       width: 90%;
-      margin-left: auto;
-      margin-right: auto;
   }
 
   #iframe ul {
@@ -76,8 +71,6 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         #iframe ul li {
@@ -105,8 +98,6 @@
       background-color: #fff;
       border-radius: 6px;
       animation: fadeInUp 1s ease-in-out;
-      margin-left: auto;
-      margin-right: auto;
   }
 
   #iframe th, #iframe td {
