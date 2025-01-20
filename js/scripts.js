@@ -35,7 +35,7 @@ function showModal(playbook) {
     modalTitle.style.textAlign = "center";
     modalDetails.innerHTML = '<p>Carregando conteúdo...</p>';
 
-    const filePath = `https://github.com/Maarckz/Playbooks/modals/${playbook}`;
+    const filePath = `https://raw.githubusercontent.com/Maarckz/Playbooks/refs/heads/main/modals/${playbook}`;
     fetch(filePath)
         .then(response => {
             if (!response.ok) throw new Error(`Erro ao carregar: ${response.statusText}`);
