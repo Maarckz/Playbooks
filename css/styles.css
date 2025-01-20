@@ -1,21 +1,104 @@
-.modal {
-    display: none;
-    position: fixed; 
-    z-index: 9999; 
+
+  /* Estilo geral do modal */
+  .modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.4); 
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    animation: fadeIn 0.4s ease-in-out;
+}
+/* Conteúdo do modal */
+.modal-content {
+    position: relative;
+    margin: 5% auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    max-width: 1400px; /* Largura máxima */
+    width: 90%; /* Adapta ao tamanho da tela */
+    top: -5%; /* Desloca para cima */
+    max-height: 85vh; /* Altura máxima para caber na tela */
+    overflow-y: auto; /* Adiciona barra de rolagem vertical */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 0.4s ease-in-out;
 }
 
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    border-radius: 10px;
+
+
+/* Animação de entrada do conteúdo */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animação de saída */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Título do modal */
+.modal-content h1 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+.modal-content h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+
+            font-size: 16px;
+            background-color: #ddf4ff;
+            padding: 6px;
+            border-radius: 6px;
+            border: 1px solid #b6e3ff;
+            color: #0969da;
+            animation: fadeInUp 1s ease-in-out;
+            display: block;
+        }
+
+
+/* Botão de fechar */
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.modal-content .close:hover {
+    color: red;
+}
+
+/* Animação de saída do conteúdo ao fechar */
+.modal-content.closing {
+    animation: fadeOut 0.4s ease-in-out;
 }
 
 .close {
