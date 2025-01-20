@@ -276,8 +276,8 @@
             <p>Pelo menos uma vez por ano</p>
             <p>Testar/Validar:</p>
             <ul>
-                <li>Cartões do cliente</li>
-                <li>Contatos internos e caminhos de escalonamento</li>
+                <li class="item">Cartões do cliente</li>
+                <li class="item">Contatos internos e caminhos de escalonamento</li>
             </ul>
         </div>
             <div class="card">
@@ -291,9 +291,9 @@
                 <h3>Garantir acesso apropriado a qualquer documentação e informações necessárias, incluindo acesso fora do horário comercial, para os seguintes itens:</h3>
                 <p>Playbooks de IR para destacar os riscos de segurança enfrentados pelos funcionários, incluindo:</p>
                 <ul>
-                    <li>Ataques de phishing e e-mails maliciosos</li>
-                    <li>Ransomware</li>
-                    <li>Relatar um incidente cibernético suspeito</li>
+                    <li class="item">Ataques de phishing e e-mails maliciosos</li>
+                    <li class="item">Ransomware</li>
+                    <li class="item">Relatar um incidente cibernético suspeito</li>
                 </ul>
             </div>
         </div>
@@ -309,85 +309,85 @@
     <div class="card">
         <h3>Ativos dos Clientes</h3>
         <ul>
-            <li>Proprietários</li>
-            <li>Contatos</li>
-            <li>Ações pré-autorizadas</li>
+            <li class="item">Proprietários</li>
+            <li class="item">Contatos</li>
+            <li class="item">Ações pré-autorizadas</li>
         </ul>
     </div>
     <div class="card">
         <h3>Ativos da Empresa</h3>
         <p>(Incluindo todas as subsidiárias e unidades de negócios)</p>
         <ul>
-            <li>Proprietários</li>
-            <li>Contatos</li>
-            <li>Administradores</li>
-            <li>Ações pré-autorizadas</li>
+            <li class="item">Proprietários</li>
+            <li class="item">Contatos</li>
+            <li class="item">Administradores</li>
+            <li class="item">Ações pré-autorizadas</li>
         </ul>
     </div>
     <div class="card">
         <h3>Tipo de Inventário de Ativos Necessário</h3>
         <ul>
-            <li>Endpoints</li>
-            <li>Servidores</li>
-            <li>Equipamentos de rede</li>
-            <li>Appliances de segurança</li>
-            <li>Faixas de rede</li>
+            <li class="item">Endpoints</li>
+            <li class="item">Servidores</li>
+            <li class="item">Equipamentos de rede</li>
+            <li class="item">Appliances de segurança</li>
+            <li class="item">Faixas de rede</li>
                 <ul>
-                    <li>Públicas</li>
-                    <li>Privadas</li>
-                    <li>VPN / Fora de banda</li>
+                    <li class="item">Públicas</li>
+                    <li class="item">Privadas</li>
+                    <li class="item">VPN / Fora de banda</li>
                         <ul>
-                            <li>Funcionários</li>
-                            <li>Parceiros</li>
-                            <li>Clientes</li>
+                            <li class="item">Funcionários</li>
+                            <li class="item">Parceiros</li>
+                            <li class="item">Clientes</li>
                         </ul>
                 </ul>
         </ul>
     </div>
 </div>
+<div class="card">
 
 <h2>2. Detectar</h2>
-
 <p>Ações:</p>
 <ul>
-    <li>Receber alertas de e-mails suspeitos reportados por usuários ou sistemas automatizados.</li>
-    <li>Validar o incidente usando ferramentas de análise:</li>
+    <li class="item">Receber alertas de e-mails suspeitos reportados por usuários ou sistemas automatizados.</li>
+    <li class="item">Validar o incidente usando ferramentas de análise:</li>
     <ul>
-        <li>Inspecionar cabeçalhos de e-mails.</li>
-        <li>Verificar links suspeitos em sandboxes.</li>
+        <li class="item">Inspecionar cabeçalhos de e-mails.</li>
+        <li class="item">Verificar links suspeitos em sandboxes.</li>
     </ul>
-    <li>Classificar o incidente em níveis de severidade (baixo, médio, alto).</li>
+    <li class="item">Classificar o incidente em níveis de severidade (baixo, médio, alto).</li>
 </ul>
 
 <p>Ferramentas recomendadas:</p>
 <ul>
-    <li>Ferramentas de sandboxing.</li>
-    <li>Soluções de SIEM.</li>
+    <li class="item">Ferramentas de sandboxing.</li>
+    <li class="item">Soluções de SIEM.</li>
 </ul>
 
 <p>Ações:</p>
 <ul>
-    <li>Analisar cabeçalhos de e-mail:</li>
+    <li class="item">Analisar cabeçalhos de e-mail:</li>
     <ul>
-        <li>Identificar o IP do remetente e conferir autenticação DKIM/SPF.</li>
+        <li class="item">Identificar o IP do remetente e conferir autenticação DKIM/SPF.</li>
     </ul>
-    <li>Examinar links e anexos suspeitos:</li>
+    <li class="item">Examinar links e anexos suspeitos:</li>
     <ul>
-        <li>Usar sandboxes para verificar comportamento malicioso.</li>
+        <li class="item">Usar sandboxes para verificar comportamento malicioso.</li>
     </ul>
-    <li>Identificar as credenciais ou dados potencialmente comprometidos.</li>
+    <li class="item">Identificar as credenciais ou dados potencialmente comprometidos.</li>
 </ul>
 
 <p>Exemplo prático:</p>
 <ul>
-    <li>Cabeçalhos de e-mail: Verificar registros DNS do remetente para autenticidade.</li>
-    <li>Link: Usar um ambiente seguro para testar se redireciona a sites maliciosos.</li>
+    <li class="item">Cabeçalhos de e-mail: Verificar registros DNS do remetente para autenticidade.</li>
+    <li class="item">Link: Usar um ambiente seguro para testar se redireciona a sites maliciosos.</li>
 </ul>
 
 <p>Ferramentas recomendadas:</p>
 <ul>
-    <li>Sandboxes.</li>
-    <li>Ferramentas de análise de e-mail.</li>
+    <li class="item">Sandboxes.</li>
+    <li class="item">Ferramentas de análise de e-mail.</li>
 </ul>
 
 <p><strong>Fluxo de Trabalho</strong></p>
@@ -398,25 +398,24 @@
 <p><strong>Alertas</strong></p>
 <p>Alertas são gerados por diferentes sistemas de propriedade da equipe de Segurança/SOC. As principais fontes de alertas são:</p>
 <ul>
-    <li>Chamados</li>
-    <li>SIEM</li>
-    <li>Anti-Vírus / EDR</li>
-    <li>Relatórios:</li>
+    <li class="item">Chamados</li>
+    <li class="item">SIEM</li>
+    <li class="item">Anti-Vírus / EDR</li>
+    <li class="item">Relatórios:</li>
     <ul>
-        <li>DNS</li>
-        <li>Proxy Web</li>
+        <li class="item">DNS</li>
+        <li class="item">Proxy Web</li>
     </ul>
-    <li>Erros de servidores de e-mail</li>
+    <li class="item">Erros de servidores de e-mail</li>
 </ul>
-
 <p><strong>Notificações</strong></p>
 <p>As notificações vêm de fontes externas, geralmente por e-mail, Teams ou telefone. As principais fontes de notificações são:</p>
 <ul>
-    <li>Usuários (internos)</li>
-    <li>Recipientes de e-mails (externos)</li>
-    <li>Terceiros</li>
-    <li>ISP</li>
-    <li>Provedores de e-mail</li>
+    <li class="item">Usuários (internos)</li>
+    <li class="item">Recipientes de e-mails (externos)</li>
+    <li class="item">Terceiros</li>
+    <li class="item">ISP</li>
+    <li class="item">Provedores de e-mail</li>
 </ul>
 
 <hr />
@@ -425,24 +424,24 @@
 
 <p><strong>Comuns</strong></p>
 <ul>
-    <li>Roubo de Credenciais</li>
-    <li>Entrega de Malware</li>
-    <li>Atividades Criminais</li>
+    <li class="item">Roubo de Credenciais</li>
+    <li class="item">Entrega de Malware</li>
+    <li class="item">Atividades Criminais</li>
     <ul>
-        <li>Chantagem / Resgate</li>
+        <li class="item">Chantagem / Resgate</li>
     </ul>
 </ul>
 
 <p><strong>Específicos da Empresa</strong></p>
 <ul>
-    <li>Perdas Financeiras:</li>
+    <li class="item">Perdas Financeiras:</li>
     <ul>
-        <li>Perda de contrato</li>
-        <li>Contrato não renovado</li>
-        <li>Ofertas mais baixas para clientes</li>
-        <li>Multas:</li>
+        <li class="item">Perda de contrato</li>
+        <li class="item">Contrato não renovado</li>
+        <li class="item">Ofertas mais baixas para clientes</li>
+        <li class="item">Multas:</li>
         <ul>
-            <li>Regulamentação</li>
+            <li class="item">Regulamentação</li>
         </ul>
     </ul>
 </ul>
@@ -455,125 +454,123 @@
 <h3>Colete os seguintes dados:</h3>
 
 <ul>
-    <li><strong>Domínios</strong></li>
+    <li class="item"><strong>Domínios</strong></li>
     <ul>
-        <li>Reputação</li>
-        <li>Registrador</li>
-        <li>Proprietário</li>
-        <li>IP</li>
-        <li>Tecnologias do site:
+        <li class="item">Reputação</li>
+        <li class="item">Registrador</li>
+        <li class="item">Proprietário</li>
+        <li class="item">IP</li>
+        <li class="item">Tecnologias do site:
             <ul>
-                <li>WordPress</li>
-                <li>Joomla</li>
-                <li>Página personalizada (phishing de credenciais)</li>
+                <li class="item">WordPress</li>
+                <li class="item">Joomla</li>
+                <li class="item">Página personalizada (phishing de credenciais)</li>
             </ul>
         </li>
     </ul>
-    <li><strong>IP</strong></li>
+    <li class="item"><strong>IP</strong></li>
     <ul>
-        <li>Reputação</li>
-        <li>Proprietário</li>
-        <li>Localização Geográfica</li>
-        <li>Outros domínios nesse IP</li>
+        <li class="item">Reputação</li>
+        <li class="item">Proprietário</li>
+        <li class="item">Localização Geográfica</li>
+        <li class="item">Outros domínios nesse IP</li>
     </ul>
 </ul>
-
 <hr />
 
 <h3>Categorizar</h3>
 
 <p>Determinar o tipo de e-mail:</p>
 <ul>
-    <li><strong>Phish</strong></li>
+    <li class="item"><strong>Phish</strong></li>
     <ul>
-        <li>Imitando o site da empresa</li>
-        <li>Marca comum:
+        <li class="item">Imitando o site da empresa</li>
+        <li class="item">Marca comum:
             <ul>
-                <li>Apple</li>
-                <li>FedEx</li>
-                <li>Netflix</li>
-                <li>Etc.</li>
+                <li class="item">Apple</li>
+                <li class="item">FedEx</li>
+                <li class="item">Netflix</li>
+                <li class="item">Etc.</li>
             </ul>
         </li>
-        <li>Terceiro da empresa:
+        <li class="item">Terceiro da empresa:
             <ul>
-                <li>O365</li>
-                <li>Outras soluções baseadas na nuvem</li>
+                <li class="item">O365</li>
+                <li class="item">Outras solu es baseadas na nuvem</li>
             </ul>
         </li>
     </ul>
-    <li><strong>Spear Phish</strong></li>
-    <li><strong>Whaling</strong></li>
-    <li><strong>Spam</strong></li>
-    <li><strong>BEC</strong></li>
-    <li><strong>Regras de Encaminhamento do O365</strong></li>
+    <li class="item"><strong>Spear Phish</strong></li>
+    <li class="item"><strong>Whaling</strong></li>
+    <li class="item"><strong>Spam</strong></li>
+    <li class="item"><strong>BEC</strong></li>
+    <li class="item"><strong>Regras de Encaminhamento do O365</strong></li>
 </ul>
 
-<h2>3. Análise</h2>
+<h2>3. An lise</h2>
 
 <div class="verify">
     <h3>Verificar</h3>
-    <p>Em conjunto com um membro sênior do SOC:</p>
+    <p>Em conjunto com um membro s nior do SOC:</p>
     <ul>
-        <li>Verificar novamente os dados anteriores</li>
-        <li>Descartar Falsos Positivos</li>
+        <li class="item">Verificar novamente os dados anteriores</li>
+        <li class="item">Descartar Falsos Positivos</li>
     </ul>
 </div>
 
 <div class="ioc-identification">
     <h3>Identificar IOCs</h3>
     <ul>
-        <li>Validar hashes:
+        <li class="item">Validar hashes:
             <ul>
-                <li><a href="https://www.virustotal.com">VirusTotal</a></li>
-                <li><a href="https://www.hybrid-analysis.com">Hybrid Analysis</a></li>
+                <li class="item"><a href="https://www.virustotal.com">VirusTotal</a></li>
+                <li class="item"><a href="https://www.hybrid-analysis.com">Hybrid Analysis</a></li>
             </ul>
         </li>
-        <li>Validar links:
+        <li class="item">Validar links:
             <ul>
-                <li><a href="https://www.virustotal.com">VirusTotal</a></li>
-                <li><a href="https://www.hybrid-analysis.com">Hybrid Analysis</a></li>
-                <li><a href="https://urlscan.io">URLScan</a></li>
+                <li class="item"><a href="https://www.virustotal.com">VirusTotal</a></li>
+                <li class="item"><a href="https://www.hybrid-analysis.com">Hybrid Analysis</a></li>
+                <li class="item"><a href="https://urlscan.io">URLScan</a></li>
             </ul>
         </li>
-        <li>Identificar assunto, anexos, endereço de remetente</li>
-        <li>Identificar outros endereços, domínios, IPs:
+        <li class="item">Identificar assunto, anexos, endere o de remetente</li>
+        <li class="item">Identificar outros endere os, dom nios, IPs:
             <ul>
-                <li><a href="https://www.virustotal.com">VirusTotal</a></li>
-                <li><a href="https://www.hybrid-analysis.com">Hybrid Analysis</a></li>
-                <li><a href="https://talosintelligence.com">Talos Intelligence</a></li>
+                <li class="item"><a href="https://www.virustotal.com">VirusTotal</a></li>
+                <li class="item"><a href="https://www.hybrid-analysis.com">Hybrid Analysis</a></li>
+                <li class="item"><a href="https://talosintelligence.com">Talos Intelligence</a></li>
             </ul>
         </li>
-        <li>Pesquisar fontes de inteligência de ameaças:
+        <li class="item">Pesquisar fontes de intelig ncia de amea as:
             <ul>
-                <li><a href="https://www.virustotal.com">VirusTotal</a></li>
-                <li><a href="https://www.hybrid-analysis.com">Hybrid Analysis</a></li>
-                <li><a href="https://talosintelligence.com">Talos Intelligence</a></li>
+                <li class="item"><a href="https://www.virustotal.com">VirusTotal</a></li>
+                <li class="item"><a href="https://www.hybrid-analysis.com">Hybrid Analysis</a></li>
+                <li class="item"><a href="https://talosintelligence.com">Talos Intelligence</a></li>
             </ul>
         </li>
-        <li>Forense de disco no endpoint do destinatário</li>
+        <li class="item">Forense de disco no endpoint do destinat rio</li>
     </ul>
 </div>
-
 <div class="company-scan">
     <h3>Escanear a Empresa</h3>
     <ul>
-        <li>Atualizar filtro de spam</li>
-        <li>Atualizar regras do FW, IDS, etc. com IOCs</li>
-        <li>Pesquisar todas as pastas de e-mail para IOCs</li>
-        <li>Pesquisar endpoints para IOCs com EDR</li>
+        <li class="item">Atualizar filtro de spam</li>
+        <li class="item">Atualizar regras do FW, IDS, etc. com IOCs</li>
+        <li class="item">Pesquisar todas as pastas de e-mail para IOCs</li>
+        <li class="item">Pesquisar endpoints para IOCs com EDR</li>
     </ul>
 </div>
 
 <div class="update-scope">
     <h3>Atualizar Escopo</h3>
     <ul>
-        <li>Atualizar listas de:
+        <li class="item">Atualizar listas de:
             <ul>
-                <li>Endereços de destinatários afetados</li>
-                <li>Endpoints afetados</li>
-                <li>Enclaves afetados</li>
-                <li>Unidades de negócios afetadas</li>
+                <li class="item">Endereços de destinatários afetados</li>
+                <li class="item">Endpoints afetados</li>
+                <li class="item">Enclaves afetados</li>
+                <li class="item">Unidades de negócios afetadas</li>
             </ul>
         </li>
     </ul>
@@ -585,82 +582,72 @@
     <p>Se encontrar mais vestígios de phishing ou novos IOCs, volte a esta etapa.</p>
     <p>Quando terminar de identificar todos os comprometidos:</p>
     <ul>
-        <li>Hosts</li>
-        <li>Caixas de entrada</li>
+        <li class="item">Hosts</li>
+        <li class="item">Caixas de entrada</li>
     </ul>
     <p>E investigar todos:</p>
     <ul>
-        <li>URLs</li>
-        <li>Domínios</li>
-        <li>IPs</li>
-        <li>Portas</li>
-        <li>Arquivos</li>
-        <li>Hashes</li>
+        <li class="item">URLs</li>
+        <li class="item">Domínios</li>
+        <li class="item">IPs</li>
+        <li class="item">Portas</li>
+        <li class="item">Arquivos</li>
+        <li class="item">Hashes</li>
     </ul>
     <p>Vá para a próxima fase: <a href="#4-cont-errad">Contenção/Erradicação</a></p>
+</div>
 
 <h2>4. Contenção / Erradicação</h2>
 
 <div class="actions">
     <h3>Ações:</h3>
     <ul>
-        <li>Bloquear remetentes e links maliciosos:</li>
-        <ul>
-            <li>Configurar regras no gateway de e-mail.</li>
-            <li>Atualizar listas de bloqueio de URLs no firewall ou proxy.</li>
-        </ul>
-        <li>Isolar máquinas comprometidas:</li>
-        <ul>
-            <li>Desconectar dispositivos suspeitos da rede.</li>
-        </ul>
-        <li>Comunicação interna:</li>
-        <ul>
-            <li>Enviar alertas internos orientando os usuários a não interagirem com mensagens similares.</li>
-        </ul>
+        <li class="item">Bloquear remetentes e links maliciosos:
+            <ul>
+                <li class="item">Configurar regras no gateway de e-mail.</li>
+                <li class="item">Atualizar listas de bloqueio de URLs no firewall ou proxy.</li>
+            </ul>
+        </li>
+        <li class="item">Isolar máquinas comprometidas:
+            <ul>
+                <li class="item">Desconectar dispositivos suspeitos da rede.</li>
+            </ul>
+        </li>
+        <li class="item">Comunicação interna:
+            <ul>
+                <li class="item">Enviar alertas internos orientando os usuários a não interagirem com mensagens similares.</li>
+            </ul>
+        </li>
     </ul>
 </div>
 
 <div class="recommended-tools">
     <h3>Ferramentas recomendadas:</h3>
     <ul>
-        <li>Gateways de e-mail.</li>
-        <li>EDR para isolar dispositivos.</li>
+        <li class="item">Gateways de e-mail.</li>
+        <li class="item">EDR para isolar dispositivos.</li>
     </ul>
 </div>
 
 <div class="actions">
     <h3>Ações:</h3>
     <ul>
-        <li>Resetar senhas de usuários afetados.</li>
-        <li>Revogar tokens de autenticação comprometidos (ex.: SSO, MFA).</li>
-        <li>Remover malware detectado usando EDR ou antivírus.</li>
+        <li class="item">Resetar senhas de usuários afetados.</li>
+        <li class="item">Revogar tokens de autenticação comprometidos (ex.: SSO, MFA).</li>
+        <li class="item">Remover malware detectado usando EDR ou antivírus.</li>
     </ul>
 </div>
-
-<div class="recommended-tools">
-    <h3>Ferramentas recomendadas:</h3>
-    <ul>
-        <li>Gerenciadores de acesso.</li>
-        <li>Soluções de antivírus e EDR.</li>
-    </ul>
-</div>
-
-<div class="workflow">
-    <h3>Fluxo de Trabalho</h3>
-    <img src="Workflows/Phishing-Workflow-Contain_Eradicate.png" alt="Fluxo de Trabalho de Phishing">
-</div>
-
 <div class="block">
     <h3>Bloquear</h3>
     <ul>
-        <li>Atualizar Filtros de Spam</li>
-        <li>Atualizar regras do FW, Proxy, etc.</li>
-        <li>Blackhole DNS</li>
-        <li>Enviar para terceiros:</li>
+        <li class="item">Atualizar Filtros de Spam</li>
+        <li class="item">Atualizar regras do FW, Proxy, etc.</li>
+        <li class="item">Blackhole DNS</li>
+        <li class="item">Enviar para terceiros:</li>
         <ul>
-            <li><a href="https://safebrowsing.google.com/safebrowsing/report_general/">Google Safe Browsing</a></li>
-            <li>Fornecedor de filtro web</li>
-            <li>Etc.</li>
+            <li class="item"><a href="https://safebrowsing.google.com/safebrowsing/report_general/">Google Safe Browsing</a></li>
+            <li class="item">Fornecedor de filtro web</li>
+            <li class="item">Etc.</li>
         </ul>
     </ul>
 </div>
@@ -668,9 +655,9 @@
 <div class="validate-user-actions">
     <h3>Validar Ações do Usuário</h3>
     <ul>
-        <li>Os e-mails foram lidos?</li>
-        <li>Os anexos foram abertos?</li>
-        <li>Os links foram clicados?</li>
+        <li class="item">Os e-mails foram lidos?</li>
+        <li class="item">Os anexos foram abertos?</li>
+        <li class="item">Os links foram clicados?</li>
     </ul>
 </div>
 
@@ -683,15 +670,15 @@
 <div class="delete-emails">
     <h3>Excluir E-mails</h3>
     <ul>
-        <li>Excluir das caixas de entrada dos usuários:</li>
+        <li class="item">Excluir das caixas de entrada dos usuários:</li>
         <ul>
-            <li>Ferramenta de Spam</li>
-            <li>Console de Administração de E-mail</li>
-            <li>Nuvem e On-Prem</li>
+            <li class="item">Ferramenta de Spam</li>
+            <li class="item">Console de Administração de E-mail</li>
+            <li class="item">Nuvem e On-Prem</li>
         </ul>
-        <li>Excluir Anexos Baixados:</li>
+        <li class="item">Excluir Anexos Baixados:</li>
         <ul>
-            <li>EDR, SIEM, etc. para escanear a empresa</li>
+            <li class="item">EDR, SIEM, etc. para escanear a empresa</li>
         </ul>
     </ul>
 </div>
@@ -699,11 +686,11 @@
 <div class="close-monitoring">
     <h3>Fechar Monitoramento</h3>
     <ul>
-        <li>Monitorar para:</li>
+        <li class="item">Monitorar para:</li>
         <ul>
-            <li>Mensagens relacionadas recebidas</li>
-            <li>Conexões à internet com IOC</li>
-            <li>Novos arquivos que correspondem a hashes identificados</li>
+            <li class="item">Mensagens relacionadas recebidas</li>
+            <li class="item">Conexões à internet com IOC</li>
+            <li class="item">Novos arquivos que correspondem a hashes identificados</li>
         </ul>
     </ul>
 </div>
@@ -723,17 +710,17 @@
 <div class="actions">
     <h3>Ações:</h3>
     <ul>
-        <li>Monitorar os dispositivos e contas previamente afetados.</li>
-        <li>Garantir que as máquinas limpas estão livres de malwares.</li>
-        <li>Validar que os controles foram eficazes.</li>
+        <li class="item">Monitorar os dispositivos e contas previamente afetados.</li>
+        <li class="item">Garantir que as máquinas limpas estão livres de malwares.</li>
+        <li class="item">Validar que os controles foram eficazes.</li>
     </ul>
 </div>
 
 <div class="recommended-tools">
     <h3>Ferramentas recomendadas:</h3>
     <ul>
-        <li>SIEM para monitorar atividades pós-incidente.</li>
-        <li>Logs de autenticação para verificar tentativas não autorizadas.</li>
+        <li class="item">SIEM para monitorar atividades pós-incidente.</li>
+        <li class="item">Logs de autenticação para verificar tentativas não autorizadas.</li>
     </ul>
 </div>
 
@@ -746,15 +733,15 @@
     <h3>Atualizar Defesas</h3>
     <p>Determine quais das regras a seguir precisam ser removidas e quais devem permanecer:</p>
     <ul>
-        <li>Filtros de Spam</li>
-        <li>Regras de Firewall</li>
-        <li>EDR:</li>
+        <li class="item">Filtros de Spam</li>
+        <li class="item">Regras de Firewall</li>
+        <li class="item">EDR:</li>
         <ul>
-            <li>Banir hashes</li>
-            <li>Banir domínios</li>
-            <li>Contenção</li>
+            <li class="item">Banir hashes</li>
+            <li class="item">Banir domínios</li>
+            <li class="item">Contenção</li>
         </ul>
-        <li>Bloqueio Proxy</li>
+        <li class="item">Bloqueio Proxy</li>
     </ul>
 </div>
 
@@ -767,10 +754,10 @@
     <h3>Validar Contramedidas</h3>
     <p>Determine se elementos legítimos estão sendo bloqueados por:</p>
     <ul>
-        <li>Filtros de Spam</li>
-        <li>Proxy</li>
-        <li>Firewall</li>
-        <li>EDR</li>
+        <li class="item">Filtros de Spam</li>
+        <li class="item">Proxy</li>
+        <li class="item">Firewall</li>
+        <li class="item">EDR</li>
     </ul>
     <p>Se sim, volte para <a href="#update-defenses">Atualizar Defesas</a>.</p>
     <p>Caso contrário, vá para a próxima fase: <a href="#6-p-s-incident">Pós-Incident</a></p>
@@ -779,20 +766,20 @@
 <div class="actions">
     <h3>Ações:</h3>
     <ul>
-        <li>Conduzir uma reunião de análise pós-incidente (post-mortem):
+        <li class="item">Conduzir uma reunião de análise pós-incidente (post-mortem):
             <ul>
-                <li>Documentar o que funcionou bem e o que precisa melhorar.</li>
+                <li class="item">Documentar o que funcionou bem e o que precisa melhorar.</li>
             </ul>
         </li>
-        <li>Atualizar playbooks e treinamentos baseados no incidente.</li>
+        <li class="item">Atualizar playbooks e treinamentos baseados no incidente.</li>
     </ul>
 </div>
 
 <div class="recommended-tools">
     <h3>Ferramentas recomendadas:</h3>
     <ul>
-        <li>Ferramentas de documentação.</li>
-        <li>Soluções de aprendizado e treinamento.</li>
+        <li class="item">Ferramentas de documentação.</li>
+        <li class="item">Soluções de aprendizado e treinamento.</li>
     </ul>
 </div>
 
@@ -804,8 +791,8 @@
 <div class="incident-review">
     <h3>Revisão do Incidente</h3>
     <ul>
-        <li>O que funcionou?</li>
-        <li>O que não funcionou?</li>
+        <li class="item">O que funcionou?</li>
+        <li class="item">O que não funcionou?</li>
     </ul>
 </div>
 
@@ -813,48 +800,47 @@
     <h3>Atualizar Modo de Operação</h3>
     <p>Atualize os seguintes documentos conforme necessário:</p>
     <ul>
-        <li>Políticas</li>
-        <li>Processos</li>
-        <li>Procedimentos</li>
-        <li>Playbooks</li>
-        <li>Runbooks</li>
+        <li class="item">Políticas</li>
+        <li class="item">Processos</li>
+        <li class="item">Procedimentos</li>
+        <li class="item">Playbooks</li>
+        <li class="item">Runbooks</li>
     </ul>
     <p>Atualize as Regras de Detecção em:</p>
     <ul>
-        <li>SIEM</li>
-        <li>Anti-Spam</li>
-        <li>Gateway de Malware</li>
-        <li>EDR</li>
-        <li>Outras soluções de segurança</li>
+        <li class="item">SIEM</li>
+        <li class="item">Anti-Spam</li>
+        <li class="item">Gateway de Malware</li>
+        <li class="item">EDR</li>
+        <li class="item">Outras soluções de segurança</li>
     </ul>
 </div>
 
 <div class="review-defensive-posture">
     <h3>Revisar Postura Defensiva</h3>
     <ul>
-        <li>Agendar revisão das regras recém-introduzidas em 6 meses</li>
-        <li>Verificar se as regras abaixo ainda são aplicáveis:
+        <li class="item">Agendar revisão das regras recém-introduzidas em 6 meses</li>
+        <li class="item">Verificar se as regras abaixo ainda são aplicáveis:
             <ul>
-                <li>Regras de Filtros de Spam</li>
-                <li>Regras de Firewall</li>
-                <li>Regras de Proxy para C2</li>
-                <li>Assinaturas customizadas de AV / EDR</li>
-                <li>Assinaturas de IPS</li>
-            </ul>
-        </li>
-    </ul>
-</div>
-
-<div class="user-awareness-training">
-    <h3>Treinamento de Conscientização do Usuário</h3>
-    <ul>
-        <li>Certificar-se de que o usuário recebe treinamento de Phishing</li>
-        <li>Como reconhecer Phish</li>
-        <li>Como relatar Phish</li>
-        <li>Perigos de seguir links</li>
-        <li>Perigos de abrir anexos</li>
-        <li>Perigos de atender a solicitações de scammer</li>
-    </ul>
-</div>
-
-</div>
+                <li class="item">Regras de Filtros de Spam</li>
+                <li class="item">Regras de Firewall</li>
+                <li class="item">Regras de Proxy para C2</li>
+                <li class="item">Assinaturas customizadas de AV / EDR</li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="user-awareness-training">
+        <h3>Treinamento de Conscientização do Usuário</h3>
+        <ul>
+            <li>Certificar-se de que o usuário recebe treinamento de Phishing</li>
+            <li>Como reconhecer Phish</li>
+            <li>Como relatar Phish</li>
+            <li>Perigos de seguir links</li>
+            <li>Perigos de abrir anexos</li>
+            <li>Perigos de atender a solicitações de scammer</li>
+        </ul>
+    </div>
+    
+    </div>
