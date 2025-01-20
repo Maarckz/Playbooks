@@ -108,7 +108,6 @@ button:focus {
     height: 100%;
     transition: all 0.3s ease;
     z-index: 999;
-    animation: slideIn 0.5s ease-in-out;
 }
 
 .sidebar nav ul {
@@ -158,6 +157,36 @@ button:focus {
         opacity: 1;
     }
 }
+
+
+
+.menu-hamburguer .bar {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.3s;
+}
+.menu-hamburguer:hover .bar {
+    background-color: #555;
+}
+@media only screen and (max-width: 768px) {
+      .menu-hamburguer .bar {
+        display: block; 
+        width: 9px; 
+        height: 25px; 
+        background-color: #333; 
+        writing-mode: vertical-rl; 
+        transform: rotate(180deg); 
+        margin-left: -15.45px; 
+        margin-top: 5.5px;
+    }
+
+    .menu-hamburguer:hover .bar {
+        background-color: #555;
+    }
+}
 .menu-hamburguer {
 display: none;
 position: absolute;
@@ -172,23 +201,20 @@ width: 35px;
 height: 5px;
 background-color: #333;
 margin: 6px 0;
-transition: 0.4s;
 }
 
-@media screen and (max-width: 768px) {
 .menu-hamburguer {
     display: block;
 }
 
 .sidebar {
     left: -250px;
-    transition: left 0.3s ease-in-out;
 }
 
 .sidebar.open {
     left: 0;
 }
-}
+
 
 body {
     font-family: 'Montserrat', sans-serif;
