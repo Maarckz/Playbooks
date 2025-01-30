@@ -550,10 +550,10 @@ p {
 }
 
 #iframe li {
-    background-color: #f1f8ff;
+    background-color: #d5e5fc;
     padding: 5px;
     border-radius: 5px;
-    border: 1px solid #ddd;
+    border: 1px solid #ebecff;
     display: flex;
     justify-content: center;
     align-items: center;

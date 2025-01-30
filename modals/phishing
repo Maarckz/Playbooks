@@ -109,7 +109,7 @@
             </div>
 
 
-        <h2>Acesso e Provisionamento de Ferramentas</h2>
+        <h2>Inventãrio de Acessos</h2>
         <div class="cards">
             <div class="card">
                 <h3>Ativos dos Clientes</h3>
@@ -129,6 +129,10 @@
                     <li class="item">Ações pré-autorizadas</li>
                 </ul>
             </div>
+        </div>
+
+
+        <div style="margin-top: 20px;">
             <div class="card">
                 <h3>Tipo de Inventário de Ativos Necessário</h3>
                 <ul>
@@ -136,17 +140,17 @@
                     <li class="item">Servidores</li>
                     <li class="item">Equipamentos de rede</li>
                     <li class="item">Appliances de segurança</li>
-                    <li class="item">Faixas de rede</li>
-                    <ul>
-                        <li class="item">Públicas</li>
-                        <li class="item">Privadas</li>
-                        <li class="item">VPN / Fora de banda</li>
-                        <ul>
-                            <li class="item">Funcionários</li>
-                            <li class="item">Parceiros</li>
-                            <li class="item">Clientes</li>
-                        </ul>
-                    </ul>
+                </ul>
+                <li style="margin: 0 auto; width: 50%; text-align: center; margin-bottom: 20px;" class="item">Faixas de rede</li>
+                <ul>
+                    <li class="item">Públicas</li>
+                    <li class="item">Privadas</li>
+                    <li class="item">VPN / Fora de banda</li>
+                </ul>
+                <ul>
+                    <li class="item">Funcionários</li>
+                    <li class="item">Parceiros</li>
+                    <li class="item">Clientes</li>
                 </ul>
             </div>
         </div>
