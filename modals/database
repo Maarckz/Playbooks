@@ -1,139 +1,164 @@
-<h1>Playbook de Segurança em Banco de Dados</h1>
-<h2>1. Propósito</h2>
-<p>Proteger bancos de dados contra acessos não autorizados, manipulação indevida e vazamento de informações, garantindo a integridade, confidencialidade e disponibilidade dos dados.</p>
-<h2>2. Escopo</h2>
-<p>Aplicável a bancos de dados relacionais (como MySQL, PostgreSQL, SQL Server e Oracle) e não relacionais (como MongoDB, Cassandra e DynamoDB).</p>
-<h2>3. Papéis e Responsabilidades</h2>
-<table>
-    <tr>
-        <th>Papel</th>
-        <th>Responsabilidade</th>
-    </tr>
-    <tr>
-        <td>Administrador de Banco de Dados (DBA)</td>
-        <td>Configuração, manutenção e backups do banco de dados.</td>
-    </tr>
-    <tr>
-        <td>Especialista em Segurança de TI</td>
-        <td>Monitoramento e implementação de políticas avançadas de segurança.</td>
-    </tr>
-    <tr>
-        <td>Desenvolvedores de Software</td>
-        <td>Implementação de interações seguras com o banco de dados.</td>
-    </tr>
-</table>
-<h2>4. Procedimentos Detalhados</h2>
-<ol>
-    <li>
-        <h3>4.1. Configuração Inicial</h3>
-        <p>Ações:</p>
-        <ul>
-            <li>Instale o banco de dados utilizando as configurações padrão mínimas e seguras.</li>
-            <li>Atualize o sistema operacional e o software do banco de dados para as versões mais recentes.</li>
-            <li>Configure conexões criptografadas (TLS/SSL) para proteger os dados em trânsito.</li>
-        </ul>
-        <p>Ferramentas:</p>
-        <ul>
-            <li>PostgreSQL: Configuração do pg_hba.conf para TLS.</li>
-            <li>MySQL: Uso de mysql_secure_installation para configurações iniciais.</li>
-        </ul>
-    </li>
-    <li>
-        <h3>4.2. Controle de Acesso</h3>
-        <p>Ações:</p>
-        <ul>
-            <li>Implemente o princípio do menor privilégio, garantindo que usuários e aplicações tenham apenas as permissões necessárias.</li>
-            <li>Crie perfis de acesso baseados em funções e restrinja o acesso por IPs confiáveis.</li>
-            <li>Use autenticação multifator (MFA) para administradores.</li>
-        </ul>
-        <p>Ferramentas:</p>
-        <ul>
-            <li>PostgreSQL: Gerenciamento de privilégios com ROLES.</li>
-            <li>MySQL: Uso de comandos GRANT e REVOKE.</li>
-        </ul>
-    </li>
-    <li>
-        <h3>4.3. Hardening do Banco de Dados</h3>
-        <p>Ações:</p>
-        <ul>
-            <li>Desative serviços desnecessários e extensões que não estejam em uso.</li>
-            <li>Limite o acesso à interface de administração (phpMyAdmin, pgAdmin) para IPs específicos.</li>
-            <li>Configure políticas de segurança, como tempo limite para sessões.</li>
-        </ul>
-        <p>Ferramentas:</p>
-        <ul>
-            <li>Configuração no arquivo my.cnf (MySQL) ou postgresql.conf (PostgreSQL).</li>
-        </ul>
-    </li>
-    <li>
-        <h3>4.4. Monitoramento e Auditoria</h3>
-        <p>Ações:</p>
-        <ul>
-            <li>Configure logs para registrar acessos, alterações em dados e tentativas de autenticação.</li>
-            <li>Utilize sistemas de detecção de intrusão (IDS) para identificar comportamentos anômalos.</li>
-            <li>Monitore as consultas executadas para identificar possíveis vulnerabilidades.</li>
-        </ul>
-        <p>Ferramentas:</p>
-        <ul>
-            <li>PostgreSQL: Extensão pgAudit.</li>
-            <li>MySQL: Logs gerais e de consultas lentas.</li>
-        </ul>
-    </li>
-    <li>
-        <h3>4.5. Backup e Recuperação</h3>
-        <p>Ações:</p>
-        <ul>
-            <li>Realize backups automáticos e frequentes de todo o banco de dados.</li>
-            <li>Teste regularmente os backups para garantir sua integridade e capacidade de recuperação.</li>
-            <li>Armazene os backups criptografados em local seguro, fora do ambiente de produção.</li>
-        </ul>
-        <p>Ferramentas:</p>
-        <ul>
-            <li>MySQL: mysqldump, MySQL Enterprise Backup.</li>
-            <li>PostgreSQL: pg_dump ou pg_basebackup.</li>
-        </ul>
-    </li>
-    <li>
-        <h3>4.6. Prevenção Contra Ameaças</h3>
-        <p>Ações:</p>
-        <ul>
-            <li>Implante firewalls para proteger o banco de dados de acessos maliciosos.</li>
-            <li>Configure consultas parametrizadas para prevenir injeções SQL.</li>
-            <li>Limite a taxa de conexões para evitar ataques de força bruta.</li>
-        </ul>
-        <p>Ferramentas:</p>
-        <ul>
-            <li>Firewalls: AWS WAF, Cloudflare.</li>
-            <li>IDS: Snort, Suricata.</li>
-        </ul>
-    </li>
-    <li>
-        <h3>4.7. Resposta a Incidentes</h3>
-        <p>Ações:</p>
-        <ul>
-            <li>Isolar o banco de dados comprometido imediatamente.</li>
-            <li>Analisar logs para determinar a origem do incidente.</li>
-            <li>Restaurar o banco de dados a partir de um backup íntegro.</li>
-        </ul>
-        <p>Ferramentas:</p>
-        <ul>
-            <li>Logs: Splunk, Elastic Stack (ELK).</li>
-        </ul>
-    </li>
-    <li>
-        <h3>4.8. Revisão Contínua</h3>
-        <p>Ações:</p>
-        <ul>
-            <li>Realize auditorias regulares para identificar falhas ou vulnerabilidades no ambiente do banco de dados.</li>
-            <li>Atualize continuamente as políticas de segurança de acordo com as melhores práticas.</li>
-            <li>Treine equipes de desenvolvimento e administração para práticas seguras.</li>
-        </ul>
-        <p>Ferramentas:</p>
-        <ul>
-            <li>Pentests: SQLMap, Nessus.</li>
-        </ul>
-    </li>
-</ol>
-<h2>5. Pós-Implementação</h2>
-<p>Monitore continuamente o desempenho e a segurança do banco de dados.</p>
-<p>Atualize ferramentas, scripts e processos de segurança conforme novas ameaças surgirem.</p>
+<div id="iframe">
+    <h2>1. Preparação</h2>
+    <p>A fase de preparação é crucial para garantir que a organização esteja pronta para detectar, responder e mitigar incidentes de segurança cibernética. Esta fase envolve a implementação de medidas preventivas, a configuração de ferramentas de segurança e a capacitação da equipe.</p>
+
+    <h3>1.1. Configuração Inicial e Hardening</h3>
+    <ul>
+        <li><strong>Atualização do Sistema:</strong> Garantir que todos os sistemas estejam atualizados com os últimos patches de segurança. Utilizar ferramentas como <code>yum</code> ou <code>apt</code> para distribuições Linux.</li>
+        <li><strong>Configuração de Firewall:</strong> Implementar regras de firewall usando <code>iptables</code> ou <code>UFW</code> para bloquear acessos não autorizados.</li>
+        <li><strong>Desativação de Serviços Desnecessários:</strong> Identificar e desativar serviços e portas que não são essenciais para a operação do servidor.</li>
+        <li><strong>Configuração de Criptografia:</strong> Implementar criptografia para dados em trânsito (TLS/SSL) e em repouso (LUKS, dm-crypt).</li>
+    </ul>
+
+    <h3>1.2. Autenticação e Controle de Acesso</h3>
+    <ul>
+        <li><strong>Políticas de Senha Forte:</strong> Configurar políticas de senha forte utilizando PAM (Pluggable Authentication Modules).</li>
+        <li><strong>Autenticação Multifator (MFA):</strong> Implementar MFA para acesso a servidores críticos.</li>
+        <li><strong>Controle de Acesso Baseado em Políticas:</strong> Utilizar SELinux ou AppArmor para restringir permissões de usuários e processos.</li>
+        <li><strong>Uso de Chaves SSH:</strong> Configurar autenticação via chaves SSH em vez de senhas para acesso remoto.</li>
+    </ul>
+
+    <h3>1.3. Monitoramento e Logging</h3>
+    <ul>
+        <li><strong>Configuração de Ferramentas de Monitoramento:</strong> Implementar ferramentas como Nagios ou Zabbix para monitorar o desempenho e a segurança dos servidores.</li>
+        <li><strong>Configuração de Logs Centralizados:</strong> Utilizar Syslog ou Logwatch para centralizar e analisar logs de acesso e segurança.</li>
+        <li><strong>Detecção de Intrusões:</strong> Configurar ferramentas como OSSEC ou Snort para detectar atividades maliciosas.</li>
+    </ul>
+
+    <h3>1.4. Backup e Recuperação</h3>
+    <ul>
+        <li><strong>Configuração de Backups Automatizados:</strong> Implementar backups regulares utilizando ferramentas como Bacula ou Veeam.</li>
+        <li><strong>Testes de Integridade de Backups:</strong> Realizar testes periódicos para garantir que os backups possam ser restaurados com sucesso.</li>
+        <li><strong>Armazenamento Seguro de Backups:</strong> Armazenar backups em locais seguros e separados da infraestrutura principal.</li>
+    </ul>
+
+    <h3>1.5. Treinamento e Conscientização</h3>
+    <ul>
+        <li><strong>Treinamento de Equipe:</strong> Realizar treinamentos regulares sobre práticas seguras de gerenciamento de servidores.</li>
+        <li><strong>Workshops de Segurança:</strong> Promover workshops sobre identificação de ameaças e resposta rápida a incidentes.</li>
+        <li><strong>Cultura de Segurança:</strong> Fomentar uma cultura de segurança cibernética dentro da organização.</li>
+    </ul>
+
+    <h2>2. Detecção</h2>
+    <p>A fase de detecção envolve a identificação de atividades suspeitas ou maliciosas que possam indicar um incidente de segurança. Esta fase é crítica para uma resposta rápida e eficaz.</p>
+
+    <h3>2.1. Monitoramento Contínuo</h3>
+    <ul>
+        <li><strong>Monitoramento de Tráfego de Rede:</strong> Utilizar ferramentas como Wireshark ou tcpdump para capturar e analisar o tráfego de rede.</li>
+        <li><strong>Análise de Logs:</strong> Revisar logs de acesso, autenticação e aplicativos para identificar padrões anômalos.</li>
+        <li><strong>Alertas em Tempo Real:</strong> Configurar alertas para atividades suspeitas, como múltiplas tentativas de login falhas.</li>
+    </ul>
+
+    <h3>2.2. Detecção de Anomalias</h3>
+    <ul>
+        <li><strong>Uso de Ferramentas de Detecção de Intrusões:</strong> Implementar ferramentas como OSSEC ou Snort para detectar atividades maliciosas.</li>
+        <li><strong>Análise Comportamental:</strong> Utilizar ferramentas de análise comportamental para identificar desvios do comportamento normal do sistema.</li>
+        <li><strong>Verificação de IOCs:</strong> Comparar atividades suspeitas com Indicadores de Comprometimento (IOCs) conhecidos.</li>
+    </ul>
+
+    <h3>2.3. Validação de Incidentes</h3>
+    <ul>
+        <li><strong>Classificação de Severidade:</strong> Classificar o incidente com base na gravidade e no impacto potencial.</li>
+        <li><strong>Confirmação de Comprometimento:</strong> Validar se o incidente representa uma real ameaça à segurança.</li>
+        <li><strong>Documentação Inicial:</strong> Documentar todas as evidências e observações iniciais para análise posterior.</li>
+    </ul>
+
+    <h2>3. Análise</h2>
+    <p>A fase de análise envolve a investigação detalhada do incidente para determinar a causa raiz, o escopo do comprometimento e os impactos potenciais.</p>
+
+    <h3>3.1. Coleta de Evidências</h3>
+    <ul>
+        <li><strong>Captura de Logs:</strong> Coletar logs de sistemas, aplicativos e redes para análise.</li>
+        <li><strong>Imagem Forense:</strong> Criar imagens forenses de sistemas comprometidos para análise sem alterar os dados originais.</li>
+        <li><strong>Coleta de Artefatos:</strong> Coletar artefatos como arquivos suspeitos, hashes e endereços IP.</li>
+    </ul>
+
+    <h3>3.2. Análise de Malware</h3>
+    <ul>
+        <li><strong>Análise Estática:</strong> Analisar arquivos suspeitos sem executá-los, utilizando ferramentas como <code>strings</code> ou <code>binwalk</code>.</li>
+        <li><strong>Análise Dinâmica:</strong> Executar arquivos suspeitos em ambientes controlados (sandboxes) para observar seu comportamento.</li>
+        <li><strong>Verificação de IOCs:</strong> Comparar artefatos coletados com bancos de dados de IOCs conhecidos.</li>
+    </ul>
+
+    <h3>3.3. Determinação do Escopo</h3>
+    <ul>
+        <li><strong>Identificação de Sistemas Afetados:</strong> Identificar todos os sistemas e dispositivos que possam ter sido comprometidos.</li>
+        <li><strong>Análise de Impacto:</strong> Avaliar o impacto potencial do incidente em termos de confidencialidade, integridade e disponibilidade.</li>
+        <li><strong>Mapeamento de Ameaças:</strong> Mapear as táticas, técnicas e procedimentos (TTPs) utilizados pelo atacante.</li>
+    </ul>
+
+    <h2>4. Correção e Erradicação</h2>
+    <p>A fase de correção e erradicação envolve a remoção das ameaças e a restauração dos sistemas ao estado seguro.</p>
+
+    <h3>4.1. Isolamento de Sistemas Comprometidos</h3>
+    <ul>
+        <li><strong>Desconexão de Rede:</strong> Isolar sistemas comprometidos da rede para evitar a propagação da ameaça.</li>
+        <li><strong>Bloqueio de Acesso:</strong> Bloquear o acesso a contas e sistemas comprometidos.</li>
+    </ul>
+
+    <h3>4.2. Remoção de Malware</h3>
+    <ul>
+        <li><strong>Limpeza de Sistemas:</strong> Remover malware e arquivos maliciosos dos sistemas comprometidos.</li>
+        <li><strong>Reinstalação de Sistemas:</strong> Reinstalar sistemas operacionais e aplicativos comprometidos para garantir a remoção completa das ameaças.</li>
+    </ul>
+
+    <h3>4.3. Aplicação de Patches</h3>
+    <ul>
+        <li><strong>Atualização de Software:</strong> Aplicar patches de segurança para corrigir vulnerabilidades exploradas.</li>
+        <li><strong>Reconfiguração de Sistemas:</strong> Reconfigurar sistemas para eliminar configurações inseguras.</li>
+    </ul>
+
+    <h3>4.4. Validação de Correções</h3>
+    <ul>
+        <li><strong>Testes de Segurança:</strong> Realizar testes de segurança para garantir que as correções foram efetivas.</li>
+        <li><strong>Monitoramento Pós-Correção:</strong> Monitorar sistemas após a correção para garantir que não há resquícios da ameaça.</li>
+    </ul>
+
+    <h2>5. Recuperação</h2>
+    <p>A fase de recuperação envolve a restauração dos sistemas e serviços ao estado operacional normal, garantindo que a organização possa retomar suas atividades com segurança.</p>
+
+    <h3>5.1. Restauração de Dados</h3>
+    <ul>
+        <li><strong>Restauração de Backups:</strong> Restaurar dados a partir de backups seguros e testados.</li>
+        <li><strong>Verificação de Integridade:</strong> Verificar a integridade dos dados restaurados para garantir que não foram corrompidos.</li>
+    </ul>
+
+    <h3>5.2. Retorno à Operação Normal</h3>
+    <ul>
+        <li><strong>Reconexão de Sistemas:</strong> Reconectar sistemas à rede após garantir que estão seguros.</li>
+        <li><strong>Monitoramento Contínuo:</strong> Continuar monitorando sistemas para detectar qualquer atividade suspeita.</li>
+    </ul>
+
+    <h3>5.3. Comunicação com Stakeholders</h3>
+    <ul>
+        <li><strong>Atualização de Status:</strong> Manter stakeholders informados sobre o status da recuperação.</li>
+        <li><strong>Relatórios de Incidentes:</strong> Fornecer relatórios detalhados sobre o incidente e as ações tomadas.</li>
+    </ul>
+
+    <h2>6. Pós-Incidente</h2>
+    <p>A fase pós-incidente envolve a análise do incidente, a identificação de lições aprendidas e a implementação de melhorias para prevenir futuros incidentes.</p>
+
+    <h3>6.1. Análise Post-Mortem</h3>
+    <ul>
+        <li><strong>Revisão do Incidente:</strong> Realizar uma revisão detalhada do incidente, incluindo causas, impactos e respostas.</li>
+        <li><strong>Identificação de Lições Aprendidas:</strong> Identificar lições aprendidas e áreas de melhoria.</li>
+    </ul>
+
+    <h3>6.2. Atualização de Políticas e Procedimentos</h3>
+    <ul>
+        <li><strong>Revisão de Políticas:</strong> Revisar e atualizar políticas de segurança com base nas lições aprendidas.</li>
+        <li><strong>Atualização de Playbooks:</strong> Atualizar playbooks de resposta a incidentes para refletir as melhores práticas identificadas.</li>
+    </ul>
+
+    <h3>6.3. Treinamento e Conscientização</h3>
+    <ul>
+        <li><strong>Treinamento Adicional:</strong> Fornecer treinamento adicional para a equipe com base nas lições aprendidas.</li>
+        <li><strong>Campanhas de Conscientização:</strong> Realizar campanhas de conscientização para reforçar a importância da segurança cibernética.</li>
+    </ul>
+
+    <h3>6.4. Melhoria Contínua</h3>
+    <ul>
+        <li><strong>Monitoramento de Novas Ameaças:</strong> Monitorar novas ameaças e vulnerabilidades para manter a postura de segurança atualizada.</li>
+        <li><strong>Revisão Periódica:</strong> Realizar revisões periódicas dos processos de segurança para garantir que estão alinhados com as melhores práticas.</li>
+    </ul>
+</div>

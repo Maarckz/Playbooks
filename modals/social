@@ -1,149 +1,162 @@
-<h1>Playbook de Segurança em Redes Sociais</h1>
-<h2>1. Propósito</h2>
-<p>Proteger usuários e organizações contra ameaças de segurança em redes sociais, como roubo de informações, ataques de engenharia social e disseminação de malware.</p>
-<h2>2. Escopo</h2>
-<p>Aplicável a plataformas de redes sociais como Facebook, LinkedIn, Instagram, Twitter (X), TikTok, entre outras.</p>
-<h2>3. Papéis e Responsabilidades</h2>
-<ul>
-    <li>
-        <strong>Papel</strong>: Usuário Final
+<div id="iframe">
+    <h1>Playbook de Segurança em Redes Sociais</h1>
+    <h2>1. Propósito</h2>
+    <p>Proteger usuários e organizações contra ameaças de segurança em redes sociais, como roubo de informações, ataques de engenharia social e disseminação de malware.</p>
+
+    <h2>2. Escopo</h2>
+    <p>Aplicável a plataformas de redes sociais como Facebook, LinkedIn, Instagram, Twitter (X), TikTok, entre outras.</p>
+
+    <h2>3. Papéis e Responsabilidades</h2>
+    <ul>
+        <li>
+            <strong>Papel</strong>: Usuário Final
+            <br>
+            <strong>Responsabilidade</strong>: Configuração de segurança pessoal e conscientização de riscos.
+        </li>
+        <li>
+            <strong>Papel</strong>: Administrador de Conta
+            <br>
+            <strong>Responsabilidade</strong>: Monitoramento, controle de acesso e configuração de contas corporativas.
+        </li>
+        <li>
+            <strong>Papel</strong>: Especialista em Segurança de TI
+            <br>
+            <strong>Responsabilidade</strong>: Implementação de políticas de segurança e mitigação de incidentes.
+        </li>
+    </ul>
+
+    <h2>4. Procedimentos Detalhados</h2>
+    <h3>4.1. Configuração Inicial</h3>
+    <p>
+        Ações:
         <br>
-        <strong>Responsabilidade</strong>: Configuração de segurança pessoal e conscientização de riscos.
-    </li>
-    <li>
-        <strong>Papel</strong>: Administrador de Conta
+        Escolha senhas fortes e exclusivas para cada conta.
         <br>
-        <strong>Responsabilidade</strong>: Monitoramento, controle de acesso e configuração de contas corporativas.
-    </li>
-    <li>
-        <strong>Papel</strong>: Especialista em Segurança de TI
+        Ative autenticação de dois fatores (2FA) sempre que disponível.
         <br>
-        <strong>Responsabilidade</strong>: Implementação de políticas de segurança e mitigação de incidentes.
-    </li>
-</ul>
-<h2>4. Procedimentos Detalhados</h2>
-<h3>4.1. Configuração Inicial</h3>
-<p>
-    Ações:
-    <br>
-    Escolha senhas fortes e exclusivas para cada conta.
-    <br>
-    Ative autenticação de dois fatores (2FA) sempre que disponível.
-    <br>
-    Vincule e-mails de recuperação confiáveis e mantenha-os protegidos.
-</p>
-<p>Ferramentas:</p>
-<ul>
-    <li>Gerenciadores de Senhas (LastPass, KeePass, Bitwarden)</li>
-    <li>Aplicativos de autenticação (Google Authenticator, Authy)</li>
-</ul>
-<h3>4.2. Configuração de Privacidade</h3>
-<p>
-    Ações:
-    <br>
-    Revise e configure as permissões de privacidade de acordo com a necessidade (por exemplo, publicações visíveis apenas para amigos).
-    <br>
-    Desative recursos de geolocalização em postagens, a menos que sejam necessários.
-    <br>
-    Controle quem pode enviar mensagens, solicitações ou ver informações do perfil.
-</p>
-<p>Ferramentas:</p>
-<ul>
-    <li>Configurações de privacidade disponíveis em cada plataforma</li>
-</ul>
-<h3>4.3. Monitoramento de Atividades</h3>
-<p>
-    Ações:
-    <br>
-    Verifique regularmente os dispositivos conectados à conta e remova acessos não reconhecidos.
-    <br>
-    Ative alertas de login e atividade suspeita.
-    <br>
-    Monitore publicações ou mensagens não autorizadas que possam indicar um comprometimento.
-</p>
-<p>Ferramentas:</p>
-<ul>
-    <li>Recursos nativos de segurança das plataformas sociais</li>
-    <li>Sistemas de monitoramento corporativo (ZeroFOX, Social Sentinel)</li>
-</ul>
-<h3>4.4. Proteção Contra Engenharia Social</h3>
-<p>
-    Ações:
-    <br>
-    Não compartilhe informações sensíveis publicamente ou via mensagens privadas.
-    <br>
-    Não clique em links suspeitos recebidos em mensagens diretas.
-    <br>
-    Eduque colaboradores sobre técnicas comuns de phishing e scams em redes sociais.
-</p>
-<p>Ferramentas:</p>
-<ul>
-    <li>Treinamentos de conscientização em segurança</li>
-    <li>Filtros de mensagens (quando suportados)</li>
-</ul>
-<h3>4.5. Gerenciamento de Aplicativos de Terceiros</h3>
-<p>
-    Ações:
-    <br>
-    Revise e remova aplicativos de terceiros com permissões desnecessárias ou excessivas.
-    <br>
-    Conceda apenas as permissões mínimas necessárias aos aplicativos confiáveis.
-    <br>
-    Revogue imediatamente o acesso de aplicativos desatualizados ou comprometidos.
-</p>
-<p>Ferramentas:</p>
-<ul>
-    <li>Painel de aplicativos e integrações de cada plataforma</li>
-</ul>
-<h3>4.6. Proteção Contra Ataques de Credential Stuffing</h3>
-<p>
-    Ações:
-    <br>
-    Ative 2FA para reduzir os impactos de credenciais vazadas.
-    <br>
-    Use senhas exclusivas para cada conta em redes sociais.
-    <br>
-    Monitore se as credenciais foram comprometidas em vazamentos de dados públicos.
-</p>
-<p>Ferramentas:</p>
-<ul>
-    <li>Have I Been Pwned, serviços como DeHashed</li>
-</ul>
-<h3>4.7. Resposta a Incidentes</h3>
-<p>
-    Ações:
-    <br>
-    Alterar imediatamente a senha da conta comprometida.
-    <br>
-    Revogar acessos de dispositivos e aplicativos desconhecidos.
-    <br>
-    Denunciar atividades maliciosas à plataforma para revisão.
-    <br>
-    Restaurar postagens ou informações alteradas indevidamente.
-</p>
-<p>Ferramentas:</p>
-<ul>
-    <li>Recursos de suporte de cada rede social</li>
-    <li>Ferramentas de incident response corporativas</li>
-</ul>
-<h3>4.8. Revisão Contínua</h3>
-<p>
-    Ações:
-    <br>
-    Atualize configurações de privacidade regularmente.
-    <br>
-    Realize auditorias trimestrais para revisar acessos e permissões.
-    <br>
-    Acompanhe atualizações de segurança e novos recursos fornecidos pelas plataformas.
-</p>
-<p>Ferramentas:</p>
-<ul>
-    <li>Relatórios de auditoria corporativa</li>
-    <li>Consultas em portais de segurança de cada rede social</li>
-</ul>
-<h2>5. Pós-Implementação</h2>
-<p>
-    Monitore continuamente as atividades e alertas de segurança.
-    <br>
-    Atualize as políticas de uso das redes sociais para os colaboradores de acordo com as melhores práticas.
-</p>
+        Vincule e-mails de recuperação confiáveis e mantenha-os protegidos.
+    </p>
+    <p>Ferramentas:</p>
+    <ul>
+        <li>Gerenciadores de Senhas (LastPass, KeePass, Bitwarden)</li>
+        <li>Aplicativos de autenticação (Google Authenticator, Authy)</li>
+    </ul>
+
+    <h3>4.2. Configuração de Privacidade</h3>
+    <p>
+        Ações:
+        <br>
+        Revise e configure as permissões de privacidade de acordo com a necessidade (por exemplo, publicações visíveis apenas para amigos).
+        <br>
+        Desative recursos de geolocalização em postagens, a menos que sejam necessários.
+        <br>
+        Controle quem pode enviar mensagens, solicitações ou ver informações do perfil.
+    </p>
+    <p>Ferramentas:</p>
+    <ul>
+        <li>Configurações de privacidade disponíveis em cada plataforma</li>
+    </ul>
+
+    <h3>4.3. Monitoramento de Atividades</h3>
+    <p>
+        Ações:
+        <br>
+        Verifique regularmente os dispositivos conectados à conta e remova acessos não reconhecidos.
+        <br>
+        Ative alertas de login e atividade suspeita.
+        <br>
+        Monitore publicações ou mensagens não autorizadas que possam indicar um comprometimento.
+    </p>
+    <p>Ferramentas:</p>
+    <ul>
+        <li>Recursos nativos de segurança das plataformas sociais</li>
+        <li>Sistemas de monitoramento corporativo (ZeroFOX, Social Sentinel)</li>
+    </ul>
+
+    <h3>4.4. Proteção Contra Engenharia Social</h3>
+    <p>
+        Ações:
+        <br>
+        Não compartilhe informações sensíveis publicamente ou via mensagens privadas.
+        <br>
+        Não clique em links suspeitos recebidos em mensagens diretas.
+        <br>
+        Eduque colaboradores sobre técnicas comuns de phishing e scams em redes sociais.
+    </p>
+    <p>Ferramentas:</p>
+    <ul>
+        <li>Treinamentos de conscientização em segurança</li>
+        <li>Filtros de mensagens (quando suportados)</li>
+    </ul>
+
+    <h3>4.5. Gerenciamento de Aplicativos de Terceiros</h3>
+    <p>
+        Ações:
+        <br>
+        Revise e remova aplicativos de terceiros com permissões desnecessárias ou excessivas.
+        <br>
+        Conceda apenas as permissões mínimas necessárias aos aplicativos confiáveis.
+        <br>
+        Revogue imediatamente o acesso de aplicativos desatualizados ou comprometidos.
+    </p>
+    <p>Ferramentas:</p>
+    <ul>
+        <li>Painel de aplicativos e integrações de cada plataforma</li>
+    </ul>
+
+    <h3>4.6. Proteção Contra Ataques de Credential Stuffing</h3>
+    <p>
+        Ações:
+        <br>
+        Ative 2FA para reduzir os impactos de credenciais vazadas.
+        <br>
+        Use senhas exclusivas para cada conta em redes sociais.
+        <br>
+        Monitore se as credenciais foram comprometidas em vazamentos de dados públicos.
+    </p>
+    <p>Ferramentas:</p>
+    <ul>
+        <li>Have I Been Pwned, serviços como DeHashed</li>
+    </ul>
+
+    <h3>4.7. Resposta a Incidentes</h3>
+    <p>
+        Ações:
+        <br>
+        Alterar imediatamente a senha da conta comprometida.
+        <br>
+        Revogar acessos de dispositivos e aplicativos desconhecidos.
+        <br>
+        Denunciar atividades maliciosas à plataforma para revisão.
+        <br>
+        Restaurar postagens ou informações alteradas indevidamente.
+    </p>
+    <p>Ferramentas:</p>
+    <ul>
+        <li>Recursos de suporte de cada rede social</li>
+        <li>Ferramentas de incident response corporativas</li>
+    </ul>
+
+    <h3>4.8. Revisão Contínua</h3>
+    <p>
+        Ações:
+        <br>
+        Atualize configurações de privacidade regularmente.
+        <br>
+        Realize auditorias trimestrais para revisar acessos e permissões.
+        <br>
+        Acompanhe atualizações de segurança e novos recursos fornecidos pelas plataformas.
+    </p>
+    <p>Ferramentas:</p>
+    <ul>
+        <li>Relatórios de auditoria corporativa</li>
+        <li>Consultas em portais de segurança de cada rede social</li>
+    </ul>
+
+    <h2>5. Pós-Implementação</h2>
+    <p>
+        Monitore continuamente as atividades e alertas de segurança.
+        <br>
+        Atualize as políticas de uso das redes sociais para os colaboradores de acordo com as melhores práticas.
+    </p>
+</div>

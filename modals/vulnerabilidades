@@ -3,16 +3,19 @@
 <div id="iframe">
   <h2>Playbook de Exploração de Vulnerabilidades</h2>
 
+  <!-- PROPÓSITO -->
   <h3>1. Propósito</h3>
   <p>
     Este playbook tem como objetivo fornecer diretrizes claras e detalhadas para a identificação, exploração e mitigação de vulnerabilidades em sistemas e redes. O foco é garantir que os testes sejam realizados de maneira controlada, ética e dentro dos limites legais, com o intuito de fortalecer a postura de segurança da organização.
   </p>
 
+  <!-- ESCOPO -->
   <h3>2. Escopo</h3>
   <p>
     Este documento se aplica a todos os sistemas, redes e aplicações sob autorização explícita para execução de testes de penetração. Inclui servidores Linux, dispositivos de rede, aplicações web e APIs, com foco em ambientes predominantemente baseados em Linux.
   </p>
 
+  <!-- PAPÉIS E RESPONSABILIDADES -->
   <h3>3. Papéis e Responsabilidades</h3>
   <table>
     <thead>
@@ -43,8 +46,10 @@
     </tbody>
   </table>
 
+  <!-- ETAPAS DO PROCESSO -->
   <h3>4. Etapas do Processo</h3>
 
+  <!-- PREPARAÇÃO -->
   <h3 id="41-preparacao">4.1. Preparação</h3>
   <p>
     A fase de preparação é crucial para garantir que os testes sejam realizados de forma segura e eficiente. Aqui estão as principais ações:
@@ -76,6 +81,7 @@
     <li>Docker para criação de ambientes isolados.</li>
   </ul>
 
+  <!-- COLETA DE INFORMAÇÕES -->
   <h3 id="42-coleta-de-informacoes">4.2. Coleta de Informações</h3>
   <p>
     A coleta de informações é a primeira etapa ativa do teste de penetração. O objetivo é identificar ativos e obter o máximo de informações possível sobre o ambiente alvo.
@@ -107,6 +113,7 @@
     <li>Shodan (busca de dispositivos expostos na internet).</li>
   </ul>
 
+  <!-- ANÁLISE DE VULNERABILIDADES -->
   <h3 id="43-analise-de-vulnerabilidades">4.3. Análise de Vulnerabilidades</h3>
   <p>
     Nesta etapa, o objetivo é identificar vulnerabilidades conhecidas nos sistemas e serviços identificados durante a coleta de informações.
@@ -138,6 +145,7 @@
     <li>Burp Suite (análise de aplicações web).</li>
   </ul>
 
+  <!-- PLANEJAMENTO DE EXPLORAÇÃO -->
   <h3 id="44-planejamento-de-exploracao">4.4. Planejamento de Exploração</h3>
   <p>
     Antes de explorar as vulnerabilidades, é essencial planejar as ações para minimizar riscos e garantir que os testes sejam realizados de forma controlada.
@@ -166,6 +174,7 @@
     <li>Obsidian (gestão de conhecimento).</li>
   </ul>
 
+  <!-- EXPLORAÇÃO CONTROLADA -->
   <h3 id="45-exploracao-controlada">4.5. Exploração Controlada</h3>
   <p>
     A exploração controlada envolve a execução de exploits de forma segura e documentada, com o objetivo de validar as vulnerabilidades identificadas.
@@ -197,6 +206,7 @@
     <li>John the Ripper (ferramenta de cracking de senhas).</li>
   </ul>
 
+  <!-- PÓS-EXPLORAÇÃO -->
   <h3 id="46-pos-exploracao">4.6. Pós-Exploração</h3>
   <p>
     Após a exploração bem-sucedida, o objetivo é coletar dados úteis e mapear possíveis caminhos para movimentação lateral.
@@ -224,6 +234,7 @@
     <li>CrackMapExec (ferramenta de pós-exploração em redes Windows).</li>
   </ul>
 
+  <!-- RELATÓRIO E RECOMENDAÇÃO -->
   <h3 id="47-relatorio-e-recomendacao">4.7. Relatório e Recomendação</h3>
   <p>
     O relatório final deve documentar todas as descobertas e fornecer recomendações claras para mitigar as vulnerabilidades identificadas.
@@ -251,6 +262,7 @@
     <li>LaTeX (relatórios técnicos avançados).</li>
   </ul>
 
+  <!-- ENCERRAMENTO -->
   <h3 id="48-encerramento">4.8. Encerramento</h3>
   <p>
     A fase de encerramento envolve a finalização do teste e a documentação das lições aprendidas.
