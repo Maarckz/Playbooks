@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook: Resposta a Incidentes de Phishing - Melhorias e Atualizações (2024-2025)</title>
+</head>
+<body>
+    <h1>Playbook: Resposta a Incidentes de Phishing - Melhorias e Atualizações (2024-2025)</h1>
+
+    <h3>1. Introdução:</h3>
+    <p>A ameaça representada por ataques de phishing a organizações tem se intensificado de forma alarmante em 2024 e 2025. As táticas dos cibercriminosos evoluíram significativamente, tornando os ataques mais sofisticados, personalizados e difíceis de detectar. Diante desse cenário, playbooks de resposta a incidentes de phishing desatualizados oferecem proteção inadequada, expondo as organizações a riscos financeiros substanciais e danos à reputação.[1] A necessidade de um playbook proativo e atualizado é, portanto, fundamental para garantir a detecção precoce, a resposta eficaz e a mitigação de incidentes de phishing, minimizando o impacto sobre a organização e protegendo seus ativos digitais. Este relatório tem como objetivo analisar o playbook de resposta a incidentes de phishing fornecido e aprimorá-lo com as últimas tendências, melhores práticas e avanços tecnológicos no campo da segurança cibernética, visando criar um guia mais robusto e eficiente para a organização.</p>
+
+    <h3>2. Panorama Atual das Ameaças de Phishing (2024-2025):</h3>
+    <p>O cenário das ameaças de phishing em 2024 e 2025 é caracterizado por uma crescente sofisticação e diversificação nas técnicas utilizadas pelos atacantes. A inteligência artificial (IA) e o aprendizado de máquina (ML) emergiram como ferramentas poderosas nas mãos dos cibercriminosos, permitindo a criação de ataques mais convincentes e personalizados.</p>
+    <ul>
+        <li><strong>Ataques Impulsionados por IA e Aprendizado de Máquina:</strong> Os atacantes estão utilizando IA para gerar e-mails de phishing altamente personalizados, que imitam o estilo de escrita de indivíduos específicos, tornando a detecção significativamente mais desafiadora.[2] A tecnologia de clonagem de voz baseada em IA (vishing) também se tornou uma ameaça real, com relatos de fraudadores clonando a voz de executivos para solicitar transferências financeiras urgentes, resultando em perdas multimilionárias para as empresas.[3, 4, 5] Além disso, a IA e o ML estão por trás da criação de deepfakes e identidades sintéticas, que borram a linha entre o real e o falso, dificultando ainda mais a distinção entre comunicações autênticas e fraudulentas.[6] Campanhas de phishing em larga escala se beneficiam da capacidade da IA de gerar e-mails sem erros gramaticais e com tom semelhante a correspondências anteriores, aumentando a probabilidade de as vítimas caírem no golpe.[7] A IA também permite a orquestração de ataques multi-canal, combinando e-mail, voz e vídeo para criar cenários de fraude mais convincentes.[8] A expectativa é que a IA continue a impulsionar a velocidade e a sofisticação dos ataques cibernéticos em 2025.[9]</li>
+        <li><strong>Ataques de Smishing e Quishing:</strong> Observa-se um aumento na prevalência de ataques de phishing via SMS (smishing) e códigos QR (quishing).[2, 3, 10, 11, 12] Golpes de smishing frequentemente se disfarçam de notificações de entrega de encomendas, induzindo os usuários a clicar em links maliciosos e inserir suas credenciais em sites falsos.[3, 4] Ataques de quishing utilizam códigos QR falsos, muitas vezes distribuídos em eventos ou conferências, que direcionam os usuários para sites de login fraudulentos, resultando no roubo de milhares de credenciais.[3, 4, 10] Em 2024, houve um aumento significativo nos ataques de phishing móvel, com o smishing e o quishing liderando essa tendência.[12]</li>
+        <li><strong>Evolução do Business Email Compromise (BEC):</strong> Os ataques de BEC tornaram-se mais direcionados e sofisticados, frequentemente envolvendo a impersonação de executivos de alto nível e o uso de técnicas avançadas de engenharia social para persuadir funcionários a realizar transferências financeiras fraudulentas ou divulgar informações confidenciais.[1, 13, 14] Esses ataques podem envolver a monitorização das comunicações por e-mail de uma organização para interceptar e modificar solicitações de pagamento, utilizando domínios falsificados ou a impersonação de remetentes confiáveis.[13, 14] Simulações de phishing adaptáveis direcionadas a executivos tornam-se cruciais para preparar a liderança contra esses tipos de ataques.[15]</li>
+        <li><strong>Ataques Multi-Canal e Híbridos:</strong> Os atacantes estão cada vez mais explorando múltiplas plataformas de comunicação, como e-mail, mídias sociais e chamadas telefônicas, de forma coordenada para aumentar a probabilidade de sucesso de seus ataques.[1] Campanhas de phishing agora se estendem além do e-mail, refletindo uma mudança para esses canais alternativos.[1] Ataques híbridos podem envolver um e-mail inicial seguido por uma chamada telefônica de um impostor para dar mais credibilidade ao golpe.[1, 8]</li>
+        <li><strong>Exploração de Marcas e Serviços Confiáveis:</strong> Os cibercriminosos continuam a se aproveitar da confiança dos usuários em marcas conhecidas e serviços populares, como Microsoft, Apple, Google, LinkedIn e Starbucks, para enganar as vítimas e roubar informações confidenciais.[1, 6, 16, 17] No quarto trimestre de 2024, a Microsoft manteve sua posição como a marca mais imitada em esquemas de phishing, representando uma parcela significativa de todas as tentativas.[17] Ataques também impersonam serviços de entrega, agências governamentais e instituições financeiras para induzir as vítimas a fornecerem dados pessoais ou financeiros.[1, 6, 18, 19, 20]</li>
+        <li><strong>Phishing-as-a-Service (PhaaS):</strong> A proliferação de plataformas PhaaS democratizou a criação e o lançamento de campanhas de phishing, permitindo que atacantes com habilidades técnicas limitadas realizem ataques bem-sucedidos.[2, 9] Essas plataformas oferecem kits de phishing prontos para uso, que muitas vezes incluem técnicas avançadas como a exploração de MFA e ataques do tipo Adversary-in-the-Middle (AiTM).[9]</li>
+        <li><strong>Exploração da Fadiga de MFA:</strong> Uma tática emergente explora a fadiga de autenticação multi-fator (MFA), onde os atacantes bombardeiam os usuários com inúmeras solicitações de MFA na esperança de que, por exaustão ou distração, eles acabem aprovando uma solicitação maliciosa.[3, 4]</li>
+    </ul>
+
+    <h3>3. Refinando o Playbook Existente: Melhores Práticas Atuais:</h3>
+    <p>A análise do playbook existente à luz das melhores práticas atuais revela várias áreas onde melhorias significativas podem ser implementadas para aumentar sua eficácia na resposta a incidentes de phishing.</p>
+    <ul>
+        <li><strong>Ciclo de Vida Abrangente da Resposta a Incidentes:</strong> Um playbook eficaz deve cobrir todas as fases do ciclo de vida da resposta a incidentes, conforme definido por frameworks como o NIST (National Institute of Standards and Technology) e o SANS (SysAdmin, Audit, Network, and Security Institute).[21, 22, 23] Isso inclui as fases de Preparação, Detecção, Análise, Contenção, Erradicação, Recuperação e Lições Aprendidas.[23] O playbook fornecido já aborda essas etapas, mas a profundidade e a atualização do conteúdo em cada fase podem ser aprimoradas com base nas tendências atuais.[21, 22]</li>
+        <li><strong>Papéis e Responsabilidades Claramente Definidos:</strong> A atribuição clara de papéis e responsabilidades para a equipe de resposta a incidentes e outras partes interessadas é essencial para uma resposta coordenada e eficiente.[24, 25] O playbook atual já define alguns papéis, mas pode se beneficiar de uma maior granularidade nas responsabilidades e da inclusão de outros papéis relevantes, como representantes legais e de comunicação.[26]</li>
+        <li><strong>Ênfase na Automação e SOAR:</strong> A integração de soluções de Security Orchestration, Automation and Response (SOAR) é uma melhor prática crucial para otimizar e automatizar os processos de resposta a incidentes.[27, 28] As plataformas SOAR podem automatizar tarefas como triagem de alertas, enriquecimento de dados, contenção de ameaças e ações de remediação, reduzindo significativamente o tempo de resposta e minimizando erros humanos.[28, 29] A incorporação de ferramentas SOAR no playbook deve ser explicitamente detalhada.</li>
+        <li><strong>Aproveitamento da Inteligência de Ameaças:</strong> A utilização de plataformas de inteligência de ameaças é fundamental para a identificação proativa e análise de ameaças de phishing.[1, 30] O playbook deve orientar sobre como integrar feeds de inteligência de ameaças para monitorar tendências de ataques, identificar indicadores de comprometimento (IoCs) e se manter atualizado sobre as últimas táticas e técnicas dos atacantes.[31, 32]</li>
+        <li><strong>Procedimentos Detalhados para Cada Fase:</strong> O playbook deve fornecer procedimentos passo a passo para cada fase da resposta a incidentes, incluindo ações específicas, ferramentas recomendadas e caminhos de escalonamento claros.[24, 33] A clareza e o detalhe dos procedimentos garantem que a equipe de resposta possa agir de forma rápida e eficaz sob pressão.</li>
+        <li><strong>Importância da Comunicação:</strong> A comunicação clara e oportuna durante a resposta a incidentes é vital para manter todas as partes interessadas informadas e garantir uma resposta coordenada.[25, 34] O playbook deve incluir um plano de comunicação detalhado, definindo canais de comunicação, modelos de mensagens e responsabilidades pela divulgação de informações, tanto interna quanto externamente.[35, 36]</li>
+        <li><strong>Testes e Atualizações Regulares:</strong> Um playbook de resposta a incidentes não é um documento estático; ele deve ser testado regularmente por meio de simulações e atualizado com base nas lições aprendidas e na evolução do cenário de ameaças.[25, 27] O playbook deve incluir um cronograma para revisões e exercícios de simulação periódicos.</li>
+        <li><strong>Integração com Continuidade de Negócios e Recuperação de Desastres:</strong> O playbook de resposta a incidentes de phishing deve ser integrado aos planos mais amplos de continuidade de negócios e recuperação de desastres da organização.[24, 37] Isso garante que a resposta a um incidente de phishing esteja alinhada com os objetivos gerais de resiliência da organização e que os processos de recuperação possam ser iniciados de forma eficaz em caso de interrupções significativas.[38]</li>
+    </ul>
+
+    <h3>4. Etapas do Processo</h3>
+
+    <h2>4.1. Preparação</h2>
+    <div id="iframe">
+        <div class="cards">
+            <div class="card">
+                <h3>CRIAR E MANTER UMA LISTA</h3>
+                <p>Todos os domínios de propriedade da empresa.</p>
+                <p>Todos os servidores de e-mail.</p>
+                <p>Todas as pessoas que podem registrar domínios.</p>
+                <p>Domínios semelhantes (lookalike domains) identificados por meio de inteligência de ameaças.[39]</p>
+                <p>Inventário atualizado de todos os ativos digitais, incluindo serviços em nuvem e dispositivos móveis, com informações sobre seus proprietários, contatos e ações pré-autorizadas.[22, 24, 40]</p>
+                <p>Lista de pessoal chave para a resposta a incidentes, com suas informações de contato.</p>
+            </div>
+            <div class="card">
+                <h3>CRIAR TEMPLATES DE E-MAILS</h3>
+                <p>Para notificar todos os funcionários sobre campanhas de phishing em andamento contra a organização.</p>
+                <p>Para contatar empresas para remoção de domínios maliciosos.</p>
+                <p>Para informar terceiros a tomar ações contra phishing em sua infraestrutura.</p>
+                <p>Comunicações de escalonamento para as partes interessadas relevantes, incluindo a alta gerência e o departamento jurídico.</p>
+                <p>Modelos para comunicação interna sobre os esforços de contenção e erradicação.</p>
+                <p>Templates para notificar clientes ou parceiros externos que possam ter sido afetados por um incidente de phishing.[25, 34, 41]</p>
+            </div>
+            <div class="card">
+                <h3>GARANTIR</h3>
+                <p>Soluções de anti-malware/anti-spam/anti-phish estejam implementadas.</p>
+                <p>Os usuários saibam como relatar tentativas de phishing.</p>
+                <p>Existam regras de detecção para documentos e arquivos maliciosos </p>
+                <ul>
+                    <li class="item">PowerShell</li>
+                    <li class="item">CMD</li>
+                    <li class="item">ELF</li>
+                    <li class="item">BASH</li>
+                    <li class="item">Macros</li>
+                    <li class="item">Arquivos LNK</li>
+                    <li class="item">Imagens ISO</li>
+                </ul>
+                <p>Soluções avançadas de segurança de e-mail que utilizam IA e análise comportamental para detectar e bloquear ataques de phishing sofisticados.[42, 43, 44, 45, 46]</p>
+                <p>Mecanismos de relatório fáceis de usar, como um botão dedicado no cliente de e-mail, para sinalizar mensagens suspeitas.[47, 48, 49]</p>
+                <p>Regras de detecção para comportamento de usuário suspeito, que podem indicar contas comprometidas.[13, 50]</p>
+            </div>
+            <div class="card">
+                <h3>REALIZAR SIMULAÇÕES</h3>
+                <p>Para garantir que todos os aspectos do Playbook funcionem.</p>
+                <p>Após a publicação de um ataque de phishing</p>
+                <p>Pelo menos duas vezes por ano</p>
+                <p>Testar/Validar:</p>
+                <ul>
+                    <li class="item">Maturidade da equipe</li>
+                    <li class="item">Acessos de usuários externos</li>
+                    <li class="item">Caminhos de escalonamento</li>
+                    <li class="item">Smishing, vishing e quishing.[3, 51]</li>
+                    <li class="item">Simulações de phishing adaptáveis.[1, 15, 52]</li>
+                    <li class="item">Procedimentos da equipe de resposta a incidentes e o fluxo de comunicação.[24, 25, 41]</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>MONITORAR E REVISAR INTELIGÊNCIA</h3>
+                <p>Realize vigilância ativa e revise regularmente ameaças à organização, incluindo:</p>
+                <ul>
+                    <li class="item">Ameaças à marca e ao setor</li>
+                    <li class="item">Padrões comuns de ataques</li>
+                    <li class="item">Novos riscos e vulnerabilidades em desenvolvimento</li>
+                    <li class="item">Ataques publicados de phishing</li>
+                    <li class="item">Fontes e plataformas de inteligência de ameaças respeitáveis.[30, 31, 32, 53]</li>
+                    <li class="item">Mídias sociais e a dark web em busca de menções à marca e possíveis ameaças.[16, 30]</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>GARANTIR ACESSO APROPRIADO </h3>
+                <p>A qualquer documentação e informações necessárias</p>
+                    <ul>
+                        <li class="item">Acesso a sistemas críticos</li>
+                        <li class="item">Ferramentas de monitoramento</li>
+                        <li class="item">Contatos de emergência</li>
+                        <li class="item">Ferramentas de análise forense.[50, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63]</li>
+                        <li class="item">Ambientes de sandboxing.[50, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63]</li>
+                        <li class="item">Feeds de inteligência de ameaças.</li>
+                        <li class="item">Plataformas SOAR.</li>
+                        <li class="item">Lista atualizada de contatos de emergência, incluindo especialistas externos em segurança cibernética e agências de aplicação da lei.</li>
+                    </ul>
+            </div>
+        </div>
+
+
+        <h2>Inventãrio de Acessos</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Ativos dos Clientes</h3>
+                <ul>
+                    <li class="item">Proprietários</li>
+                    <li class="item">Contatos</li>
+                    <li class="item">Ações pré-autorizadas</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Ativos da Empresa</h3>
+                <p>(Incluindo todas as subsidiárias e unidades de negócios)</p>
+                <ul>
+                    <li class="item">Proprietários</li>
+                    <li class="item">Contatos</li>
+                    <li class="item">Administradores</li>
+                    <li class="item">Ações pré-autorizadas</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div style="margin-top: 20px;">
+            <div class="card">
+                <h3>Tipo de Inventário de Ativos Necessário</h3>
+                <ul>
+                    <li class="item">Endpoints</li>
+                    <li class="item">Servidores</li>
+                    <li class="item">Equipamentos de rede</li>
+                    <li class="item">Appliances de segurança</li>
+                    <li class="item">Infraestrutura de nuvem (IaaS, PaaS, SaaS)</li>
+                    <li class="item">Repositórios de dados</li>
+                    <li class="item">Armazenamentos de informações confidenciais</li>
+                    <li class="item">Ferramentas de segurança e suas configurações</li>
+                </ul>
+                <li style="margin: 0 auto; width: 50%; text-align: center; margin-bottom: 20px;" class="item">Faixas de rede</li>
+                <ul>
+                    <li class="item">Públicas</li>
+                    <li class="item">Privadas</li>
+                    <li class="item">VPN / Fora de banda</li>
+                </ul>
+                <ul>
+                    <li class="item">Funcionários</li>
+                    <li class="item">Parceiros</li>
+                    <li class="item">Clientes</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>2. Detectar</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>ETAPA 1:</h3>
+                <ul>
+                    <li>Receber alertas de e-mails suspeitos reportados por usuários ou sistemas automatizados.</li>
+                    <li>Validar o incidente usando ferramentas de análise:
+                        <ul>
+                            <li>Inspecionar cabeçalhos de e-mails.[64, 65, 66]</li>
+                            <li>Verificar links suspeitos em sandboxes.[58, 59, 60, 61]</li>
+                        </ul>
+                    </li>
+                    <li>Classificar o incidente em níveis de severidade (baixo, médio, alto).</li>
+                </ul>
+                <p>Ferramentas recomendadas:</p>
+                <ul>
+                    <li>Ferramentas de sandboxing.[58, 59, 60, 61]</li>
+                    <li>Soluções de SIEM.</li>
+                    <li>Soluções avançadas de segurança de e-mail.[42, 43, 44, 45, 46]</li>
+                    <li>Plataformas SOAR.[28, 29]</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>ETAPA 2:</h3>
+                <ul>
+                    <li>Analisar cabeçalhos de e-mail:[64, 65, 66]
+                        <ul>
+                            <li>Identificar o IP do remetente e conferir autenticação DKIM/SPF.[67, 68, 69]</li>
+                        </ul>
+                    </li>
+                    <li>Examinar links e anexos suspeitos:
+                        <ul>
+                            <li>Usar sandboxes para verificar comportamento malicioso.[58, 59, 60, 61]</li>
+                        </ul>
+                    </li>
+                    <li>Identificar as credenciais ou dados potencialmente comprometidos.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Exemplo Prático:</h3>
+                <ul>
+                    <li>Cabeçalhos de e-mail: Verificar registros DNS do remetente para autenticidade.</li>
+                    <li>Link: Usar um ambiente seguro para testar se redireciona a sites maliciosos.</li>
+                    <li>Um funcionário reporta um e-mail com um código QR suspeito solicitando informações de login. A equipe SOC analisa o cabeçalho do e-mail, identifica um remetente desconhecido e usa um sandbox para verificar o link incorporado no código QR, que direciona para um domínio não relacionado à empresa. O incidente é classificado como de alta severidade devido ao potencial de comprometimento de credenciais.</li>
+                </ul>
+                <p>Ferramentas recomendadas:</p>
+                <ul>
+                    <li>Sandboxes.[58, 59, 60, 61]</li>
+                    <li>Ferramentas de análise de e-mail.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <p><strong>Fluxo de Trabalho</strong></p>
+            <img src="Workflows/Phishing-Workflow-Detect.png" alt="Fluxo de Trabalho de Phishing" />
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Identificar Indicadores de Ameaça</h3>
+                <h4>Alertas</h4>
+                <p>Alertas são gerados por diferentes sistemas de propriedade da equipe de Segurança/SOC.</p>
+                <ul>
+                    <li class="item">Chamados</li>
+                    <li class="item">SIEM</li>
+                    <li class="item">Anti-Vírus / EDR</li>
+                    <li class="item">Relatórios:
+                        <ul>
+                            <li class="item">DNS</li>
+                            <li class="item">Proxy Web</li>
+                        </ul>
+                    </li>
+                    <li class="item">Erros de servidores de e-mail</li>
+                </ul>
+                <h4>Notificações</h4>
+                <p>As notificações vêm de fontes externas, geralmente por e-mail, Teams ou telefone.</p>
+                <ul>
+                    <li class="item">Usuários (internos)</li>
+                    <li class="item">Recipientes de e-mails (externos)</li>
+                    <li class="item">Terceiros</li>
+                    <li class="item">ISP</li>
+                    <li class="item">Provedores de e-mail</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="cards">
+            <div class="card">
+                <h3>Identificar Fatores de Risco</h3>
+                <h4>Comuns</h4>
+                <ul>
+                    <li class="item">Roubo de Credenciais</li>
+                    <li class="item">Entrega de Malware</li>
+                    <li class="item">Atividades Criminais
+                        <ul>
+                            <li class="item">Chantagem / Resgate</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h4>Específicos da Empresa</h4>
+                <ul>
+                    <li class="item">Perdas Financeiras:
+                        <ul>
+                            <li class="item">Perda de contrato</li>
+                            <li class="item">Contrato não renovado</li>
+                            <li class="item">Ofertas mais baixas para clientes</li>
+                            <li class="item">Multas:
+                                <ul>
+                                    <li class="item">Regulamentação</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr />
+
+        <div class="cards">
+            <div class="card">
+                <p><strong>Coleta de Dados</strong></p>
+                <p>Esta seção descreve as informações que devem ser coletadas e documentadas sobre o incidente.</p>
+                <h3>Colete os seguintes dados:</h3>
+                <ul>
+                    <li class="item"><strong>Domínios</strong>
+                        <ul>
+                            <li class="item">Reputação</li>
+                            <li class="item">Registrador</li>
+                            <li class="item">Proprietário</li>
+                            <li class="item">IP</li>
+                            <li class="item">Tecnologias do site:
+                                <ul>
+                                    <li class="item">WordPress</li>
+                                    <li class="item">Joomla</li>
+                                    <li class="item">Página personalizada (phishing de credenciais)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="item"><strong>IP</strong>
+                        <ul>
+                            <li class="item">Reputação</li>
+                            <li class="item">Proprietário</li>
+                            <li class="item">Localização Geográfica</li>
+                            <li class="item">Outros domínios nesse IP</li>
+                        </ul>
+                    </li>
+                </ul>
+                <hr />
+                <h3>Categorizar</h3>
+                <p>Determinar o tipo de e-mail:</p>
+                <ul>
+                    <li class="item"><strong>Phish</strong>
+                        <ul>
+                            <li class="item">Imitando o site da empresa</li>
+                            <li class="item">Marca comum:
+                                <ul>
+                                    <li class="item">Apple</li>
+                                    <li class="item">FedEx</li>
+                                    <li class="item">Netflix</li>
+                                    <li class="item">Etc.</li>
+                                </ul>
+                            </li>
+                            <li class="item">Terceiro da empresa:
+                                <ul>
+                                    <li class="item">O365</li>
+                                    <li class="item">Outras soluções baseadas na nuvem</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="item"><strong>Spear Phish</strong></li>
+                    <li class="item"><strong>Whaling</strong></li>
+                    <li class="item"><strong>Spam</strong></li>
+                    <li class="item"><strong>BEC</strong></li>
+                    <li class="item"><strong>Regras de Encaminhamento do O365</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>3. Análise</h2>
+        <div class="verify">
+            <h3>Verificar</h3>
+            <p>Em conjunto com um membro sênior do SOC:</p>
+            <ul>
+                <li class="item">Verificar novamente os dados anteriores</li>
+                <li class="item">Descartar Falsos Positivos</li>
+            </ul>
+        </div>
+
+        <div class="ioc-identification">
+            <h3>Identificar IOCs</h3>
+            <ul>
+                <li class="item">Validar hashes:
+                    <ul>
+                        <li class="item"><a href="https://www.virustotal.com">VirusTotal</a></li>
+                        <li class="item"><a href="https://www.hybrid-analysis.com">Hybrid Analysis</a></li>
+                    </ul>
+                </li>
+                <li class="item">Validar links:
+                    <ul>
+                        <li class="item"><a href="https://www.virustotal.com">VirusTotal</a></li>
+                        <li class="item"><a href="https://www.hybrid-analysis.com">Hybrid Analysis</a></li>
+                        <li class="item"><a href="https://urlscan.io">URLScan</a></li>
+                    </ul>
+                </li>
+                <li class="item">Identificar assunto, anexos, endereço de remetente</li>
+                <li class="item">Identificar outros endereços, domínios, IPs:
+                    <ul>
+                        <li class="item"><a href="https://www.virustotal.com">VirusTotal</a></li>
+                        <li class="item"><a href="https://www.hybrid-analysis.com">Hybrid Analysis</a></li>
+                        <li class="item"><a href="https://talosintelligence.com">Talos Intelligence</a></li>
+                    </ul>
+                </li>
+                <li class="item">Pesquisar fontes de inteligência de ameaças:
+                    <ul>
+                        <li class="item"><a href="https://www.virustotal.com">VirusTotal</a></li>
+                        <li class="item"><a href="https://www.hybrid-analysis.com">Hybrid Analysis</a></li>
+                        <li class="item"><a href="https://talosintelligence.com">Talos Intelligence</a></li>
+                    </ul>
+                </li>
+                <li class="item">Forense de disco no endpoint do destinatário</li>
+            </ul>
+        </div>
+
+        <div class="company-scan">
+            <h3>Escanear a Empresa</h3>
+            <ul>
+                <li class="item">Atualizar filtro de spam</li>
+                <li class="item">Atualizar regras do FW, IDS, etc. com IOCs</li>
+                <li class="item">Pesquisar todas as pastas de e-mail para IOCs</li>
+                <li class="item">Pesquisar endpoints para IOCs com EDR</li>
+            </ul>
+        </div>
+
+        <div class="update-scope">
+            <h3>Atualizar Escopo</h3>
+            <ul>
+                <li class="item">Atualizar listas de:
+                    <ul>
+                        <li class="item">Endereços de destinatários afetados</li>
+                        <li class="item">Endpoints afetados</li>
+                        <li class="item">Enclaves afetados</li>
+                        <li class="item">Unidades de negócios afetadas</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="scope-validation">
+            <h3>Validação do Escopo</h3>
+            <p>Todas as máquinas foram identificadas?</p>
+            <p>Se encontrar mais vestígios de phishing ou novos IOCs, volte a esta etapa.</p>
+            <p>Quando terminar de identificar todos os comprometidos:</p>
+            <ul>
+                <li class="item">Hosts</li>
+                <li class="item">Caixas de entrada</li>
+            </ul>
+            <p>E investigar todos:</p>
+            <ul>
+                <li class="item">URLs</li>
+                <li class="item">Domínios</li>
+                <li class="item">IPs</li>
+                <li class="item">Portas</li>
+                <li class="item">Arquivos</li>
+                <li class="item">Hashes</li>
+            </ul>
+            <p>Vá para a próxima fase: <a href="#4-cont-errad">Contenção/Erradicação</a></p>
+        </div>
+
+        <h2>4. Contenção / Erradicação</h2>
+        <div class="actions">
+            <h3>Ações:</h3>
+            <ul>
+                <li class="item">Bloquear remetentes e links maliciosos:
+                    <ul>
+                        <li class="item">Configurar regras no gateway de e-mail.</li>
+                        <li class="item">Atualizar listas de bloqueio de URLs no firewall ou proxy.</li>
+                    </ul>
+                </li>
+                <li class="item">Isolar máquinas comprometidas:
+                    <ul>
+                        <li class="item">Desconectar dispositivos suspeitos da rede.</li>
+                    </ul>
+                </li>
+                <li class="item">Comunicação interna:
+                    <ul>
+                        <li class="item">Enviar alertas internos orientando os usuários a não interagirem com mensagens similares.[33, 70]</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="recommended-tools">
+            <h3>Ferramentas recomendadas:</h3>
+            <ul>
+                <li class="item">Gateways de e-mail.</li>
+                <li class="item">EDR para isolar dispositivos.</li>
+                <li class="item">Plataformas SOAR.[28, 29]</li>
+            </ul>
+        </div>
+
+        <div class="actions">
+            <h3>Ações:</h3>
+            <ul>
+                <li class="item">Resetar senhas de usuários afetados.</li>
+                <li class="item">Revogar tokens de autenticação comprometidos (ex.: SSO, MFA).</li>
+                <li class="item">Remover malware detectado usando EDR ou antivírus.</li>
+                <li class="item">Revogar tokens de acesso e chaves de API para contas comprometidas.</li>
+                <li class="item">Analisar logs de vários sistemas para identificar todos os sistemas e usuários afetados.[33]</li>
+            </ul>
+        </div>
+
+        <div class="block">
+            <h3>Bloquear</h3>
+            <ul>
+                <li class="item">Atualizar Filtros de Spam</li>
+                <li class="item">Atualizar regras do FW, Proxy, etc.</li>
+                <li class="item">Blackhole DNS</li>
+                <li class="item">Enviar para terceiros:
+                    <ul>
+                        <li class="item"><a href="https://safebrowsing.google.com/safebrowsing/report_general/">Google Safe Browsing</a></li>
+                        <li class="item">Fornecedor de filtro web</li>
+                        <li class="item">Etc.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="validate-user-actions">
+            <h3>Validar Ações do Usuário</h3>
+            <ul>
+                <li class="item">Os e-mails foram lidos?</li>
+                <li class="item">Os anexos foram abertos?</li>
+                <li class="item">Os links foram clicados?</li>
+            </ul>
+        </div>
+
+        <div class="infection-by-malware">
+            <h3>Infecção por Malware?</h3>
+            <p>Se houve anexos maliciosos abertos, precisamos assumir que o(s) endpoint(s) foi/foram infectados por malware.</p>
+            <p>Por favor, continue para o <a href="../IRP-Malware/README.md">Playbook de Malware</a>.</p>
+        </div>
+
+        <div class="delete-emails">
+            <h3>Excluir E-mails</h3>
+            <ul>
+                <li class="item">Excluir das caixas de entrada dos usuários:
+                    <ul>
+                        <li class="item">Ferramenta de Spam</li>
+                        <li class="item">Console de Administração de E-mail</li>
+                        <li class="item">Nuvem e On-Prem</li>
+                    </ul>
+                </li>
+                <li class="item">Excluir Anexos Baixados:
+                    <ul>
+                        <li class="item">EDR, SIEM, etc. para escanear a empresa</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="close-monitoring">
+            <h3>Fechar Monitoramento</h3>
+            <ul>
+                <li class="item">Monitorar para:
+                    <ul>
+                        <li class="item">Mensagens relacionadas recebidas</li>
+                        <li class="item">Conexões à internet com IOC</li>
+                        <li class="item">Novos arquivos que correspondem a hashes identificados</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="all-endpoints-contained">
+            <h3>Todos os Endpoints Afetados Contidos?</h3>
+            <p>Se todos os endpoints afetados foram contidos, você pode passar para a próxima fase, caso contrário, continue abaixo.</p>
+        </div>
+
+        <div class="new-ioc-discovered">
+            <h3>Novo IOC Descoberto?</h3>
+            <p>Se novos IOCs foram descobertos, volte para a <a href="README.md#3-analyze">Fase de Análise</a>.</p>
+        </div>
+
+        <h2>5. Recuperação</h2>
+        <div class="actions">
+            <h3>Ações:</h3>
+            <ul>
+                <li class="item">Monitorar os dispositivos e contas previamente afetados.</li>
+                <li class="item">Garantir que as máquinas limpas estão livres de malwares.</li>
+                <li class="item">Validar que os controles foram eficazes.</li>
+                <li class="item">Realizar análise forense avançada para identificar a causa raiz e a extensão do ataque.[33, 41, 71, 72]</li>
+                <li class="item">Remover todos os arquivos maliciosos, softwares, backdoors e outros artefatos instalados pelos atacantes.[33, 41, 71, 72]</li>
+                <li class="item">Restaurar sistemas afetados a partir de backups limpos e verificados, se necessário.</li>
+                <li class="item">Aplicar patches de segurança e atualizações a todos os sistemas vulneráveis explorados durante o ataque.</li>
+                <li class="item">Realizar uma varredura completa de segurança de todos os sistemas para garantir que não haja outras ameaças persistentes.</li>
+                <li class="item">Revisar e atualizar as configurações de segurança para evitar ataques semelhantes no futuro.</li>
+                <li class="item">Verificar a integridade dos sistemas restaurados, garantindo que todos os serviços estejam funcionando corretamente.</li>
+                <li class="item">Comunicar aos usuários sobre a restauração dos sistemas e fornecer orientações adicionais, se necessário.</li>
+                <li class="item">Realizar uma revisão pós-incidente completa para identificar lições aprendidas e áreas de melhoria no processo de resposta a incidentes.[27, 41, 73]</li>
+                <li class="item">Atualizar o playbook de resposta a incidentes com base nessas lições.</li>
+                <li class="item">Implementar medidas preventivas adicionais para evitar futuros ataques de phishing.</li>
+            </ul>
+        </div>
+
+        <div class="recommended-tools">
+            <h3>Ferramentas recomendadas:</h3>
+            <ul>
+                <li class="item">SIEM para monitorar atividades pós-incidente.</li>
+                <li class="item">Logs de autenticação para verificar tentativas não autorizadas.</li>
+                <li class="item">Ferramentas de análise forense.[50, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63]</li>
+                <li class="item">Plataformas SOAR.[28, 29]</li>
+            </ul>
+        </div>
+
+        <div class="workflow">
+            <h3>Fluxo de Trabalho</h3>
+            <img src="Workflows/Phishing-Workflow-Recover.png" alt="Fluxo de Trabalho de Phishing" />
+        </div>
+
+        <div class="update-defenses">
+            <h3>Atualizar Defesas</h3>
+            <p>Determine quais das regras a seguir precisam ser removidas e quais devem permanecer:</p>
+            <ul>
+                <li class="item">Filtros de Spam</li>
+                <li class="item">Regras de Firewall</li>
+                <li class="item">EDR:
+                    <ul>
+                        <li class="item">Banir hashes</li>
+                        <li class="item">Banir domínios</li>
+                        <li class="item">Contenção</li>
+                    </ul>
+                </li>
+                <li class="item">Bloqueio Proxy</li>
+            </ul>
+        </div>
+
+        <div class="all-endpoints-recovered">
+            <h3>Todos os Endpoints Afetados Recuperados?</h3>
+            <p>Se todos os endpoints afetados foram contidos, você pode passar para a próxima fase, caso contrário, continue abaixo.</p>
+        </div>
+
+        <div class="validate-countermeasures">
+            <h3>Validar Contramedidas</h3>
+            <p>Determine se elementos legítimos estão sendo bloqueados por:</p>
+            <ul>
+                <li class="item">Filtros de Spam</li>
+                <li class="item">Proxy</li>
+                <li class="item">Firewall</li>
+                <li class="item">EDR</li>
+            </ul>
+            <p>Se sim, volte para <a href="#update-defenses">Atualizar Defesas</a>.</p>
+            <p>Caso contrário, vá para a próxima fase: <a href="#6-p-s-incident">Pós-Incidente</a></p>
+        </div>
+
+        <h2>6. Pós-Incidente</h2>
+        <div class="actions">
+            <h3>Ações:</h3>
+            <ul>
+                <li class="item">Conduzir uma reunião de análise pós-incidente (post-mortem):
+                    <ul>
+                        <li class="item">Documentar o que funcionou bem e o que precisa melhorar.</li>
+                    </ul>
+                </li>
+                <li class="item">Atualizar playbooks e treinamentos baseados no incidente.</li>
+            </ul>
+        </div>
+
+        <div class="recommended-tools">
+            <h3>Ferramentas recomendadas:</h3>
+            <ul>
+                <li class="item">Ferramentas de documentação.</li>
+                <li class="item">Soluções de aprendizado e treinamento.</li>
+            </ul>
+        </div>
+
+        <div class="workflow">
+            <h3>Fluxo de Trabalho</h3>
+            <img src="Workflows/Phishing-Workflow-Post%20Incident.png" alt="Fluxo de Trabalho de Phishing">
+        </div>
+
+        <div class="incident-review">
+            <h3>Revisão do Incidente</h3>
+            <ul>
+                <li class="item">O que funcionou?</li>
+                <li class="item">O que não funcionou?</li>
+            </ul>
+        </div>
+
+        <div class="update-operations">
+            <h3>Atualizar Modo de Operação</h3>
+            <p>Atualize os seguintes documentos conforme necessário:</p>
+            <ul>
+                <li class="item">Políticas</li>
+                <li class="item">Processos</li>
+                <li class="item">Procedimentos</li>
+                <li class="item">Playbooks</li>
+                <li class="item">Runbooks</li>
+            </ul>
+            <p>Atualize as Regras de Detecção em:</p>
+            <ul>
+                <li class="item">SIEM</li>
+                <li class="item">Anti-Spam</li>
+                <li class="item">Gateway de Malware</li>
+                <li class="item">EDR</li>
+                <li class="item">Outras soluções de segurança</li>
+            </ul>
+        </div>
+
+        <div class="review-defensive-posture">
+            <h3>Revisar Postura Defensiva</h3>
+            <ul>
+                <li class="item">Agendar revisão das regras recém-introduzidas em 6 meses</li>
+                <li class="item">Verificar se as regras abaixo ainda são aplicáveis:
+                    <ul>
+                        <li class="item">Regras de Filtros de Spam</li>
+                        <li class="item">Regras de Firewall</li>
+                        <li class="item">Regras de Proxy para C2</li>
+                        <li class="item">Assinaturas customizadas de AV / EDR</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="user-awareness-training">
+            <h3>Treinamento de Conscientização do Usuário</h3>
+            <ul>
+                <li>Certificar-se de que o usuário recebe treinamento de Phishing</li>
+                <li>Como reconhecer Phish</li>
+                <li>Como relatar Phish</li>
+                <li>Perigos de seguir links</li>
+                <li>Perigos de abrir anexos</li>
+                <li>Perigos de atender a solicitações de scammer</li>
+            </ul>
+        </div>
+
+        </div>
+    </div>
+</body>
+</html>

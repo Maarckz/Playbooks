@@ -1,0 +1,212 @@
+<link href="css/styles.css" rel="stylesheet">
+
+<div id="iframe">
+  <h2>Playbook de Monitoramento de Redes</h2>
+
+  <h3>1. Propósito</h3>
+  <p>
+    Este playbook tem como objetivo estabelecer diretrizes para o monitoramento eficaz de redes, incluindo a configuração de ferramentas, coleta de dados, análise e resposta a eventos. O foco é garantir a visibilidade completa da infraestrutura de rede, permitindo a detecção precoce de anomalias, análise de tráfego e identificação de ameaças ou falhas.
+  </p>
+
+  <h3>2. Escopo</h3>
+  <p>
+    Este documento se aplica a redes corporativas e de datacenters, com foco em:
+  </p>
+  <ul>
+    <li><strong>Detecção de Anomalias:</strong> Identificar comportamentos incomuns que possam indicar ameaças ou falhas.</li>
+    <li><strong>Análise de Tráfego:</strong> Monitorar e analisar o tráfego de rede para garantir o desempenho e a segurança.</li>
+    <li><strong>Identificação de Ameaças ou Falhas:</strong> Detectar e responder a incidentes de segurança ou problemas de infraestrutura.</li>
+  </ul>
+
+  <h3>3. Papéis e Responsabilidades</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Papel</th>
+        <th>Responsabilidade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Administrador de Redes</td>
+        <td>
+          Configurar ferramentas de monitoramento e garantir a operação contínua da infraestrutura de rede.
+        </td>
+      </tr>
+      <tr>
+        <td>Analista SOC</td>
+        <td>
+          Revisar alertas, investigar anomalias e coordenar a resposta a incidentes.
+        </td>
+      </tr>
+      <tr>
+        <td>Equipe de Segurança</td>
+        <td>
+          Responder a eventos de segurança, implementar ações corretivas e garantir a conformidade com políticas de segurança.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>4. Etapas do Processo</h3>
+
+  <h3 id="41-preparacao">4.1. Preparação</h3>
+  <p>
+    A fase de preparação é crucial para garantir que o monitoramento de redes seja eficiente e abrangente. Aqui estão as principais ações:
+  </p>
+  <ul>
+    <li><strong>Definir Objetivos do Monitoramento:</strong>
+      <ul>
+        <li>Detecção de ameaças: Identificar atividades maliciosas na rede.</li>
+        <li>Monitoramento de desempenho: Garantir que a rede esteja operando dentro dos parâmetros esperados.</li>
+        <li>Análise de comportamento: Identificar padrões de tráfego e comportamentos incomuns.</li>
+      </ul>
+    </li>
+    <li><strong>Mapear a Infraestrutura:</strong>
+      <ul>
+        <li>Identificar hosts críticos, sub-redes e serviços essenciais.</li>
+        <li>Documentar a topologia da rede para facilitar a análise e a resposta a incidentes.</li>
+      </ul>
+    </li>
+    <li><strong>Estabelecer KPIs:</strong>
+      <ul>
+        <li>Definir métricas-chave, como latência, throughput e taxa de perda de pacotes.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Ferramentas Recomendadas:</strong></p>
+  <ul>
+    <li>Nmap (mapeamento de rede).</li>
+    <li>SolarWinds (monitoramento de infraestrutura).</li>
+    <li>Visio ou Lucidchart (diagramas de rede).</li>
+  </ul>
+
+  <h3 id="42-deteccao">4.2. Detecção</h3>
+  <p>
+    A detecção envolve a configuração de ferramentas e a coleta de dados para identificar atividades anômalas na rede.
+  </p>
+  <ul>
+    <li><strong>Configurar Ferramentas de Monitoramento:</strong>
+      <ul>
+        <li>Utilizar ferramentas como Zabbix e Nagios para monitorar o desempenho da rede.</li>
+        <li>Configurar coleta de dados através de SNMP, Syslog e NetFlow.</li>
+      </ul>
+    </li>
+    <li><strong>Criar Dashboards Personalizados:</strong>
+      <ul>
+        <li>Exibir métricas-chave, como uso de largura de banda, latência e disponibilidade de serviços.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Ferramentas Recomendadas:</strong></p>
+  <ul>
+    <li>Zabbix (monitoramento de desempenho).</li>
+    <li>Nagios (monitoramento de infraestrutura).</li>
+    <li>Graylog (coleta e análise de logs).</li>
+  </ul>
+
+  <h3 id="43-analise">4.3. Análise</h3>
+  <p>
+    A análise de dados coletados é essencial para identificar padrões anômalos e correlacionar eventos.
+  </p>
+  <ul>
+    <li><strong>Identificar Padrões Anômalos:</strong>
+      <ul>
+        <li>Monitorar aumentos repentinos no tráfego em portas incomuns.</li>
+        <li>Identificar comunicações com endereços IP suspeitos.</li>
+      </ul>
+    </li>
+    <li><strong>Correlacionar Eventos:</strong>
+      <ul>
+        <li>Investigar conexões entre logs de firewall, tráfego de rede e alertas de segurança.</li>
+      </ul>
+    </li>
+    <li><strong>Validar Métricas de Desempenho:</strong>
+      <ul>
+        <li>Avaliar gargalos de largura de banda e falhas de serviço.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Ferramentas Recomendadas:</strong></p>
+  <ul>
+    <li>ELK Stack (análise de logs).</li>
+    <li>Grafana (visualização de métricas).</li>
+    <li>Kibana (análise de dados).</li>
+  </ul>
+
+  <h3 id="44-correcao-e-erradicacao">4.4. Correção e Erradicação</h3>
+  <p>
+    Após a identificação de anomalias, é essencial corrigir as vulnerabilidades e erradicar as ameaças.
+  </p>
+  <ul>
+    <li><strong>Configurar Alertas:</strong>
+      <ul>
+        <li>Definir thresholds para tráfego, latência e falhas de autenticação.</li>
+      </ul>
+    </li>
+    <li><strong>Executar Investigações:</strong>
+      <ul>
+        <li>Validar a origem de tráfego suspeito e identificar possíveis ameaças.</li>
+      </ul>
+    </li>
+    <li><strong>Implementar Mitigações:</strong>
+      <ul>
+        <li>Bloquear endereços IP maliciosos ou ajustar políticas de roteamento.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Ferramentas Recomendadas:</strong></p>
+  <ul>
+    <li>Palo Alto Cortex XSOAR (automação de resposta a incidentes).</li>
+    <li>ACLs em Firewalls e Switches (bloqueio de tráfego malicioso).</li>
+  </ul>
+
+  <h3 id="45-recuperacao">4.5. Recuperação</h3>
+  <p>
+    A fase de recuperação envolve a restauração dos sistemas afetados e a garantia de que a rede esteja segura e operacional.
+  </p>
+  <ul>
+    <li><strong>Restaurar Configurações:</strong>
+      <ul>
+        <li>Reverter alterações maliciosas e restaurar configurações de rede.</li>
+      </ul>
+    </li>
+    <li><strong>Monitorar Atividades:</strong>
+      <ul>
+        <li>Monitorar a rede para garantir que as ameaças foram completamente erradicadas.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Ferramentas Recomendadas:</strong></p>
+  <ul>
+    <li>OSSEC (detecção de intrusões).</li>
+    <li>Logwatch (monitoramento de logs).</li>
+  </ul>
+
+  <h3 id="46-pos-incidente">4.6. Pós-Incidente</h3>
+  <p>
+    A fase pós-incidente envolve a análise do incidente e a implementação de melhorias para prevenir futuros ataques.
+  </p>
+  <ul>
+    <li><strong>Documentar Lições Aprendidas:</strong>
+      <ul>
+        <li>Registrar insights e melhorias para futuros incidentes.</li>
+      </ul>
+    </li>
+    <li><strong>Atualizar Políticas de Segurança:</strong>
+      <ul>
+        <li>Implementar novas políticas e procedimentos com base nas lições aprendidas.</li>
+      </ul>
+    </li>
+    <li><strong>Realizar Treinamentos:</strong>
+      <ul>
+        <li>Treinar a equipe em técnicas de detecção e resposta a incidentes.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Ferramentas Recomendadas:</strong></p>
+  <ul>
+    <li>Power BI (relatórios e análises).</li>
+    <li>Packet Tracer e GNS3 (simulações de rede).</li>
+  </ul>
+</div>

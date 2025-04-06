@@ -1,0 +1,222 @@
+<link href="css/styles.css" rel="stylesheet">
+
+<div id="iframe">
+  <h2>Playbook de Segurança em Redes Wi-Fi</h2>
+
+  <h3>1. Propósito</h3>
+  <p>
+    Este playbook tem como objetivo proteger redes Wi-Fi contra acessos não autorizados, ataques cibernéticos e exploração de vulnerabilidades. O foco é fornecer diretrizes claras para a configuração, monitoramento e resposta a incidentes em redes Wi-Fi corporativas, residenciais ou públicas.
+  </p>
+
+  <h3>2. Escopo</h3>
+  <p>
+    Este documento se aplica a redes Wi-Fi, abrangendo:
+  </p>
+  <ul>
+    <li><strong>Configuração de Redes Seguras:</strong> Implementar protocolos de segurança e configurações robustas.</li>
+    <li><strong>Monitoramento e Mitigação de Ameaças:</strong> Detectar e responder a atividades maliciosas em tempo real.</li>
+    <li><strong>Garantia de Conformidade:</strong> Seguir as melhores práticas de segurança e padrões de conformidade.</li>
+  </ul>
+
+  <h3>3. Papéis e Responsabilidades</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Papel</th>
+        <th>Responsabilidade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Administrador de Redes</td>
+        <td>
+          Configurar e gerenciar redes Wi-Fi, garantindo a segurança e o desempenho da infraestrutura.
+        </td>
+      </tr>
+      <tr>
+        <td>Especialista em Segurança</td>
+        <td>
+          Realizar auditorias de segurança, configurar defesas avançadas e responder a incidentes.
+        </td>
+      </tr>
+      <tr>
+        <td>Usuários Finais</td>
+        <td>
+          Seguir práticas seguras ao utilizar redes Wi-Fi e relatar atividades suspeitas.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>4. Etapas do Processo</h3>
+
+  <h3 id="41-preparacao">4.1. Preparação</h3>
+  <p>
+    A fase de preparação é crucial para garantir que a rede Wi-Fi esteja configurada de forma segura desde o início.
+  </p>
+  <ul>
+    <li><strong>Alterar Credenciais Padrão:</strong>
+      <ul>
+        <li>Modificar as credenciais padrão do roteador e da interface administrativa.</li>
+      </ul>
+    </li>
+    <li><strong>Configurar Senhas Complexas:</strong>
+      <ul>
+        <li>Utilizar senhas fortes e únicas para a rede Wi-Fi e a interface administrativa.</li>
+      </ul>
+    </li>
+    <li><strong>Alterar o SSID Padrão:</strong>
+      <ul>
+        <li>Definir um SSID único, evitando informações pessoais ou identificáveis.</li>
+      </ul>
+    </li>
+    <li><strong>Ativar o Protocolo de Segurança WPA3:</strong>
+      <ul>
+        <li>Utilizar WPA3, se suportado, ou WPA2 como alternativa.</li>
+      </ul>
+    </li>
+    <li><strong>Desativar o WPS:</strong>
+      <ul>
+        <li>Desabilitar o Wi-Fi Protected Setup (WPS) para evitar vulnerabilidades.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Ferramentas Recomendadas:</strong></p>
+  <ul>
+    <li>Painéis de configuração do roteador (Cisco, Ubiquiti, TP-Link).</li>
+  </ul>
+
+  <h3 id="42-deteccao">4.2. Detecção</h3>
+  <p>
+    A detecção envolve a identificação de atividades anômalas e a configuração de alertas para monitoramento contínuo.
+  </p>
+  <ul>
+    <li><strong>Configurar Ferramentas de Monitoramento:</strong>
+      <ul>
+        <li>Utilizar sistemas de detecção e prevenção de intrusões sem fio (WIDS/WIPS).</li>
+      </ul>
+    </li>
+    <li><strong>Configurar Alertas Automáticos:</strong>
+      <ul>
+        <li>Definir alertas para conexões suspeitas ou falhas de autenticação.</li>
+      </ul>
+    </li>
+    <li><strong>Realizar Análises Periódicas de Logs:</strong>
+      <ul>
+        <li>Monitorar logs para identificar padrões de ataque ou atividades maliciosas.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Ferramentas Recomendadas:</strong></p>
+  <ul>
+    <li>WIDS/WIPS: Ekahau, Kismet.</li>
+    <li>Monitoramento de logs: Graylog, ELK Stack.</li>
+  </ul>
+
+  <h3 id="43-analise">4.3. Análise</h3>
+  <p>
+    A análise de eventos de segurança é essencial para identificar e responder a ameaças de forma eficaz.
+  </p>
+  <ul>
+    <li><strong>Correlacionar Eventos de Segurança:</strong>
+      <ul>
+        <li>Utilizar ferramentas de SIEM para correlacionar eventos e identificar padrões de ataque.</li>
+      </ul>
+    </li>
+    <li><strong>Investigar Atividades Anômalas:</strong>
+      <ul>
+        <li>Analisar logs e métricas para determinar a origem e o impacto de atividades suspeitas.</li>
+      </ul>
+    </li>
+    <li><strong>Validar Configurações de Segurança:</strong>
+      <ul>
+        <li>Verificar se as políticas de segurança estão sendo aplicadas corretamente.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Ferramentas Recomendadas:</strong></p>
+  <ul>
+    <li>SIEMs: Splunk, Wazuh, Sentinel.</li>
+    <li>Análise de logs: ELK Stack, Graylog.</li>
+  </ul>
+
+  <h3 id="44-correcao-e-erradicacao">4.4. Correção e Erradicação</h3>
+  <p>
+    A correção e erradicação envolvem a resolução de vulnerabilidades e a remoção de ameaças identificadas.
+  </p>
+  <ul>
+    <li><strong>Habilitar Atualizações Automáticas de Firmware:</strong>
+      <ul>
+        <li>Garantir que o roteador e os dispositivos conectados estejam sempre atualizados.</li>
+      </ul>
+    </li>
+    <li><strong>Configurar Firewalls Locais e IPS:</strong>
+      <ul>
+        <li>Implementar firewalls e sistemas de prevenção contra intrusões (IPS) para proteger a rede.</li>
+      </ul>
+    </li>
+    <li><strong>Implementar Redes VPN:</strong>
+      <ul>
+        <li>Configurar VPNs para usuários remotos, garantindo a segurança das conexões.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Ferramentas Recomendadas:</strong></p>
+  <ul>
+    <li>VPN: OpenVPN, WireGuard.</li>
+    <li>Firewall: pfSense, UFW.</li>
+  </ul>
+
+  <h3 id="45-recuperacao">4.5. Recuperação</h3>
+  <p>
+    A fase de recuperação envolve a restauração dos sistemas e dados afetados e a garantia de que a rede esteja segura.
+  </p>
+  <ul>
+    <li><strong>Restaurar Configurações:</strong>
+      <ul>
+        <li>Reverter alterações maliciosas e restaurar configurações de rede.</li>
+      </ul>
+    </li>
+    <li><strong>Isolar Recursos Comprometidos:</strong>
+      <ul>
+        <li>Isolar dispositivos ou segmentos de rede comprometidos para evitar a propagação de ameaças.</li>
+      </ul>
+    </li>
+    <li><strong>Realizar Análises Forenses:</strong>
+      <ul>
+        <li>Investigar a origem do ataque e identificar vulnerabilidades exploradas.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Ferramentas Recomendadas:</strong></p>
+  <ul>
+    <li>Análise forense: Volatility, Rekall.</li>
+  </ul>
+
+  <h3 id="46-pos-incidente">4.6. Pós-Incidente</h3>
+  <p>
+    A fase pós-incidente envolve a análise do incidente e a implementação de melhorias para prevenir futuros ataques.
+  </p>
+  <ul>
+    <li><strong>Revisar Configurações:</strong>
+      <ul>
+        <li>Revisar e ajustar as configurações de segurança com base nas lições aprendidas.</li>
+      </ul>
+    </li>
+    <li><strong>Monitorar Logs e Alertas:</strong>
+      <ul>
+        <li>Continuar monitorando logs e respondendo a alertas de forma proativa.</li>
+      </ul>
+    </li>
+    <li><strong>Atualizar Dispositivos:</strong>
+      <ul>
+        <li>Garantir que todos os dispositivos estejam atualizados com os patches de segurança mais recentes.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Ferramentas Recomendadas:</strong></p>
+  <ul>
+    <li>Monitoramento: WIDS/WIPS, Graylog.</li>
+    <li>Atualizações: Gerenciadores de firmware dos fabricantes.</li>
+  </ul>
+</div>

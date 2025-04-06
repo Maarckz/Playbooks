@@ -1,0 +1,214 @@
+<link href="css/styles.css" rel="stylesheet">
+
+<div id="iframe">
+  <h2>Playbook de Recuperação de Dados</h2>
+
+  <h3>1. Propósito</h3>
+  <p>
+    Este playbook tem como objetivo fornecer um guia detalhado para a recuperação de dados perdidos ou corrompidos, minimizando impactos e restaurando a integridade das informações. O foco é garantir uma abordagem sistemática e eficiente para lidar com diferentes cenários de perda de dados, como exclusão acidental, corrupção de discos e falhas de hardware.
+  </p>
+
+  <h3>2. Escopo</h3>
+  <p>
+    Este documento se aplica a cenários como:
+  </p>
+  <ul>
+    <li><strong>Exclusão Acidental de Arquivos:</strong> Recuperação de arquivos deletados por engano.</li>
+    <li><strong>Corrupção de Dados em Discos:</strong> Recuperação de dados em discos rígidos ou SSDs corrompidos.</li>
+    <li><strong>Recuperação de Backups:</strong> Restauração de dados a partir de backups existentes.</li>
+  </ul>
+
+  <h3>3. Papéis e Responsabilidades</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Papel</th>
+        <th>Responsabilidade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Administrador de TI</td>
+        <td>
+          Identificar e acessar fontes de dados disponíveis, como backups e discos de armazenamento.
+        </td>
+      </tr>
+      <tr>
+        <td>Especialista em Recuperação</td>
+        <td>
+          Aplicar técnicas avançadas e ferramentas de recuperação para restaurar dados perdidos ou corrompidos.
+        </td>
+      </tr>
+      <tr>
+        <td>Usuários Afetados</td>
+        <td>
+          Fornecer informações detalhadas sobre os dados perdidos ou corrompidos, incluindo localização e importância.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>4. Etapas do Processo</h3>
+
+  <h3 id="41-preparacao">4.1. Preparação</h3>
+  <p>
+    A fase de preparação é crucial para garantir que a recuperação de dados seja realizada de forma segura e eficiente. Aqui estão as principais ações:
+  </p>
+  <ul>
+    <li><strong>Identificar a Origem do Problema:</strong>
+      <ul>
+        <li>Determinar se a perda de dados foi causada por exclusão acidental, falha no hardware ou malware.</li>
+      </ul>
+    </li>
+    <li><strong>Identificar a Localização dos Dados:</strong>
+      <ul>
+        <li>Verificar se os dados estão armazenados localmente, em rede ou na nuvem.</li>
+      </ul>
+    </li>
+    <li><strong>Validar a Gravidade do Incidente:</strong>
+      <ul>
+        <li>Avaliar se os dados estão parcialmente acessíveis ou totalmente perdidos.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Ferramentas Recomendadas:</strong></p>
+  <ul>
+    <li>Logs do sistema: Syslog, Journalctl.</li>
+    <li>Scanners de disco: TestDisk, Photorec.</li>
+  </ul>
+
+  <h3 id="42-deteccao">4.2. Detecção</h3>
+  <p>
+    A detecção envolve a identificação precisa dos dados perdidos e a avaliação das opções de recuperação.
+  </p>
+  <ul>
+    <li><strong>Verificar Backups Disponíveis:</strong>
+      <ul>
+        <li>Identificar se o dado está armazenado em versões anteriores de backups.</li>
+      </ul>
+    </li>
+    <li><strong>Avaliar Integridade do Hardware:</strong>
+      <ul>
+        <li>Testar discos rígidos ou SSDs para detectar falhas físicas ou lógicas.</li>
+      </ul>
+    </li>
+    <li><strong>Determinar Ferramentas Adequadas:</strong>
+      <ul>
+        <li>Escolher ferramentas de recuperação com base no tipo de dado e sistema de arquivos.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Ferramentas Recomendadas:</strong></p>
+  <ul>
+    <li>Backups: Verificação em Bacula, Rsync.</li>
+    <li>Teste de hardware: Smartmontools, Badblocks.</li>
+  </ul>
+
+  <h3 id="43-analise">4.3. Análise</h3>
+  <p>
+    A análise de dados perdidos ou corrompidos é essencial para determinar a melhor abordagem de recuperação.
+  </p>
+  <ul>
+    <li><strong>Analisar Sistemas de Arquivos:</strong>
+      <ul>
+        <li>Identificar o sistema de arquivos utilizado (ext4, XFS, NTFS, etc.).</li>
+      </ul>
+    </li>
+    <li><strong>Verificar Estrutura de Partições:</strong>
+      <ul>
+        <li>Identificar partições perdidas ou corrompidas.</li>
+      </ul>
+    </li>
+    <li><strong>Avaliar Dados Recuperáveis:</strong>
+      <ul>
+        <li>Determinar a viabilidade de recuperação com base no estado do disco.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Ferramentas Recomendadas:</strong></p>
+  <ul>
+    <li>TestDisk (recuperação de partições).</li>
+    <li>GParted (gerenciamento de partições).</li>
+  </ul>
+
+  <h3 id="44-correcao-e-erradicacao">4.4. Correção e Erradicação</h3>
+  <p>
+    A correção e erradicação envolvem a recuperação efetiva dos dados e a resolução das causas do problema.
+  </p>
+  <ul>
+    <li><strong>Realizar Recuperação de Dados:</strong>
+      <ul>
+        <li>Utilizar ferramentas como TestDisk e Photorec para recuperar arquivos perdidos.</li>
+      </ul>
+    </li>
+    <li><strong>Recuperar Partições Perdidas:</strong>
+      <ul>
+        <li>Restaurar partições corrompidas ou deletadas.</li>
+      </ul>
+    </li>
+    <li><strong>Restaurar Dados de Backups:</strong>
+      <ul>
+        <li>Utilizar soluções de backup como Bacula ou Rsync para restaurar dados.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Ferramentas Recomendadas:</strong></p>
+  <ul>
+    <li>Photorec (recuperação de arquivos).</li>
+    <li>Bacula (solução de backup).</li>
+  </ul>
+
+  <h3 id="45-recuperacao">4.5. Recuperação</h3>
+  <p>
+    A fase de recuperação envolve a restauração dos dados e a garantia de que eles estejam íntegros e acessíveis.
+  </p>
+  <ul>
+    <li><strong>Verificar Integridade dos Dados:</strong>
+      <ul>
+        <li>Comparar hashes dos arquivos recuperados com os originais.</li>
+      </ul>
+    </li>
+    <li><strong>Testar Funcionalidade:</strong>
+      <ul>
+        <li>Garantir que os arquivos recuperados estejam funcionais e não corrompidos.</li>
+      </ul>
+    </li>
+    <li><strong>Restaurar Configurações:</strong>
+      <ul>
+        <li>Reverter alterações maliciosas e restaurar configurações de sistema.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Ferramentas Recomendadas:</strong></p>
+  <ul>
+    <li>HashCalc (validação de hashes).</li>
+    <li>Logwatch (monitoramento de logs).</li>
+  </ul>
+
+  <h3 id="46-pos-incidente">4.6. Pós-Incidente</h3>
+  <p>
+    A fase pós-incidente envolve a análise do incidente e a implementação de melhorias para prevenir futuras perdas de dados.
+  </p>
+  <ul>
+    <li><strong>Implementar Medidas Preventivas:</strong>
+      <ul>
+        <li>Configurar backups regulares e redundância de dados.</li>
+      </ul>
+    </li>
+    <li><strong>Documentar o Processo de Recuperação:</strong>
+      <ul>
+        <li>Criar um registro detalhado do incidente e das ações tomadas.</li>
+      </ul>
+    </li>
+    <li><strong>Treinar Equipes:</strong>
+      <ul>
+        <li>Realizar treinamentos para sensibilizar a equipe sobre práticas de segurança e prevenção de perda de dados.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Ferramentas Recomendadas:</strong></p>
+  <ul>
+    <li>Rsync (automação de backups).</li>
+    <li>Workshops ou treinamentos online.</li>
+  </ul>
+</div>

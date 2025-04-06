@@ -1,0 +1,237 @@
+    <!-- PROPÓSITO -->
+    <h3>1. Propósito</h3>
+    <p>Estabelecer um procedimento eficaz para detectar, mitigar e recuperar-se de ataques DDoS, garantindo a disponibilidade contínua dos serviços e minimizando impactos operacionais e financeiros.</p>
+
+    <!-- ESCOPO -->
+    <h3 id="2-escopo">2. Escopo</h3>
+    <p>Este playbook aplica-se a todos os tipos de ataques DDoS, incluindo:</p>
+    <ul>
+        <li><strong>Ataques Volumétricos:</strong> Envolvem altos volumes de tráfego para sobrecarregar a largura de banda.</li>
+        <li><strong>Ataques de Amplificação/Reflexão:</strong> Utilizam serviços como DNS, NTP ou SSDP para amplificar o tráfego.</li>
+        <li><strong>Ataques de Camada de Aplicação:</strong> Focam em sobrecarregar servidores com requisições HTTP ou POST maliciosas.</li>
+    </ul>
+
+    <!-- PAPÉIS E RESPONSABILIDADES -->
+    <h3 id="3-papeis-e-responsabilidades">3. Papéis e Responsabilidades</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Papel</th>
+                <th>Responsabilidade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Equipe SOC</td>
+                <td>Monitorar, identificar e aplicar estratégias de mitigação.</td>
+            </tr>
+            <tr>
+                <td>Administradores de TI</td>
+                <td>Implementar mudanças em firewalls, roteadores e servidores.</td>
+            </tr>
+            <tr>
+                <td>Provedores de Nuvem/CDN</td>
+                <td>Ativar proteção avançada contra DDoS e redirecionar tráfego.</td>
+            </tr>
+            <tr>
+                <td>Equipe de Comunicação</td>
+                <td>Notificar stakeholders internos e externos sobre o incidente.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- ETAPAS DO PROCESSO -->
+    <h3 id="4-etapas-do-processo">4. Etapas do Processo</h3>
+
+    <!-- PREPARAÇÃO -->
+    <h2 id="41-preparacao">4.1. Preparação</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Configurar Ferramentas de Monitoramento</h3>
+            <ul>
+                <li>Implementar soluções SIEM (Splunk, QRadar) para detecção precoce.</li>
+                <li>Configurar alertas para picos anormais de tráfego.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Proteção de Infraestrutura</h3>
+            <ul>
+                <li>Habilitar proteção DDoS em provedores de nuvem (AWS Shield, Azure DDoS Protection).</li>
+                <li>Configurar firewalls e WAFs (Web Application Firewalls) para bloquear tráfego malicioso.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Plano de Resposta</h3>
+            <ul>
+                <li>Definir procedimentos claros para cada tipo de ataque DDoS.</li>
+                <li>Realizar simulações regulares para validar a eficácia do plano.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- IDENTIFICAÇÃO -->
+    <h2 id="42-identificacao">4.2. Identificação</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Monitorar Métricas Anômalas</h3>
+            <ul>
+                <li>Aumento repentino no tráfego de rede.</li>
+                <li>Uso elevado de recursos (CPU, memória, largura de banda).</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Confirmar o Ataque</h3>
+            <ul>
+                <li>Analisar logs de rede (NetFlow, packet captures).</li>
+                <li>Identificar padrões de tráfego malicioso.</li>
+            </ul>
+        </div>
+    </div>
+    <p><strong>Ferramentas Recomendadas:</strong></p>
+    <ul>
+        <li>Soluções SIEM (Splunk, QRadar).</li>
+        <li>Ferramentas de monitoramento de rede (Zabbix, SolarWinds).</li>
+    </ul>
+
+    <!-- CLASSIFICAÇÃO DO ATAQUE -->
+    <h2 id="43-classificacao-do-ataque">4.3. Classificação do Ataque</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Tipos de Ataque</h3>
+            <ul>
+                <li>Volumétrico: Altos volumes de pacotes ou solicitações.</li>
+                <li>Amplificação: Uso de serviços refletidos (DNS, NTP, SSDP).</li>
+                <li>Aplicação: Alto número de requisições HTTP ou POST.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Identificar Fontes</h3>
+            <ul>
+                <li>Endereços IP, ASN ou regiões geográficas.</li>
+            </ul>
+        </div>
+    </div>
+    <p><strong>Ferramentas Recomendadas:</strong></p>
+    <ul>
+        <li>Ferramentas de análise de tráfego (Wireshark, tcpdump).</li>
+        <li>Soluções DDoS Protection (Cloudflare, AWS Shield).</li>
+    </ul>
+
+    <!-- CONTENÇÃO INICIAL -->
+    <h2 id="44-contencao-inicial">4.4. Contenção Inicial</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Aplicar Bloqueios Temporários</h3>
+            <ul>
+                <li>Endereços IP suspeitos: Usar ACLs ou firewall.</li>
+                <li>Regiões geográficas: Bloqueio por país no firewall.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Redirecionar Tráfego</h3>
+            <ul>
+                <li>Usar provedores de mitigação como Akamai ou Cloudflare.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Ativar Sistemas de Proteção</h3>
+            <ul>
+                <li>Scrubbing centers para filtrar tráfego malicioso.</li>
+            </ul>
+        </div>
+    </div>
+    <p><strong>Ferramentas Recomendadas:</strong></p>
+    <ul>
+        <li>Firewalls (Palo Alto, Fortinet).</li>
+        <li>Soluções CDN (Cloudflare, Akamai).</li>
+    </ul>
+
+    <!-- MITIGAÇÃO -->
+    <h2 id="45-mitigacao">4.5. Mitigação</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Configurar Filtros Avançados</h3>
+            <ul>
+                <li>Bloquear pacotes inválidos (ex.: SYN flood).</li>
+                <li>Limitar requisições por segundo no servidor web.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Habilitar Rate-Limiting</h3>
+            <ul>
+                <li>Restringir o número de conexões simultâneas por IP.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Reduzir Superfícies de Ataque</h3>
+            <ul>
+                <li>Desativar serviços ou portas não utilizados.</li>
+            </ul>
+        </div>
+    </div>
+    <p><strong>Ferramentas Recomendadas:</strong></p>
+    <ul>
+        <li>Regras de WAF (ModSecurity, F5).</li>
+        <li>Roteadores e switches configurados para limitar volume.</li>
+    </ul>
+
+    <!-- RECUPERAÇÃO -->
+    <h2 id="46-recuperacao">4.6. Recuperação</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Restaurar Serviços</h3>
+            <ul>
+                <li>Gradualmente reativar IPs ou regiões bloqueadas.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Monitorar Tráfego</h3>
+            <ul>
+                <li>Verificar se o tráfego malicioso foi completamente mitigado.</li>
+            </ul>
+        </div>
+    </div>
+    <p><strong>Ferramentas Recomendadas:</strong></p>
+    <ul>
+        <li>Logs de performance (Elastic Stack, Graylog).</li>
+        <li>Ferramentas de monitoramento de SLA.</li>
+    </ul>
+
+    <!-- PÓS-INCIDENTE -->
+    <h2 id="47-pos-incidente">4.7. Pós-Incidente</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Conduzir Análise Pós-Incidente</h3>
+            <ul>
+                <li>Identificar vulnerabilidades exploradas.</li>
+                <li>Avaliar eficácia das medidas tomadas.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Atualizar Planos de Resposta</h3>
+            <ul>
+                <li>Refletir lições aprendidas no playbook.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Reforçar Políticas de Segurança</h3>
+            <ul>
+                <li>Configurar alertas automáticos para atividades suspeitas.</li>
+                <li>Realizar treinamentos de conscientização para a equipe.</li>
+            </ul>
+        </div>
+    </div>
+    <p><strong>Ferramentas Recomendadas:</strong></p>
+    <ul>
+        <li>Ferramentas de documentação (Confluence, Notion).</li>
+        <li>Plataformas de colaboração para treinamento (MS Teams, Slack).</li>
+    </ul>
+
+    <!-- REFERÊNCIAS -->
+    <h3 id="5-referencias">5. Referências</h3>
+    <ul>
+        <li><a href="https://owasp.org/www-community/attacks/Denial_of_Service">OWASP: Ataques de Negação de Serviço</a></li>
+        <li><a href="https://www.cloudflare.com/learning/ddos/">Cloudflare: Guia de Mitigação de DDoS</a></li>
+        <li><a href="https://aws.amazon.com/shield/">AWS Shield: Proteção contra DDoS</a></li>
+    </ul>
+</div>

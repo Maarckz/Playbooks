@@ -1,0 +1,52 @@
+<h2>1. Propósito</h2>
+Este playbook fornece orientações para identificar, remover e prevenir o scareware, um tipo de malware que exibe mensagens alarmistas e falsas para enganar os usuários. O objetivo é proteger os usuários de ameaças falsas, impedir o comprometimento de sistemas e reduzir o impacto de campanhas de scareware.
+
+<h2>2. Escopo</h2>
+Este playbook é aplicável a todos os sistemas e dispositivos dentro da organização, incluindo computadores, laptops, dispositivos móveis e qualquer outro sistema de informação onde o scareware possa ser executado.
+
+<h2>3. Papéis e Responsabilidades</h2>
+<table>
+  <tr>
+    <th>Papel</th>
+    <th>Responsabilidade</th>
+  </tr>
+  <tr>
+    <td>Equipe de Segurança</td>
+    <td>Monitorar sinais de scareware, implementar medidas de prevenção e remoção.</td>
+  </tr>
+  <tr>
+    <td>Equipe de TI</td>
+    <td>Executar a remoção técnica do scareware nos dispositivos comprometidos.</td>
+  </tr>
+  <tr>
+    <td>Comunicação Corporativa</td>
+    <td>Comunicar aos usuários finais sobre as ameaças de scareware e as ações de resposta.</td>
+  </tr>
+  <tr>
+    <td>Equipe de Suporte ao Usuário</td>
+    <td>Fornecer suporte e assistência para usuários afetados, ajudando a remover o scareware de seus dispositivos.</td>
+  </tr>
+  <tr>
+    <td>Usuários Finais</td>
+    <td>Relatar mensagens suspeitas e não interagir com elas, protegendo seus dispositivos de scareware.</td>
+  </tr>
+</table>
+
+<h2>4. Procedimentos Detalhados</h2>
+<h3>4.1. Identificação de Scareware</h3>
+<ul>
+  <li>Ações:
+    <ul>
+      <li>Sinais Comuns de Scareware: Monitorar e educar os usuários para reconhecer sinais típicos de scareware, como mensagens alarmistas e pop-ups informando que o sistema está infectado, com links direcionando para sites de download de software "antivírus" falso ou solicitando informações pessoais.</li>
+      <li>Análise de Logs de Sistema: Inspecionar logs de sistema e eventos para identificar atividades suspeitas que possam estar relacionadas ao scareware, como processos de instalação não autorizados ou tentativas de conexão com endereços de IP externos desconhecidos.</li>
+      <li>Verificação de Programas Não Solicitados: Detectar programas ou barras de ferramentas indesejadas que tenham sido instaladas sem o conhecimento do usuário, muitas vezes associadas ao scareware.</li>
+    </ul>
+  </li>
+  <li>Ferramentas:
+    <ul>
+      <li>Software Antivírus (Sophos, Kaspersky) para detecção preliminar de scareware.</li>
+      <li>Ferramentas de Análise de Sistema (Process Explorer, Autoruns) para identificar processos suspeitos.</li>
+      <li>Ferramentas de Monitoramento de Rede (Wireshark, Zeek) para identificar conexões indesejadas.</li>
+    </ul>
+  </li>
+</ul>

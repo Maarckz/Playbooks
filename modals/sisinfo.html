@@ -1,0 +1,218 @@
+<link href="css/styles.css" rel="stylesheet">
+
+<div id="iframe">
+  <h2>Playbook de Segurança em Sistemas de Informação</h2>
+
+  <h3>1. Propósito</h3>
+  <p>
+    Este playbook tem como objetivo proteger os sistemas de informação contra acessos não autorizados, ameaças cibernéticas e vulnerabilidades, garantindo a confidencialidade, integridade e disponibilidade dos dados. O foco é fornecer diretrizes claras para a configuração, monitoramento e resposta a incidentes em sistemas locais, híbridos ou baseados na nuvem.
+  </p>
+
+  <h3>2. Escopo</h3>
+  <p>
+    Este documento se aplica a sistemas de informação, abrangendo:
+  </p>
+  <ul>
+    <li><strong>Configuração de Controles de Acesso:</strong> Garantir que apenas usuários autorizados tenham acesso aos recursos.</li>
+    <li><strong>Implementação de Soluções de Segurança:</strong> Definir e aplicar políticas de segurança robustas.</li>
+    <li><strong>Monitoramento Contínuo e Auditoria:</strong> Monitorar atividades para detectar e responder a ameaças em tempo real.</li>
+  </ul>
+
+  <h3>3. Papéis e Responsabilidades</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Papel</th>
+        <th>Responsabilidade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Administrador de Sistemas</td>
+        <td>
+          Configurar e gerenciar controles de acesso, sistemas de autenticação e políticas de segurança.
+        </td>
+      </tr>
+      <tr>
+        <td>Especialista em Segurança</td>
+        <td>
+          Auditar configurações de segurança, implementar políticas avançadas e responder a incidentes.
+        </td>
+      </tr>
+      <tr>
+        <td>Usuários Finais</td>
+        <td>
+          Adotar práticas seguras no uso de sistemas e credenciais, e relatar atividades suspeitas.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>4. Etapas do Processo</h3>
+
+  <h3 id="41-preparacao">4.1. Preparação</h3>
+  <p>
+    A fase de preparação é crucial para garantir que os sistemas de informação estejam configurados de forma segura desde o início.
+  </p>
+  <ul>
+    <li><strong>Habilitar Autenticação Multifator (MFA):</strong>
+      <ul>
+        <li>Implementar MFA para todos os usuários e serviços.</li>
+      </ul>
+    </li>
+    <li><strong>Configurar Políticas de Senha Seguras:</strong>
+      <ul>
+        <li>Exigir comprimento mínimo, complexidade e periodicidade de troca de senhas.</li>
+      </ul>
+    </li>
+    <li><strong>Criar Grupos de Usuários com Base no Princípio do Menor Privilégio:</strong>
+      <ul>
+        <li>Limitar o acesso a recursos com base nas necessidades dos usuários.</li>
+      </ul>
+    </li>
+    <li><strong>Implementar Autenticação Única (SSO) e Autenticação Baseada em Certificados:</strong>
+      <ul>
+        <li>Utilizar SSO e autenticação baseada em certificados para melhorar a segurança.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Ferramentas Recomendadas:</strong></p>
+  <ul>
+    <li>Active Directory, Okta, Duo Security.</li>
+  </ul>
+
+  <h3 id="42-deteccao">4.2. Detecção</h3>
+  <p>
+    A detecção envolve a identificação de atividades anômalas e a configuração de alertas para monitoramento contínuo.
+  </p>
+  <ul>
+    <li><strong>Configurar Ferramentas de Monitoramento:</strong>
+      <ul>
+        <li>Utilizar sistemas de detecção e prevenção de intrusões (IDS/IPS).</li>
+      </ul>
+    </li>
+    <li><strong>Configurar Alertas Automáticos:</strong>
+      <ul>
+        <li>Definir alertas para atividades suspeitas, como logins falhos ou alterações de configuração.</li>
+      </ul>
+    </li>
+    <li><strong>Realizar Análises Periódicas de Logs:</strong>
+      <ul>
+        <li>Monitorar logs para identificar padrões de ataque ou atividades maliciosas.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Ferramentas Recomendadas:</strong></p>
+  <ul>
+    <li>IDS/IPS: Snort, Suricata.</li>
+    <li>Monitoramento de logs: Graylog, ELK Stack.</li>
+  </ul>
+
+  <h3 id="43-analise">4.3. Análise</h3>
+  <p>
+    A análise de eventos de segurança é essencial para identificar e responder a ameaças de forma eficaz.
+  </p>
+  <ul>
+    <li><strong>Correlacionar Eventos de Segurança:</strong>
+      <ul>
+        <li>Utilizar ferramentas de SIEM para correlacionar eventos e identificar padrões de ataque.</li>
+      </ul>
+    </li>
+    <li><strong>Investigar Atividades Anômalas:</strong>
+      <ul>
+        <li>Analisar logs e métricas para determinar a origem e o impacto de atividades suspeitas.</li>
+      </ul>
+    </li>
+    <li><strong>Validar Configurações de Segurança:</strong>
+      <ul>
+        <li>Verificar se as políticas de segurança estão sendo aplicadas corretamente.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Ferramentas Recomendadas:</strong></p>
+  <ul>
+    <li>SIEMs: Splunk, Wazuh, Sentinel.</li>
+    <li>Análise de logs: ELK Stack, Graylog.</li>
+  </ul>
+
+  <h3 id="44-correcao-e-erradicacao">4.4. Correção e Erradicação</h3>
+  <p>
+    A correção e erradicação envolvem a resolução de vulnerabilidades e a remoção de ameaças identificadas.
+  </p>
+  <ul>
+    <li><strong>Implementar Ferramentas de Prevenção e Detecção de Intrusões (IDS/IPS):</strong>
+      <ul>
+        <li>Configurar IDS/IPS para detectar e bloquear atividades maliciosas.</li>
+      </ul>
+    </li>
+    <li><strong>Configurar Firewalls de Rede e Aplicativos:</strong>
+      <ul>
+        <li>Implementar firewalls para proteger a rede e aplicativos contra ameaças.</li>
+      </ul>
+    </li>
+    <li><strong>Habilitar Backups Regulares e Planos de Recuperação de Desastres:</strong>
+      <ul>
+        <li>Garantir que os dados possam ser restaurados rapidamente em caso de incidente.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Ferramentas Recomendadas:</strong></p>
+  <ul>
+    <li>IDS/IPS: Snort, Suricata.</li>
+    <li>Firewalls: pfSense, WAFs (Cloudflare, ModSecurity).</li>
+  </ul>
+
+  <h3 id="45-recuperacao">4.5. Recuperação</h3>
+  <p>
+    A fase de recuperação envolve a restauração dos sistemas e dados afetados e a garantia de que a infraestrutura esteja segura.
+  </p>
+  <ul>
+    <li><strong>Restaurar Dados a Partir de Backups:</strong>
+      <ul>
+        <li>Utilizar backups para restaurar dados e sistemas afetados.</li>
+      </ul>
+    </li>
+    <li><strong>Isolar Recursos Comprometidos:</strong>
+      <ul>
+        <li>Isolar dispositivos ou segmentos de rede comprometidos para evitar a propagação de ameaças.</li>
+      </ul>
+    </li>
+    <li><strong>Realizar Análises Forenses:</strong>
+      <ul>
+        <li>Investigar a origem do ataque e identificar vulnerabilidades exploradas.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Ferramentas Recomendadas:</strong></p>
+  <ul>
+    <li>Backup: Bacula, Rsync.</li>
+    <li>Análise forense: Volatility, Rekall.</li>
+  </ul>
+
+  <h3 id="46-pos-incidente">4.6. Pós-Incidente</h3>
+  <p>
+    A fase pós-incidente envolve a análise do incidente e a implementação de melhorias para prevenir futuros ataques.
+  </p>
+  <ul>
+    <li><strong>Revisar Políticas de Segurança:</strong>
+      <ul>
+        <li>Revisar e atualizar políticas de segurança com base nas lições aprendidas.</li>
+      </ul>
+    </li>
+    <li><strong>Conduzir Auditorias Regulares:</strong>
+      <ul>
+        <li>Realizar auditorias trimestrais para identificar brechas de segurança.</li>
+      </ul>
+    </li>
+    <li><strong>Estabelecer Canais de Comunicação:</strong>
+      <ul>
+        <li>Definir canais claros para reportar incidentes e compartilhar informações.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Ferramentas Recomendadas:</strong></p>
+  <ul>
+    <li>Auditoria: Nessus, Qualys.</li>
+    <li>Comunicação: Slack, Microsoft Teams.</li>
+  </ul>
+</div>

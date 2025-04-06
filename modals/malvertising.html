@@ -1,0 +1,121 @@
+<h1>Playbook para Lidar com Malvertising</h1>
+  <h2>1. Propósito</h2>
+  <p>Este playbook fornece orientações sobre como lidar com malvertising (publicidade maliciosa), abordando as etapas para bloquear anúncios maliciosos, proteger os usuários e mitigar os riscos associados a esse tipo de ameaça.</p>
+  <h2>2. Escopo</h2>
+  <p>Este playbook aplica-se a todas as plataformas digitais e sistemas utilizados pela organização que exibem ou interagem com anúncios, incluindo sites corporativos, aplicativos móveis e plataformas de terceiros que exibem anúncios de redes externas.</p>
+  <h2>3. Papéis e Responsabilidades</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Papel</th>
+        <th>Responsabilidade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Equipe de Segurança</td>
+        <td>Identificar e bloquear anúncios maliciosos, investigar incidentes e mitigar riscos.</td>
+      </tr>
+      <tr>
+        <td>Equipe de TI</td>
+        <td>Implementar bloqueios técnicos para anúncios maliciosos e proteger os sistemas contra malware.</td>
+      </tr>
+      <tr>
+        <td>Marketing/Comunicação</td>
+        <td>Garantir a conformidade com as políticas de anúncios e auditar redes de anúncios.</td>
+      </tr>
+      <tr>
+        <td>Desenvolvedores</td>
+        <td>Monitorar e implementar medidas preventivas em plataformas digitais para reduzir riscos de malvertising.</td>
+      </tr>
+      <tr>
+        <td>Usuários Finais</td>
+        <td>Eviar clicar em anúncios suspeitos e relatar qualquer comportamento anômalo.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>4. Procedimentos Detalhados</h2>
+  <h3>4.1. Identificação de Anúncios Maliciosos</h3>
+  <ul>
+    <li>Ações:
+      <ul>
+        <li>Monitoramento de Anúncios: Realize varreduras e análise contínua para detectar comportamentos suspeitos de anúncios, como redirecionamentos inesperados, downloads automáticos de arquivos ou anúncios que tentam enganar os usuários com falsas promessas de prêmios ou atualizações de software.</li>
+        <li>Análise de Logs de Rede: Analise os logs de rede para detectar tráfego gerado por scripts maliciosos ou redirecionamentos suspeitos causados por anúncios.</li>
+        <li>Verificação de Sites de Publicidade: Utilize ferramentas para monitorar e verificar as redes de anúncios em uso, garantindo que eles sigam práticas de segurança recomendadas.</li>
+      </ul>
+    </li>
+    <li>Ferramentas:
+      <ul>
+        <li>Ferramentas de análise de tráfego de rede (Wireshark, Zeek).</li>
+        <li>Ferramentas de detecção de adware e malvertising (Malwarebytes, Webroot).</li>
+        <li>Sistemas de monitoramento de logs (Splunk, ELK Stack).</li>
+      </ul>
+    </li>
+  </ul>
+  <h3>4.2. Prevenção de Malvertising</h3>
+  <ul>
+    <li>Ações:
+      <ul>
+        <li>Bloqueio de Anúncios Suspeitos: Implemente listas de bloqueio de anúncios maliciosos (blacklists) e use soluções de bloqueio de anúncios para impedir que anúncios inseguros sejam carregados.</li>
+        <li>Uso de Soluções de Filtragem de Contéudo: Utilize filtros de conteúdo que possam identificar e bloquear scripts maliciosos, redirecionamentos de sites e outros comportamentos indesejados associados a malvertising.</li>
+        <li>Implementação de Políticas de Publicidade: Colabore com redes de anúncios confiáveis e implemente políticas rigorosas de verificação de anúncios antes de sua exibição.</li>
+        <li>Atualizações de Navegadores e Plugins: Garanta que os navegadores e plugins de todos os usuários estejam atualizados, uma vez que vulnerabilidades de software podem ser exploradas por malvertising.</li>
+      </ul>
+    </li>
+    <li>Ferramentas:
+      <ul>
+        <li>Ferramentas de bloqueio de anúncios (AdBlock Plus, uBlock Origin).</li>
+        <li>Soluções de segurança para navegadores (NoScript, Web of Trust).</li>
+        <li>Plataformas de verificação de anúncios (DoubleVerify, Integral Ad Science).</li>
+      </ul>
+    </li>
+  </ul>
+  <h3>4.3. Detecção de Malvertising em Tempo Real</h3>
+  <ul>
+    <li>Ações:
+      <ul>
+        <li>Implementação de Ferramentas de Monitoramento em Tempo Real: Utilize sistemas de monitoramento de segurança para identificar instantaneamente a presença de malvertising, especialmente em plataformas móveis e sites corporativos.</li>
+        <li>Análise de Links e Scripts: Monitore e analise os links e scripts incorporados nos anúncios, validando-os quanto a comportamentos suspeitos ou conexões com domínios maliciosos.</li>
+      </ul>
+    </li>
+    <li>Ferramentas:
+      <ul>
+        <li>Ferramentas de monitoramento de segurança da web (Sucuri, Cloudflare).</li>
+        <li>Sistemas de detecção e prevenção de intrusões (Snort, Suricata).</li>
+      </ul>
+    </li>
+  </ul>
+  <h3>4.4. Resposta a Incidentes de Malvertising</h3>
+  <ul>
+    <li>Ações:
+      <ul>
+        <li>Isolamento de Plataformas Comprometidas: Caso um malvertising tenha sido identificado, isole as plataformas afetadas para impedir a disseminação do malware.</li>
+        <li>Remoção de Anúncios Maliciosos: Remova imediatamente qualquer anúncio suspeito ou malicioso, e entre em contato com a rede de anúncios ou o site de origem para relatar o incidente.</li>
+        <li>Análise de Sistemas Afetados: Realize uma análise detalhada nos sistemas comprometidos para determinar se o malware foi executado e quais dados foram acessados.</li>
+      </ul>
+    </li>
+    <li>Ferramentas:
+      <ul>
+        <li>Ferramentas de limpeza de malware (Malwarebytes, Kaspersky Anti-Rootkit).</li>
+        <li>Ferramentas de gestão de incidentes (ServiceNow, JIRA).</li>
+        <li>Sistemas de bloqueio de IP e URL (pfSense, Cisco ASA).</li>
+      </ul>
+    </li>
+  </ul>
+  <h3>4.5. Comunicação e Notificação</h3>
+  <ul>
+    <li>Ações:
+      <ul>
+        <li>Notificação de Stakeholders: Informe as partes envolvidas, incluindo equipes internas, parceiros e fornecedores, sobre o incidente e as ações tomadas.</li>
+        <li>Notificação de Autoridades Regulatórias: Caso os dados dos usuários tenham sido comprometidos ou a organização tenha violado regulamentações de segurança (como GDPR ou LGPD), notifique as autoridades competentes conforme exigido.</li>
+        <li>Comunicado aos Usuários: Caso os usuários tenham sido afetados, forneça informações claras e instruções sobre como proteger seus dispositivos ou dados.</li>
+      </ul>
+    </li>
+    <li>Ferramentas:
+      <ul>
+        <li>Modelos de comunicação de incidentes.</li>
+        <li>Ferramentas de alerta e notificação em massa (SendGrid, Twilio).</li>
+        <li>Plataformas de comunicação corporativa (Slack, Teams).</li>
+      </ul>
+    </li>
+  </ul>

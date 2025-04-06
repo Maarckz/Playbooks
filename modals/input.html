@@ -1,0 +1,183 @@
+<h1>Playbook para Prevenção de Controle de Entradas Insuficiente em Aplicações Web</h1>
+
+<h2>1. Propósito</h2>
+<p>Fornecer orientações para prevenir o controle de entradas insuficiente em aplicações web, evitando falhas de segurança como injeção de código, manipulação de dados e outros ataques que possam comprometer a integridade da aplicação.</p>
+
+<h2>2. Escopo</h2>
+<p>Aplica-se a todas as entradas de dados em aplicações web, incluindo formulários, URL, headers HTTP, cookies e quaisquer outros pontos de interação com o usuário ou sistemas externos.</p>
+
+<h2>3. Papéis e Responsabilidades</h2>
+<table>
+    <tr>
+        <th>Papel</th>
+        <th>Responsabilidade</th>
+    </tr>
+    <tr>
+        <td>Desenvolvedores</td>
+        <td>Implementar validação e sanitização adequadas das entradas do usuário.</td>
+    </tr>
+    <tr>
+        <td>Equipe de Segurança</td>
+        <td>Identificar riscos relacionados à falta de controle de entradas e recomendar boas práticas de segurança.</td>
+    </tr>
+    <tr>
+        <td>Equipe de QA</td>
+        <td>Validar se os controles de entrada estão adequadamente implementados e testados.</td>
+    </tr>
+    <tr>
+        <td>Gestores de TI</td>
+        <td>Definir políticas de segurança de dados e garantir a conformidade com as melhores práticas de entrada de dados.</td>
+    </tr>
+</table>
+
+<h2>4. Procedimentos Detalhados</h2>
+
+<h3>4.1. Definição de Requisitos de Entrada</h3>
+<ul>
+    <li>Ações:
+        <ul>
+            <li>Definir claramente o tipo de dado esperado em cada entrada, especificando formatos válidos.</li>
+            <li>Estabelecer uma lista de tipos de entrada permitidos e proibir qualquer entrada fora dos padrões definidos.</li>
+            <li>Considerar a implementação de listas brancas para validar as entradas.</li>
+        </ul>
+    </li>
+    <li>Ferramentas:
+        <ul>
+            <li>Ferramentas de validação de entrada (validadores personalizados, regex).</li>
+            <li>Frameworks de validação de dados (Express Validator, Joi).</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>4.2. Validação Lado Servidor</h3>
+<ul>
+    <li>Ações:
+        <ul>
+            <li>Implementar validação de entradas no lado do servidor.</li>
+            <li>Nunca confiar exclusivamente na validação no lado do cliente.</li>
+        </ul>
+    </li>
+    <li>Ferramentas:
+        <ul>
+            <li>Frameworks de validação de servidor (Spring Validation, Django Forms).</li>
+            <li>Bibliotecas para sanitização de entradas (validator.js, OWASP Java HTML Sanitizer).</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>4.3. Sanitização de Entradas</h3>
+<ul>
+    <li>Ações:
+        <ul>
+            <li>Aplicar sanitização nas entradas do usuário para garantir que dados maliciosos sejam removidos.</li>
+            <li>Evitar que caracteres especiais sejam interpretados como comandos.</li>
+        </ul>
+    </li>
+    <li>Ferramentas:
+        <ul>
+            <li>Ferramentas de sanitização de entradas (OWASP ESAPI, DOMPurify).</li>
+            <li>Funções de escape de dados (htmlspecialchars, escapeHtml).</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>4.4. Filtragem de Entradas Baseada em Contexto</h3>
+<ul>
+    <li>Ações:
+        <ul>
+            <li>Filtrar entradas com base no contexto de uso.</li>
+            <li>Usar validação contextual para garantir que entradas sejam processadas apenas onde são apropriadas.</li>
+        </ul>
+    </li>
+    <li>Ferramentas:
+        <ul>
+            <li>Bibliotecas de filtragem de entradas específicas para o contexto (url-parse, DOMPurify).</li>
+            <li>Ferramentas de escaneamento de vulnerabilidades de XSS (OWASP ZAP, Burp Suite).</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>4.5. Limitação de Tamanho de Entrada</h3>
+<ul>
+    <li>Ações:
+        <ul>
+            <li>Definir limites de tamanho para entradas de dados.</li>
+            <li>Implementar limites de tamanho adequados para diferentes tipos de dados.</li>
+        </ul>
+    </li>
+    <li>Ferramentas:
+        <ul>
+            <li>Configurações no servidor para limitar o tamanho de entrada.</li>
+            <li>Bibliotecas para validação do tamanho de entrada (express-validator, Joi).</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>4.6. Monitoramento de Entradas</h3>
+<ul>
+    <li>Ações:
+        <ul>
+            <li>Monitorar as entradas de dados para detectar padrões suspeitos.</li>
+            <li>Implementar logs detalhados de entradas para facilitar a detecção de abusos.</li>
+        </ul>
+    </li>
+    <li>Ferramentas:
+        <ul>
+            <li>Ferramentas de monitoramento de tráfego e logs (Splunk, LogRhythm).</li>
+            <li>Ferramentas de análise de tráfego em tempo real (Wireshark, Zeek).</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>4.7. Testes de Penetração e Auditorias</h3>
+<ul>
+    <li>Ações:
+        <ul>
+            <li>Realizar testes de penetração regulares focados na manipulação de entradas.</li>
+            <li>Auditorias de segurança regulares para garantir que todas as entradas sejam devidamente tratadas.</li>
+        </ul>
+    </li>
+    <li>Ferramentas:
+        <ul>
+            <li>Ferramentas de testes de penetração (Burp Suite, OWASP ZAP, Acunetix).</li>
+            <li>Frameworks de testes automatizados (Selenium, Cypress).</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>4.8. Resposta a Incidentes de Controle de Entrada Insuficiente</h3>
+<ul>
+    <li>Ações:
+        <ul>
+            <li>Realizar a contenção imediata de falhas no controle de entrada.</li>
+            <li>Notificar stakeholders internos sobre a falha de segurança.</li>
+            <li>Implementar melhorias no processo de validação de entradas.</li>
+        </ul>
+    </li>
+    <li>Ferramentas:
+        <ul>
+            <li>Sistemas de gerenciamento de incidentes de segurança (JIRA, ServiceNow).</li>
+            <li>Ferramentas de monitoramento de resposta a incidentes (PagerDuty, Opsgenie).</li>
+        </ul>
+    </li>
+</ul>
+
+<h2>5. Pós-Implementação</h2>
+<ul>
+    <li>Monitoramento Contínuo:
+        <ul>
+            <li>Continuar monitorando as entradas de dados para identificar novas vulnerabilidades.</li>
+        </ul>
+    </li>
+    <li>Auditoria e Revisão Periódica:
+        <ul>
+            <li>Realizar revisões periódicas dos controles de entrada.</li>
+        </ul>
+    </li>
+    <li>Treinamento e Conscientização:
+        <ul>
+            <li>Treinar desenvolvedores e equipes de QA sobre a importância de validar e sanitizar entradas.</li>
+        </ul>
+    </li>
+</ul>
+
